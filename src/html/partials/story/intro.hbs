@@ -3,7 +3,7 @@
 	<div id='right'></div>
 </section>	
 <section id='story'>
-	<div id='slide_1' class='slide gradient'>
+	<div id='slide_1' class='slide gradient is-visible'>
 		<div class='header'>
 			<div class='roundel'>
 				<img inline src='pudding/logo.svg'>
@@ -31,10 +31,40 @@
 
 	<div id='slide_2' class='slide gradient'>
 		<div class='text-wrapper'>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur auctor laoreet odio, sit amet pulvinar ante semper in.</p>
+			{{#each copy.slide2}}
+				<p>{{{value}}}</p>
+			{{/each}}
 		</div>
 		<div class='button-wrapper'>
 			<button>Start quiz</button>
+		</div>
+	</div>
+
+	<div id='slide_3' class='slide gradient quiz'>
+		<div class='quiz-header'>
+			<div class='song-details'>
+				<p id='artist'>Artist name</p>
+				<p id='song'>Song title</p>
+			</div>
+			<div class='quiz-details'>
+				<p class='song-count'>Song <span id='count'>X</span> of 5</p>
+				<div class='song-circles'>
+					<div id='song1' class='song-circle'></div>
+					<div id='song2' class='song-circle'></div>
+					<div id='song3' class='song-circle'></div>
+					<div id='song4' class='song-circle'></div>
+					<div id='song5' class='song-circle'></div>
+				</div>
+			</div>
+		</div>
+		<div class='lyric-wrapper'>
+			{{#each copy.lyric1}}
+				<p>{{{value}}}</p>
+			{{/each}}
+		</div>
+		<div class='tap-directions'>
+			<div class='roundel'></div>
+			<p>Tap on the words to censor</p>
 		</div>
 	</div>
 </section>	

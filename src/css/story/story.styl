@@ -1,4 +1,7 @@
 /* CUSTOM STORY STYLE */
+body
+    overflow hidden
+
 #touch
     position absolute
     width 100%
@@ -14,17 +17,22 @@
     display flex
     flex-direction column
     padding 2rem
+    position absolute
+    opacity 0
+
+    &.is-visible
+        visibility visible
+        opacity 1
+
 
     &.gradient
         background linear-gradient(-45deg, $kb-teal 0%, $kb-purple 50%, $kb-pink 100%)
 
     .header
-        position absolute
         width 100%
-        height 100vh
         display flex
         flex-direction row
-        //align-items flex-start
+        align-items flex-start
 
         .roundel
             width 50px
@@ -46,13 +54,12 @@
                     fill $white  
 
     .title
-        position absolute
         width 100%
         height 100vh
         display flex
         align-items center
         justify-content center
-        flex-direction column  
+        flex-direction column 
 
         h1
             set-type-size('xx-large', true)
@@ -70,7 +77,6 @@
                 width 100%
 
     .byline
-        position absolute
         width 100%
         height 100vh
         display flex
@@ -90,8 +96,8 @@
 
     .text-wrapper
         width 100%
+        height 100vh
         display flex
-        align-items center
         justify-content center
         flex-direction column
 
@@ -106,8 +112,8 @@
         justify-content center   
 
         button  
-            width 10rem
-            height 4rem
+            width 12.5rem
+            height 3.75rem
             border 2px solid $white 
             text-align center  
             text-transform uppercase
@@ -115,4 +121,78 @@
             font-family $national
             font-weight 700
             set-type-size('root', true)
-            background rgba($white, 0.3)    
+            background rgba($white, 0.3)  
+
+            &:hover
+                background rgba($white, 1)  
+
+    .quiz-header
+        display flex
+        flex-direction row     
+        justify-content space-between 
+
+        .song-details
+            display flex
+            flex-direction column  
+            font-family $national
+            set-type-size('large', true)  
+
+            p
+                margin 0
+                padding 0
+
+            #artist
+                text-transform uppercase
+                font-weight 700   
+
+        .quiz-details
+            display flex
+            flex-direction column  
+
+            .song-count
+                set-type-size('small', true)
+                font-family $national
+                margin 0
+                padding 0
+                text-align right
+
+            .song-circles
+                display flex
+                flex-direction row
+
+                .song-circle
+                    width 25px
+                    height 25px
+                    border-radius 50%
+                    border 2px solid rgba($white, 0.5)
+                    margin-left 0.5rem      
+
+    .lyric-wrapper
+        width 100%
+        height 100vh
+        display flex
+        justify-content center
+        flex-direction column
+
+        p    
+            set-type-size('xxxx-large', true)
+            font-family $national
+            font-weight 700   
+
+    .tap-directions
+        width 100%
+        display flex
+        align-items center
+        justify-content flex-end
+        flex-direction column   
+
+        .roundel
+            width 50px
+            height 50px
+            border-radius 50%
+            background rgba($white, 0.9)
+
+        p
+            set-type-size('small', true)
+            font-family $national
+            text-align center                    
