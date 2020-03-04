@@ -1,9 +1,18 @@
 <section id='touch'>
-	<div id='left'></div>
-	<div id='right'></div>
+	<div id='left' class='is-visible'>
+		<button>
+			<img inline src='arrow-left.svg'>
+		</button>
+	</div>
+	<div id='right' class='is-visible'>
+		<button>
+			<p>Start quiz</p>
+			<img inline src='arrow-right.svg'>
+		</button>
+	</div>
 </section>	
 <section id='story'>
-	<div id='slide_1' class='slide gradient is-visible'>
+	<div id='slide_1' class='slide gradient is-visible-slide'>
 		<div class='header'>
 			<div class='roundel'>
 				<img inline src='pudding/logo.svg'>
@@ -31,23 +40,22 @@
 
 	<div id='slide_2' class='slide gradient'>
 		<div class='text-wrapper'>
-			{{#each copy.slide2}}
+			{{#each copy.slide_2}}
 				<p>{{{value}}}</p>
 			{{/each}}
-		</div>
-		<div class='button-wrapper'>
-			<button>Start quiz</button>
 		</div>
 	</div>
 
 	<div id='slide_3' class='slide gradient quiz'>
 		<div class='quiz-header'>
 			<div class='song-details'>
-				<p id='artist'>Artist name</p>
-				<p id='song'>Song title</p>
+				{{#each copy.quiz_1}}
+					<p id='artist'>{{{artist}}}</p>
+					<p id='song'>{{{song}}}</p>
+				{{/each}}
 			</div>
 			<div class='quiz-details'>
-				<p class='song-count'>Song <span id='count'>X</span> of 5</p>
+				<p class='song-count'>Song <span id='count'>1</span> of 5</p>
 				<div class='song-circles'>
 					<div id='song1' class='song-circle'></div>
 					<div id='song2' class='song-circle'></div>
@@ -58,13 +66,38 @@
 			</div>
 		</div>
 		<div class='lyric-wrapper'>
-			{{#each copy.lyric1}}
-				<p>{{{value}}}</p>
+			{{#each copy.quiz_1}}
+				<p>{{{lyric}}}</p>
 			{{/each}}
 		</div>
 		<div class='tap-directions'>
 			<div class='roundel'></div>
 			<p>Tap on the words to censor</p>
+		</div>
+	</div>
+	<div id='slide_4' class='slide gradient quiz'>
+		<div class='quiz-header'>
+			<div class='song-details'>
+				{{#each copy.quiz_2}}
+					<p id='artist'>{{{artist}}}</p>
+					<p id='song'>{{{song}}}</p>
+				{{/each}}
+			</div>
+			<div class='quiz-details'>
+				<p class='song-count'>Song <span id='count'>2</span> of 5</p>
+				<div class='song-circles'>
+					<div id='song1' class='song-circle'></div>
+					<div id='song2' class='song-circle'></div>
+					<div id='song3' class='song-circle'></div>
+					<div id='song4' class='song-circle'></div>
+					<div id='song5' class='song-circle'></div>
+				</div>
+			</div>
+		</div>
+		<div class='lyric-wrapper'>
+			{{#each copy.quiz_2}}
+				<p>{{{lyric}}}</p>
+			{{/each}}
 		</div>
 	</div>
 </section>	
