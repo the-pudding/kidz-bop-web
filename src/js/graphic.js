@@ -41,7 +41,7 @@ function fwdTap() {
     d3.select('.quiz-details').classed('is-visible', true)
   }
 
-  if ($nextSlideID > 3) {
+  if ($nextSlideID > 3 && $currSlideID % 2 == 0) {
     let $currCount = d3.selectAll('#count').text()
     $currCount = parseInt($currCount) + 1
     d3.selectAll('#count').text(`${$currCount}`)
@@ -69,7 +69,7 @@ function bckTap() {
     d3.select('.quiz-details').classed('is-visible', false)
   }
 
-  if ($prevSlideID > 2) {
+  if ($prevSlideID > 2 && $currSlideID % 2 !== 0) {
     let $currCount = d3.selectAll('#count').text()
     $currCount = parseInt($currCount) - 1
     d3.selectAll('#count').text(`${$currCount}`)

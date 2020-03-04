@@ -71,8 +71,7 @@ body
     position absolute
     flex-direction row 
     width 100%
-    align-items flex-start
-    justify-content space-between
+    justify-content flex-end
     opacity 0
     padding 2rem
 
@@ -112,26 +111,7 @@ body
                 background-image url('assets/images/x.png')
                 background-repeat no-repeat
                 background-size 20px 20px
-                background-position center
-
-    .quiz-header
-        display flex
-        flex-direction row     
-        justify-content space-between 
-
-        .song-details
-            display flex
-            flex-direction column  
-            font-family $national
-            set-type-size('large', true)  
-
-            p
-                margin 0
-                padding 0
-
-            #artist
-                text-transform uppercase
-                font-weight 700              
+                background-position center            
 
 .slide
     width 100%
@@ -246,7 +226,26 @@ body
             background rgba($white, 0.3)  
 
             &:hover
-                background rgba($white, 1)  
+                background rgba($white, 1) 
+
+    .quiz-header
+        display flex
+        flex-direction row     
+        justify-content space-between 
+
+        .song-details
+            display flex
+            flex-direction column  
+            font-family $national
+            set-type-size('large', true)  
+
+            p
+                margin 0
+                padding 0
+
+            #artist
+                text-transform uppercase
+                font-weight 700               
 
     .lyric-wrapper
         width 100%
@@ -258,7 +257,54 @@ body
         p    
             set-type-size('xxxx-large', true)
             font-family $national
-            font-weight 700   
+            font-weight 700 
+
+    .compare-wrapper
+        width 100%
+        height 100vh
+        display flex
+        justify-content center
+        flex-direction column
+
+        .lyric-set
+            background $white
+            border 2px solid $off-black
+            padding 2rem
+            margin-top 3rem
+
+            .lyric-head
+                width 100%
+                display flex
+                flex-direction row
+                justify-content space-between
+                padding-bottom 1.5rem
+                border-bottom 2px solid $off-black
+                border-style dashed
+
+                p
+                    set-type-size('medium', true)
+                    font-family $national
+                    font-weight 700
+                    margin 0
+                    padding-top 0
+
+                svg
+                    stroke $gray    
+
+            p
+                set-type-size('xx-large', true)
+                font-family $national
+                margin 0 
+                padding-top 1.5rem 
+
+            .origLyric
+                span
+                    background $off-black
+                    font-weight 700     
+
+            .kbLyric
+                span
+                    font-weight 700         
 
     .tap-directions
         width 100%

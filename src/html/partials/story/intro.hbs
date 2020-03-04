@@ -13,14 +13,6 @@
 </section>	
 <section id='story'>
 	<div class='quiz-details'>
-		<div class='quiz-header'>
-			<div class='song-details'>
-				{{#each copy.quiz_1}}
-					<p id='artist'>{{{artist}}}</p>
-					<p id='song'>{{{song}}}</p>
-				{{/each}}
-			</div>
-		</div>
 		<div class='quiz-tracker'>
 			<p class='song-count'>Song <span id='count'>1</span> of 5</p>
 			<div class='song-circles'>
@@ -66,7 +58,45 @@
 		</div>
 	</div>
 
-	<div id='slide_3' class='slide gradient quiz'>
+	{{#each copy.quiz_questions}}
+	<div id='slide_{{firstID}}' class='slide gradient quiz'>
+		<div class='quiz-header'>
+			<div class='song-details'>
+				<p id='artist'>{{{artist}}}</p>
+				<p id='song'>{{{song}}}</p>
+			</div>
+		</div>
+		<div class='lyric-wrapper'>
+			<p>{{{lyric}}}</p>
+		</div>
+	</div>
+	<div id='slide_{{secondID}}' class='slide gradient quiz'>
+		<div class='quiz-header'>
+			<div class='song-details'>
+				<p id='artist'>{{{artist}}}</p>
+				<p id='song'>{{{song}}}</p>
+			</div>
+		</div>
+		<div class='compare-wrapper'>
+			<div class='lyric-set'>
+				<div class='lyric-head'>
+					<p>Original</p>
+					<img inline src='volume-2.svg'>
+				</div>
+				<p class='origLyric'>{{{lyric}}}</p>
+			</div>
+			<div class='lyric-set'>
+				<div class='lyric-head'>
+					<p>Kidz Bop</p>
+					<img inline src='volume-2.svg'>
+				</div>
+				<p class='kbLyric'>{{{kbLyric}}}</p>
+			</div>
+		</div>
+	</div>
+	{{/each}}
+
+	{{!-- <div id='slide_3' class='slide gradient quiz'>
 		<div class='lyric-wrapper'>
 			{{#each copy.quiz_1}}
 				<p>{{{lyric}}}</p>
@@ -78,14 +108,58 @@
 		</div>
 	</div>
 	<div id='slide_4' class='slide gradient quiz'>
+		<div class='compare-wrapper'>
+			<div class='lyric-set'>
+				<div class='lyric-head'>
+					<p>Original</p>
+					<img inline src='volume-2.svg'>
+				</div>
+				{{#each copy.quiz_1}}
+					<p>{{{lyric}}}</p>
+				{{/each}}
+			</div>
+			<div class='lyric-set'>
+				<div class='lyric-head'>
+					<p>Kidz Bop</p>
+					<img inline src='volume-2.svg'>
+				</div>
+				{{#each copy.quiz_1}}
+					<p>{{{kbLyric}}}</p>
+				{{/each}}
+			</div>
+		</div>
+	</div>
+	<div id='slide_5' class='slide gradient quiz'>
 		<div class='lyric-wrapper'>
 			{{#each copy.quiz_2}}
 				<p>{{{lyric}}}</p>
 			{{/each}}
 		</div>
 	</div>
+		<div id='slide_6' class='slide gradient quiz'>
+		<div class='compare-wrapper'>
+			<div class='lyric-set'>
+				<div class='lyric-head'>
+					<p>Original</p>
+					<img inline src='volume-2.svg'>
+				</div>
+				{{#each copy.quiz_2}}
+					<p>{{{lyric}}}</p>
+				{{/each}}
+			</div>
+			<div class='lyric-set'>
+				<div class='lyric-head'>
+					<p>Kidz Bop</p>
+					<img inline src='volume-2.svg'>
+				</div>
+				{{#each copy.quiz_2}}
+					<p>{{{kbLyric}}}</p>
+				{{/each}}
+			</div>
+		</div>
 	</div>
-	<div id='slide_5' class='slide gradient quiz'>
+	</div>
+	<div id='slide_7' class='slide gradient quiz'>
 		<div class='lyric-wrapper'>
 			{{#each copy.quiz_3}}
 				<p>{{{lyric}}}</p>
@@ -93,19 +167,84 @@
 		</div>
 	</div>
 	</div>
-	<div id='slide_6' class='slide gradient quiz'>
+		<div id='slide_8' class='slide gradient quiz'>
+		<div class='compare-wrapper'>
+			<div class='lyric-set'>
+				<div class='lyric-head'>
+					<p>Original</p>
+					<img inline src='volume-2.svg'>
+				</div>
+				{{#each copy.quiz_3}}
+					<p>{{{lyric}}}</p>
+				{{/each}}
+			</div>
+			<div class='lyric-set'>
+				<div class='lyric-head'>
+					<p>Kidz Bop</p>
+					<img inline src='volume-2.svg'>
+				</div>
+				{{#each copy.quiz_3}}
+					<p>{{{kbLyric}}}</p>
+				{{/each}}
+			</div>
+		</div>
+	</div>
+	<div id='slide_9' class='slide gradient quiz'>
 		<div class='lyric-wrapper'>
 			{{#each copy.quiz_4}}
 				<p>{{{lyric}}}</p>
 			{{/each}}
 		</div>
 	</div>
+		<div id='slide_10' class='slide gradient quiz'>
+		<div class='compare-wrapper'>
+			<div class='lyric-set'>
+				<div class='lyric-head'>
+					<p>Original</p>
+					<img inline src='volume-2.svg'>
+				</div>
+				{{#each copy.quiz_4}}
+					<p>{{{lyric}}}</p>
+				{{/each}}
+			</div>
+			<div class='lyric-set'>
+				<div class='lyric-head'>
+					<p>Kidz Bop</p>
+					<img inline src='volume-2.svg'>
+				</div>
+				{{#each copy.quiz_4}}
+					<p>{{{kbLyric}}}</p>
+				{{/each}}
+			</div>
+		</div>
 	</div>
-	<div id='slide_7' class='slide gradient quiz'>
+	<div id='slide_11' class='slide gradient quiz'>
 		<div class='lyric-wrapper'>
 			{{#each copy.quiz_5}}
 				<p>{{{lyric}}}</p>
 			{{/each}}
 		</div>
 	</div>
+		<div id='slide_12' class='slide gradient quiz'>
+		<div class='compare-wrapper'>
+			<div class='lyric-set'>
+				<div class='lyric-head'>
+					<p>Original</p>
+					<img inline src='volume-2.svg'>
+				</div>
+				{{#each copy.quiz_5}}
+					<p>{{{lyric}}}</p>
+				{{/each}}
+			</div>
+			<div class='lyric-set'>
+				<div class='lyric-head'>
+					<p>Kidz Bop</p>
+					<img inline src='volume-2.svg'>
+				</div>
+				{{#each copy.quiz_5}}
+					<p>{{{kbLyric}}}</p>
+				{{/each}}
+			</div>
+		</div>
+	</div> --}}
 </section>	
