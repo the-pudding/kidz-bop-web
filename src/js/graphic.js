@@ -1,8 +1,25 @@
+import prepareSpan from "./utils/prepare-span";
+
 /* global d3 */
 function resize() {}
 
 const $fwdTapDiv = d3.selectAll('#right')
 const $bckTapDiv = d3.selectAll('#left')
+let $lyricSpans = null
+
+function spanSetup() {
+  const $lyric1 = d3.select('#slide_3 .lyric-wrapper p')
+  const $lyric2 = d3.select('#slide_4 .lyric-wrapper p')
+
+  prepareSpan.prepare($lyric1)
+  prepareSpan.prepare($lyric2)
+
+  $lyricSpans = d3.selectAll('.lyric-wrapper span')
+}
+
+function spanCensor() {
+  console.log('clicked')
+}
 
 function buttonSetup() {
   d3.selectAll('#left').classed('is-visible', false)
@@ -43,9 +60,11 @@ function bckTap() {
 }
 
 function init() {
+  spanSetup()
   buttonSetup()
   $fwdTapDiv.on('click', fwdTap)
   $bckTapDiv.on('click', bckTap)
+  $lyricSpans.on('click', spanCensor)
 }
 
 export default { init, resize };
