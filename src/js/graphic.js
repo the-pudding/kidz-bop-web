@@ -38,6 +38,13 @@ function fwdTap() {
   if ($nextSlideID == 3) {
     d3.selectAll('#left').classed('is-visible', true)
     d3.selectAll('#right').classed('solo', false)
+    d3.select('.quiz-details').classed('is-visible', true)
+  }
+
+  if ($nextSlideID > 3) {
+    let $currCount = d3.selectAll('#count').text()
+    $currCount = parseInt($currCount) + 1
+    d3.selectAll('#count').text(`${$currCount}`)
   }
 
   console.log('fwd', $currSlideID, $nextSlideID)
@@ -55,7 +62,19 @@ function bckTap() {
   if ($prevSlideID == 1) {
     d3.selectAll('#left').classed('is-visible', false)
     d3.selectAll('#right').classed('solo', true)
+    d3.select('.quiz-details').classed('is-visible', false)
   }
+
+  if ($prevSlideID == 2) {
+    d3.select('.quiz-details').classed('is-visible', false)
+  }
+
+  if ($prevSlideID > 2) {
+    let $currCount = d3.selectAll('#count').text()
+    $currCount = parseInt($currCount) - 1
+    d3.selectAll('#count').text(`${$currCount}`)
+  }
+
   console.log('bck', $currSlideID, $prevSlideID)
 }
 

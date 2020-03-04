@@ -12,6 +12,26 @@
 	</div>
 </section>	
 <section id='story'>
+	<div class='quiz-details'>
+		<div class='quiz-header'>
+			<div class='song-details'>
+				{{#each copy.quiz_1}}
+					<p id='artist'>{{{artist}}}</p>
+					<p id='song'>{{{song}}}</p>
+				{{/each}}
+			</div>
+		</div>
+		<div class='quiz-tracker'>
+			<p class='song-count'>Song <span id='count'>1</span> of 5</p>
+			<div class='song-circles'>
+				<div id='song1' class='song-circle'></div>
+				<div id='song2' class='song-circle'></div>
+				<div id='song3' class='song-circle'></div>
+				<div id='song4' class='song-circle'></div>
+				<div id='song5' class='song-circle'></div>
+			</div>
+		</div>
+	</div>
 	<div id='slide_1' class='slide gradient is-visible-slide'>
 		<div class='header'>
 			<div class='roundel'>
@@ -47,24 +67,6 @@
 	</div>
 
 	<div id='slide_3' class='slide gradient quiz'>
-		<div class='quiz-header'>
-			<div class='song-details'>
-				{{#each copy.quiz_1}}
-					<p id='artist'>{{{artist}}}</p>
-					<p id='song'>{{{song}}}</p>
-				{{/each}}
-			</div>
-			<div class='quiz-details'>
-				<p class='song-count'>Song <span id='count'>1</span> of 5</p>
-				<div class='song-circles'>
-					<div id='song1' class='song-circle'></div>
-					<div id='song2' class='song-circle'></div>
-					<div id='song3' class='song-circle'></div>
-					<div id='song4' class='song-circle'></div>
-					<div id='song5' class='song-circle'></div>
-				</div>
-			</div>
-		</div>
 		<div class='lyric-wrapper'>
 			{{#each copy.quiz_1}}
 				<p>{{{lyric}}}</p>
@@ -76,26 +78,32 @@
 		</div>
 	</div>
 	<div id='slide_4' class='slide gradient quiz'>
-		<div class='quiz-header'>
-			<div class='song-details'>
-				{{#each copy.quiz_2}}
-					<p id='artist'>{{{artist}}}</p>
-					<p id='song'>{{{song}}}</p>
-				{{/each}}
-			</div>
-			<div class='quiz-details'>
-				<p class='song-count'>Song <span id='count'>2</span> of 5</p>
-				<div class='song-circles'>
-					<div id='song1' class='song-circle'></div>
-					<div id='song2' class='song-circle'></div>
-					<div id='song3' class='song-circle'></div>
-					<div id='song4' class='song-circle'></div>
-					<div id='song5' class='song-circle'></div>
-				</div>
-			</div>
-		</div>
 		<div class='lyric-wrapper'>
 			{{#each copy.quiz_2}}
+				<p>{{{lyric}}}</p>
+			{{/each}}
+		</div>
+	</div>
+	</div>
+	<div id='slide_5' class='slide gradient quiz'>
+		<div class='lyric-wrapper'>
+			{{#each copy.quiz_3}}
+				<p>{{{lyric}}}</p>
+			{{/each}}
+		</div>
+	</div>
+	</div>
+	<div id='slide_6' class='slide gradient quiz'>
+		<div class='lyric-wrapper'>
+			{{#each copy.quiz_4}}
+				<p>{{{lyric}}}</p>
+			{{/each}}
+		</div>
+	</div>
+	</div>
+	<div id='slide_7' class='slide gradient quiz'>
+		<div class='lyric-wrapper'>
+			{{#each copy.quiz_5}}
 				<p>{{{lyric}}}</p>
 			{{/each}}
 		</div>
