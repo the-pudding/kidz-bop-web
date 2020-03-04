@@ -96,7 +96,23 @@ body
             height 25px
             border-radius 50%
             border 2px solid rgba($white, 0.5)
-            margin-left 0.5rem   
+            margin-left 0.5rem
+
+            &.is-correct
+                border 2px solid rgba($kb-teal, 1) 
+                background-color $kb-teal 
+                background-image url('assets/images/check.png')
+                background-repeat no-repeat
+                background-size 20px 20px
+                background-position center
+
+            &.is-wrong
+                border 2px solid rgba($off-black, 1) 
+                background-color $off-black
+                background-image url('assets/images/x.png')
+                background-repeat no-repeat
+                background-size 20px 20px
+                background-position center
 
     .quiz-header
         display flex
