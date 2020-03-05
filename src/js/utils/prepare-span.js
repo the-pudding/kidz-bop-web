@@ -4,7 +4,7 @@ function prepare(sel) {
     const html = sel
         .html()
         .split(' ')
-        .map(d => `<span>${d}</span>`)
+        .map((d, i) => `<span data-index=${i}>${d}</span>`)
         .join(' ');
 
     sel.html(html);
@@ -13,4 +13,3 @@ function prepare(sel) {
 }
 
 export default { prepare };
-  

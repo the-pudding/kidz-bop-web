@@ -1,3 +1,4 @@
+import matches from './lyrics';
 import prepareSpan from './utils/prepare-span';
 
 /* global d3 */
@@ -17,12 +18,51 @@ function spanSetup() {
   $lyricSpans = d3.selectAll('.lyric-wrapper span');
 }
 
+function checkCensors() {
+  // first, see if they censored everything
+  const $currSlide = d3.selectAll('.is-visible-slide');
+  const allWords = $currSlide.selectAll('span');
+  const allCensored = $currSlide.selectAll('.censored');
+
+  const selectedAll = allWords.size() === allCensored.size();
+
+  // TODO: if all are selected, stop there
+  // Else, see if they got an exact match, if so, Winner!
+  // Else, see if at least main one is selected, if so, that's good, give it to them
+  // Otherwise, loser
+}
+
+function findCensored() {
+  // select all censored spans
+  const $currSlide = d3.selectAll('.is-visible-slide');
+  const allCensored = $currSlide.selectAll('.censored');
+
+  // create empty array for all censored span indeces
+  const censoredIndeces = [];
+
+  // for each span that is censored, collect the index and push it to censoredIndeces
+  allCensored.each(function pushIndeces() {
+    const word = d3.select(this);
+    const index = word.attr('data-index');
+    censoredIndeces.push(+index);
+  });
+
+  checkCensors();
+
+  console.log({ matches });
+}
+
 function spanCensor() {
+  // select the word that was clicked
   const word = d3.select(this);
+
   // is this word already censored?
-  const censored = word.classed('censored');
+  const isCensored = word.classed('censored');
+
   // if so, make it uncensored, if not, censor it
-  word.classed('censored', !censored);
+  word.classed('censored', !isCensored);
+
+  findCensored();
 }
 
 function buttonSetup() {
