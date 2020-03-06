@@ -1,9 +1,11 @@
 function prepare(sel) {
     if (!sel.size()) return false;
 
+    console.log({ sel });
+
     const html = sel
         .html()
-        .split(' ')
+        .split(' ' || '<br>')
         .map((d, i) => `<span data-index=${i}>${d}</span>`)
         .join(' ');
 

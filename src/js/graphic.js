@@ -8,6 +8,10 @@ const $slides = d3.selectAll('.slide');
 const $fwdTapDiv = d3.selectAll('#right');
 const $bckTapDiv = d3.selectAll('#left');
 const $songCircles = d3.selectAll('.song-circle');
+const $quizSlidesAll = $slides.filter((d, i, n) =>
+  d3.select(n[i]).attr('data-quiz')
+);
+
 let $lyricSpans = null;
 
 let $currSlide = null;
@@ -17,11 +21,12 @@ let $nextSlide = null;
 let $quizSlide = null;
 
 function spanSetup() {
-  const $lyric1 = d3.select('#slide_3 .lyric-wrapper p');
-  const $lyric2 = d3.select('#slide_4 .lyric-wrapper p');
-
-  prepareSpan.prepare($lyric1);
-  prepareSpan.prepare($lyric2);
+  // select all quiz slides then select the p element in each slide
+  $quizSlidesAll.nodes().forEach(d => {
+    const wrapper = d3.select(d).select('.lyric-wrapper p');
+    // then convert them to spans
+    prepareSpan.prepare(wrapper);
+  });
 
   $lyricSpans = d3.selectAll('.lyric-wrapper span');
 }
