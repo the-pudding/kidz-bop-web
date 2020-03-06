@@ -14,6 +14,7 @@ let $currSlide = null;
 let $currSlideID = null;
 let $prevSlide = null;
 let $nextSlide = null;
+let $quizSlide = null;
 
 function spanSetup() {
   const $lyric1 = d3.select('#slide_3 .lyric-wrapper p');
@@ -43,6 +44,12 @@ function updateSlideLocation() {
   $nextSlide = $slides.filter(
     (d, i, n) => d3.select(n[i]).attr('data-slide') === `${$currSlideID + 1}`
   );
+
+  if (answerSlide) {
+    $quizSlide = $slides.filter(
+      (d, i, n) => d3.select(n[i]).attr('data-slide') === `${$currSlideID - 1}`
+    );
+  }
 }
 
 function slideSetup() {
@@ -53,12 +60,13 @@ function slideSetup() {
 
 function checkCensors(censoredIndeces) {
   // first, see if they censored everything on the previous slide
-  const allWords = $prevSlide.selectAll('span');
-  const allCensored = $prevSlide.selectAll('.censored');
-  const currQuiz = $prevSlide.attr('data-quiz');
+  const allWords = $quizSlide.selectAll('span');
+  const allCensored = $quizSlide.selectAll('.censored');
+  const currQuiz = $quizSlide.attr('data-quiz');
 
   // filter our pre-defined answers based on the current quiz id
   const thisMatch = matches.filter(d => d.quizID === +currQuiz)[0];
+  console.log({ $prevSlide, $currSlide, matches, currQuiz, thisMatch });
 
   // words the user didn't censor that should've been
   const missed = thisMatch.exact.filter(
@@ -69,6 +77,8 @@ function checkCensors(censoredIndeces) {
   const extraCensored = censoredIndeces.filter(
     element => !thisMatch.exact.includes(element)
   );
+
+  console.log({ match: thisMatch.exact, missed, extraCensored });
 
   const selectedAll = allWords.size() === allCensored.size();
 
@@ -94,7 +104,7 @@ function checkCensors(censoredIndeces) {
 
 function findCensored() {
   // select all censored spans
-  const allCensored = $prevSlide.selectAll('.censored');
+  const allCensored = $quizSlide.selectAll('.censored');
 
   // create empty array for all censored span indeces
   const censoredIndeces = [];
