@@ -30,9 +30,14 @@ function updateSlideLocation() {
   $currSlide = d3.select('.is-visible-slide');
   // find the ID of the current slide
   $currSlideID = +$currSlide.attr('data-slide');
+  // is the user on an answer slide in the quiz section?
+  const answerSlide = $currSlideID >= 3 && ($currSlideID + 1) % 2 !== 0;
   // select the previous slide
-  $prevSlide = $slides.filter(
-    (d, i, n) => d3.select(n[i]).attr('data-slide') === `${$currSlideID - 1}`
+  // if currently on an answer slide, go back 2
+  $prevSlide = $slides.filter((d, i, n) =>
+    answerSlide
+      ? d3.select(n[i]).attr('data-slide') === `${$currSlideID - 2}`
+      : d3.select(n[i]).attr('data-slide') === `${$currSlideID - 1}`
   );
   // select the global next slide
   $nextSlide = $slides.filter(
