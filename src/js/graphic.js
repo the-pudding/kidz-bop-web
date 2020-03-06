@@ -4,9 +4,16 @@ import prepareSpan from './utils/prepare-span';
 /* global d3 */
 function resize() { }
 
+const $slides = d3.selectAll('.slide');
 const $fwdTapDiv = d3.selectAll('#right');
 const $bckTapDiv = d3.selectAll('#left');
+const $songCircles = d3.selectAll('.song-circle');
 let $lyricSpans = null;
+
+let $currSlide = null;
+let $currSlideID = null;
+let $prevSlide = null;
+let $nextSlide = null;
 
 function spanSetup() {
   const $lyric1 = d3.select('#slide_3 .lyric-wrapper p');
@@ -18,24 +25,71 @@ function spanSetup() {
   $lyricSpans = d3.selectAll('.lyric-wrapper span');
 }
 
-function checkCensors() {
-  // first, see if they censored everything
-  const $currSlide = d3.selectAll('.is-visible-slide');
-  const allWords = $currSlide.selectAll('span');
-  const allCensored = $currSlide.selectAll('.censored');
+function updateSlideLocation() {
+  // sets the current slide to whichever is visible
+  $currSlide = d3.select('.is-visible-slide');
+  // find the ID of the current slide
+  $currSlideID = +$currSlide.attr('data-slide');
+  // select the previous slide
+  $prevSlide = $slides.filter(
+    (d, i, n) => d3.select(n[i]).attr('data-slide') === `${$currSlideID - 1}`
+  );
+  // select the global next slide
+  $nextSlide = $slides.filter(
+    (d, i, n) => d3.select(n[i]).attr('data-slide') === `${$currSlideID + 1}`
+  );
+}
+
+function slideSetup() {
+  // create data attribute for each slide based on its index
+  $slides.attr('data-slide', (d, i) => i + 1);
+  updateSlideLocation();
+}
+
+function checkCensors(censoredIndeces) {
+  // first, see if they censored everything on the previous slide
+  const allWords = $prevSlide.selectAll('span');
+  const allCensored = $prevSlide.selectAll('.censored');
+  const currQuiz = $prevSlide.attr('data-quiz');
+
+  // filter our pre-defined answers based on the current quiz id
+  const thisMatch = matches.filter(d => d.quizID === +currQuiz)[0];
+
+  // words the user didn't censor that should've been
+  const missed = thisMatch.exact.filter(
+    element => !censoredIndeces.includes(element)
+  );
+
+  // words the user DID censor that didn't need to be
+  const extraCensored = censoredIndeces.filter(
+    element => !thisMatch.exact.includes(element)
+  );
 
   const selectedAll = allWords.size() === allCensored.size();
 
-  // TODO: if all are selected, stop there
+  const thisCircle = $songCircles.filter((d, i, n) => {
+    return d3.select(n[i]).attr('data-quiz') === currQuiz;
+  });
+
+  // Game Logic: if all words are censored, wrong and stop there
   // Else, see if they got an exact match, if so, Winner!
-  // Else, see if at least main one is selected, if so, that's good, give it to them
+  // Else, see if at least main word is censored, if so, that's good, give it to them
   // Otherwise, loser
+
+  if (selectedAll) {
+    thisCircle.classed('is-wrong', true).classed('is-correct', false);
+  } else if (missed.length === 0 && extraCensored.length === 0) {
+    // if they got an exact match, they win!
+    thisCircle.classed('is-correct', true).classed('is-wrong', false);
+  } else if (missed.length > 0 && censoredIndeces.includes(thisMatch.main)) {
+    // if they missed some words, but still got the main one, correct
+    thisCircle.classed('is-correct', true).classed('is-wrong', false);
+  } else thisCircle.classed('is-wrong', true).classed('is-correct', false);
 }
 
 function findCensored() {
   // select all censored spans
-  const $currSlide = d3.selectAll('.is-visible-slide');
-  const allCensored = $currSlide.selectAll('.censored');
+  const allCensored = $prevSlide.selectAll('.censored');
 
   // create empty array for all censored span indeces
   const censoredIndeces = [];
@@ -47,9 +101,7 @@ function findCensored() {
     censoredIndeces.push(+index);
   });
 
-  checkCensors();
-
-  console.log({ matches });
+  checkCensors(censoredIndeces);
 }
 
 function spanCensor() {
@@ -61,8 +113,6 @@ function spanCensor() {
 
   // if so, make it uncensored, if not, censor it
   word.classed('censored', !isCensored);
-
-  findCensored();
 }
 
 function buttonSetup() {
@@ -71,10 +121,10 @@ function buttonSetup() {
 }
 
 function fwdTap() {
-  const $currSlide = d3.selectAll('.is-visible-slide');
-  const $currSlideID = $currSlide.node().id.split('_')[1];
-  const $nextSlideID = parseInt($currSlideID) + 1;
-  const $nextSlide = d3.selectAll(`#slide_${$nextSlideID}`);
+  const $nextSlideID = $nextSlide.attr('data-slide');
+
+  // is the current slide a quiz slide?
+  const $currQuiz = $currSlide.attr('data-quiz');
 
   $currSlide.classed('is-visible-slide', false);
   $nextSlide.classed('is-visible-slide', true);
@@ -91,14 +141,17 @@ function fwdTap() {
     d3.selectAll('#count').text(`${$currCount}`);
   }
 
-  console.log('fwd', $currSlideID, $nextSlideID);
+  // update current, previous, and next
+  updateSlideLocation();
+
+  // if the current slide is a quiz slide, evaluate answer on tap
+  if ($currQuiz) {
+    findCensored();
+  }
 }
 
 function bckTap() {
-  const $currSlide = d3.selectAll('.is-visible-slide');
-  const $currSlideID = $currSlide.node().id.split('_')[1];
-  const $prevSlideID = parseInt($currSlideID) - 1;
-  const $prevSlide = d3.selectAll(`#slide_${$prevSlideID}`);
+  const $prevSlideID = $prevSlide.attr('data-slide');
 
   $currSlide.classed('is-visible-slide', false);
   $prevSlide.classed('is-visible-slide', true);
@@ -119,10 +172,12 @@ function bckTap() {
     d3.selectAll('#count').text(`${$currCount}`);
   }
 
-  console.log('bck', $currSlideID, $prevSlideID);
+  // update current, previous, and next
+  updateSlideLocation();
 }
 
 function init() {
+  slideSetup();
   spanSetup();
   buttonSetup();
   $fwdTapDiv.on('click', fwdTap);
