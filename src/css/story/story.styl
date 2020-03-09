@@ -208,6 +208,10 @@ body
         justify-content center
         flex-direction column
 
+        &.top
+            justify-content flex-start
+            padding 2rem
+
         p    
             set-type-size('large', true)
             font-family $national
@@ -331,4 +335,28 @@ body
         p
             set-type-size('small', true)
             font-family $national
-            text-align center                    
+            text-align center 
+
+#slide_17
+    padding 0 
+
+    .category-bar    
+        width 100%
+        background $off-black  
+        padding 1rem
+        display flex
+        flex-direction row 
+        align-items center
+        justify-content space-between                       
+
+        p
+            color $white
+            font-family $national
+            font-weight 700
+            set-type-size('xx-large', true)
+
+        button
+            width 50px
+            height 50px
+            border-radius 50%
+            background rgba($white, 1)

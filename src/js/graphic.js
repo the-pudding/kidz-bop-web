@@ -150,9 +150,20 @@ function fwdTap() {
   $nextSlide.classed('is-visible-slide', true);
 
   if ($nextSlideID == 3) {
+    d3.selectAll('#left').classed('is-visible', false);
+    d3.selectAll('#right').classed('solo', true);
+    d3.select('.quiz-details').classed('is-visible', true);
+  }
+
+  if ($nextSlideID == 14) {
     d3.selectAll('#left').classed('is-visible', true);
     d3.selectAll('#right').classed('solo', false);
-    d3.select('.quiz-details').classed('is-visible', true);
+    d3.select('.quiz-details').classed('is-visible', false);
+  }
+
+  if ($nextSlideID == 17) {
+    d3.selectAll('#left').classed('is-visible', false);
+    d3.selectAll('#right').classed('is-visible', false);
   }
 
   if ($nextSlideID > 3 && $currSlideID % 2 == 0) {
