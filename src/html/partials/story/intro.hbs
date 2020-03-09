@@ -1,15 +1,18 @@
 <section id='touch'>
-	<div id='left' class='is-visible'>
-		<button>
-			<img inline src='arrow-left.svg'>
-		</button>
+	<div class='tapper'>
+		<div id='left' class='is-visible'>
+			<button>
+				<img inline src='arrow-left.svg'>
+			</button>
+		</div>
+		<div id='right' class='is-visible'>
+			<button>
+				<p>Let's find out</p>
+				<img inline src='arrow-right.svg'>
+			</button>
+		</div>
 	</div>
-	<div id='right' class='is-visible'>
-		<button>
-			<p>Start quiz</p>
-			<img inline src='arrow-right.svg'>
-		</button>
-	</div>
+	<div id='skipper'><p>Skip the quiz. Show me the data.</p></div>
 </section>
 <section id='story'>
 	<div class='quiz-details'>
@@ -134,23 +137,46 @@
 			<p>{{{value}}}</p>
 			{{/each}}
 		</div>
-		<div class='category-bar'>
-			<p>alcohol & drugs</p>
-			<button>
-				<img inline src='arrow-right.svg'>
-			</button>
-		</div>
+		{{#each copy.censorship_categories}}
+			<div class='category-bar {{{tag}}}-bar'>
+				<p>{{{text}}}</p>
+				<button>
+					<img inline src='arrow-right.svg'>
+				</button>
+			</div>
+		{{/each}}
 	</div>
 	<div id='slide_18' class='slide gradient'>
 		<div class='chart'>
 
 		</div>
 		<div class='dropdown'>
-
+			<div class='dropdown-group'>
+				<div class='select-bg'></div>
+				<select class='first-select'>
+						<option selected>Word</option>
+				</select>
+			</div>
 		</div>
-		<p>
-
-		</p>
-		<div class='song-wrapper'></div>
+		<div class='compare-wrapper'>
+			<div class='lyric-set'>
+				<div class='lyric-head'>
+					<div class='deets'>
+						<p class='song'>Livin’ La Vida Loca</p>
+						<p class='kb-deets'>Kidz Bop, 2001</p>
+						<p class='orig-deets'>Original by Ricky Martin</p>
+					</div>
+					<div class='toggle'>
+						<p class='toggle-labels toggle-on'>Kidz Bop</p>
+						<label class="switch">
+						<input type="checkbox" class="is-faces">
+						<span class="slider round"></span>
+						</label>
+						<p class='toggle-labels'>Original</p>
+					</div>
+				</div>
+				<p class='origLyric'>She never drinks the water makes you order French champagne</p>
+			</div>
+		</div>
 	</div>
 </section>

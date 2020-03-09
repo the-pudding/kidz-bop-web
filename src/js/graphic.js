@@ -7,6 +7,8 @@ function resize() { }
 const $slides = d3.selectAll('.slide');
 const $fwdTapDiv = d3.selectAll('#right');
 const $bckTapDiv = d3.selectAll('#left');
+const $skipTapDiv = d3.selectAll('#skipper');
+const $categoryBars = d3.selectAll('.category-bar');
 const $songCircles = d3.selectAll('.song-circle');
 const $quizSlidesAll = $slides.filter((d, i, n) =>
   d3.select(n[i]).attr('data-quiz')
@@ -149,10 +151,23 @@ function fwdTap() {
   $currSlide.classed('is-visible-slide', false);
   $nextSlide.classed('is-visible-slide', true);
 
+  // selects the button text
+  const $buttonText = d3.select('#right button p')
+
+  // changes button text
+  if  ($nextSlideID == 2) { $buttonText.text('Take the quiz') }
+  if  ($nextSlideID == 3 || $nextSlideID == 5 || $nextSlideID == 7 || $nextSlideID == 9 || $nextSlideID == 11) { $buttonText.text('Submit') }
+  if  ($nextSlideID == 4 || $nextSlideID == 6 || $nextSlideID == 8 || $nextSlideID == 10) { $buttonText.text('Next song') }
+  if  ($nextSlideID == 12) { $buttonText.text('Show my results') }
+  if  ($nextSlideID == 13) { $buttonText.text('Tell me more') }
+
+  if ($nextSlideID == 2) { d3.select('#skipper').classed('is-visible', true); }
+
   if ($nextSlideID == 3) {
     d3.selectAll('#left').classed('is-visible', false);
     d3.selectAll('#right').classed('solo', true);
     d3.select('.quiz-details').classed('is-visible', true);
+    d3.select('#skipper').classed('is-visible', false); 
   }
 
   if ($nextSlideID == 14) {
@@ -161,7 +176,7 @@ function fwdTap() {
     d3.select('.quiz-details').classed('is-visible', false);
   }
 
-  if ($nextSlideID == 17) {
+  if ($nextSlideID >= 17 || $currSlideID == 17) {
     d3.selectAll('#left').classed('is-visible', false);
     d3.selectAll('#right').classed('is-visible', false);
   }
@@ -192,9 +207,9 @@ function bckTap() {
     d3.selectAll('#right').classed('solo', true);
     d3.select('.quiz-details').classed('is-visible', false);
   }
-
   if ($prevSlideID == 2) {
     d3.select('.quiz-details').classed('is-visible', false);
+    d3.select('#skipper').classed('is-visible', true);
   }
 
   if ($prevSlideID > 2 && $currSlideID % 2 !== 0) {
@@ -205,6 +220,33 @@ function bckTap() {
 
   // update current, previous, and next
   updateSlideLocation();
+
+}
+
+function skipTap() {
+  console.log('skip')
+}
+
+function catTap() {
+  let clickedCat = this
+  let currCat = d3.select(clickedCat).classed('cat-chosen', true)
+  let notCat = d3.selectAll('.category-bar').filter(function(d, i) { return (this !== clickedCat)}).classed('not-chosen', true)
+
+  let currPos = clickedCat.getBoundingClientRect()
+  console.log(currPos.top, currPos.right, currPos.bottom, currPos.left)
+
+  currCat.transition()
+    .duration(500)
+    .delay(100)
+    .ease(d3.easeLinear)
+    .style('transform', `translate(0, -${currPos.top}px)`)
+
+  notCat.transition()
+    .duration(250)
+    .delay((d, i) => i * 25)
+    .ease(d3.easeLinear)
+    .style('transform', 'translate(-100%)')
+
 }
 
 function init() {
@@ -213,7 +255,9 @@ function init() {
   buttonSetup();
   $fwdTapDiv.on('click', fwdTap);
   $bckTapDiv.on('click', bckTap);
+  $skipTapDiv.on('click', skipTap);
   $lyricSpans.on('click', spanCensor);
+  $categoryBars.on('click', catTap)
 }
 
 export default { init, resize };
