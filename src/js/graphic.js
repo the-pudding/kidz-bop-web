@@ -226,16 +226,47 @@ function skipTap() {
   updateSlideLocation();
 }
 
+function handleCatBack() {
+  const back = d3.select(this);
+  const parent = d3.select(this.parentNode);
+  const btnText = parent.select('p');
+  const direction = back.attr('data-direction');
+
+  btnText.classed('is-visible', false);
+  back
+    .transition()
+    .duration(25)
+    .delay(100)
+    .ease(d3.easeLinear)
+    .style('transform', `rotate(0deg)`);
+
+  $categoryBars
+    .classed('not-chosen', false)
+    .classed('cat-chosen', false)
+    .transition()
+    .duration(250)
+    .delay((d, i) => i * 25)
+    .ease(d3.easeLinear)
+    .style('transform', 'translate(0, 0)');
+
+  // prevent catTap() from also being called
+  if (direction === 'back') d3.event.stopPropagation();
+
+  back.attr('data-direction', 'forward');
+  // d3.event.stopPropagation();
+  // back.style('pointerEvents', 'none');
+  console.log({ all: d3.selectAll('.category-bar') });
+}
+
 function catTap() {
   const clickedCat = this;
   const currCat = d3.select(clickedCat).classed('cat-chosen', true);
   const currBckText = currCat.select('.button-wrapper p');
   const currBckButton = currCat.select('.button-wrapper button');
-  console.log(currBckButton);
+  console.log({ currBckButton });
   currBckText.classed('is-visible', true);
-  const notCat = d3
-    .selectAll('.category-bar')
-    .filter(function (d, i) {
+  const notCat = $categoryBars
+    .filter(function findNotCat() {
       return this !== clickedCat;
     })
     .classed('not-chosen', true);
@@ -262,6 +293,10 @@ function catTap() {
     .delay(100)
     .ease(d3.easeLinear)
     .style('transform', `rotate(-180deg)`);
+
+  currBckButton.attr('data-direction', 'back');
+
+  currBckButton.on('click', handleCatBack); // .style('pointerEvents', 'all');
 }
 
 function init() {
