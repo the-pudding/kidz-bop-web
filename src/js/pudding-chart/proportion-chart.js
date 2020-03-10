@@ -26,7 +26,7 @@ d3.selection.prototype.stackedBar = function init(options) {
         let height = 0;
         const MARGIN_TOP = 0;
         const MARGIN_BOTTOM = 0;
-        const MARGIN_LEFT = 0;
+        const MARGIN_LEFT = 50;
         const MARGIN_RIGHT = 0;
 
         // scales
@@ -65,6 +65,7 @@ d3.selection.prototype.stackedBar = function init(options) {
                 height = $chart.node().offsetHeight - MARGIN_TOP - MARGIN_BOTTOM;
                 const max = d3.max(data, d => d.total);
                 scaleX.domain([0, max]).range([0, width]);
+                console.log({ max, width });
 
                 return Chart;
             },
