@@ -13,6 +13,7 @@ const $songCircles = d3.selectAll('.song-circle');
 const $quizSlidesAll = $slides.filter((d, i, n) =>
   d3.select(n[i]).attr('data-quiz')
 );
+const $count = d3.selectAll('#count');
 const $quizDetails = d3.select('.quiz-details');
 
 let $lyricSpans = null;
@@ -145,6 +146,9 @@ function updateButtons() {
   const $left = d3.selectAll('#left');
   const $right = d3.selectAll('#right');
   const $rightText = $right.select('button p');
+  // this will return true if a quiz or answer slide, and false if not
+  const quizOrAnswer =
+    $currSlide.attr('data-quiz') || $currSlide.attr('data-answer');
 
   if ($currSlideID === 2) $rightText.text('Take the quiz');
   // if current slide is quiz slide, make it read Submit
@@ -165,79 +169,20 @@ function updateButtons() {
   $right.classed('solo', $currSlideID <= 13);
 
   // show quiz details on quiz and answer slides
-  $quizDetails.classed(
-    'is-visible',
-    $currSlide.attr('data-quiz') || $currSlide.attr('data-answer')
-  );
+  $quizDetails.classed('is-visible', quizOrAnswer);
+
+  // update count if on quiz slides
+  if ($currSlide.attr('data-quiz')) {
+    $count.text($currSlide.attr('data-quiz'));
+  }
 }
 
 function fwdTap() {
-  const $nextSlideID = $nextSlide.attr('data-slide');
-
   // is the current slide a quiz slide?
   const $currQuiz = $currSlide.attr('data-quiz');
 
   $currSlide.classed('is-visible-slide', false);
   $nextSlide.classed('is-visible-slide', true);
-
-  // // selects the button text
-  // const $buttonText = d3.select('#right button p');
-
-  // changes button text
-  // if ($nextSlideID == 2) {
-  //   $buttonText.text('Take the quiz');
-  // }
-  // if (
-  //   $nextSlideID == 3 ||
-  //   $nextSlideID == 5 ||
-  //   $nextSlideID == 7 ||
-  //   $nextSlideID == 9 ||
-  //   $nextSlideID == 11
-  // ) {
-  //   $buttonText.text('Submit');
-  // }
-  // if (
-  //   $nextSlideID == 4 ||
-  //   $nextSlideID == 6 ||
-  //   $nextSlideID == 8 ||
-  //   $nextSlideID == 10
-  // ) {
-  //   $buttonText.text('Next song');
-  // }
-  // if ($nextSlideID == 12) {
-  //   $buttonText.text('Show my results');
-  // }
-  // if ($nextSlideID == 13) {
-  //   $buttonText.text('Tell me more');
-  // }
-
-  // if ($nextSlideID == 2) {
-  //   d3.select('#skipper').classed('is-visible', true);
-  // }
-
-  // if ($nextSlideID == 3) {
-  //   d3.selectAll('#left').classed('is-visible', false);
-  //   d3.selectAll('#right').classed('solo', true);
-  //   d3.select('.quiz-details').classed('is-visible', true);
-  //   d3.select('#skipper').classed('is-visible', false);
-  // }
-
-  // if ($nextSlideID == 14) {
-  //   d3.selectAll('#left').classed('is-visible', true);
-  //   d3.selectAll('#right').classed('solo', false);
-  //   d3.select('.quiz-details').classed('is-visible', false);
-  // }
-
-  // if ($nextSlideID >= 17 || $currSlideID == 17) {
-  //   d3.selectAll('#left').classed('is-visible', false);
-  //   d3.selectAll('#right').classed('is-visible', false);
-  // }
-
-  if ($nextSlideID > 3 && $currSlideID % 2 == 0) {
-    let $currCount = d3.selectAll('#count').text();
-    $currCount = parseInt($currCount) + 1;
-    d3.selectAll('#count').text(`${$currCount}`);
-  }
 
   // update current, previous, and next
   updateSlideLocation();
@@ -249,26 +194,8 @@ function fwdTap() {
 }
 
 function bckTap() {
-  const $prevSlideID = $prevSlide.attr('data-slide');
-
   $currSlide.classed('is-visible-slide', false);
   $prevSlide.classed('is-visible-slide', true);
-
-  if ($prevSlideID == 1) {
-    d3.selectAll('#left').classed('is-visible', false);
-    d3.selectAll('#right').classed('solo', true);
-    d3.select('.quiz-details').classed('is-visible', false);
-  }
-  if ($prevSlideID == 2) {
-    d3.select('.quiz-details').classed('is-visible', false);
-    d3.select('#skipper').classed('is-visible', true);
-  }
-
-  if ($prevSlideID > 2 && $currSlideID % 2 !== 0) {
-    let $currCount = d3.selectAll('#count').text();
-    $currCount = parseInt($currCount) - 1;
-    d3.selectAll('#count').text(`${$currCount}`);
-  }
 
   // update current, previous, and next
   updateSlideLocation();
