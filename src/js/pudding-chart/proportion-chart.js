@@ -80,12 +80,10 @@ d3.selection.prototype.stackedBar = function init(options) {
                         return d.censored;
                     })
                     .join(enter =>
-                        enter
-                            .append('div')
-                            .attr('class', d => `bar bar--${d.key}`)
-                            .style('width', d => `${scaleX(d.value)}px`)
-                            .style('height', '10px')
+                        enter.append('div').attr('class', d => `bar bar--${d.key}`)
                     );
+
+                bar.style('width', d => `${scaleX(d.value)}px`).style('height', '10px');
 
                 return Chart;
             },

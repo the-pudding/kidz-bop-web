@@ -36,7 +36,9 @@ function cleanData(data) {
     return cleaned;
 }
 
-function resize() { }
+function resize() {
+    charts.forEach(chart => chart.resize().render());
+}
 
 function setupCharts() {
     const $sel = d3.select(this);
