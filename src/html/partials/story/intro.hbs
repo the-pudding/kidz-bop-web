@@ -16,6 +16,19 @@
 		<p>Skip the quiz. Show me the data.</p>
 	</div>
 </section>
+<section id='categories'>
+	{{#each copy.censorship_categories}}
+	<div class='category-bar {{{tag}}}-bar'>
+		<p>{{{text}}}</p>
+		<div class='button-wrapper'>
+			<p>Back to categories</p>
+			<button>
+				<img inline src='arrow-right.svg'>
+			</button>
+		</div>
+	</div>
+	{{/each}}
+</section>
 <section id='story'>
 	<div class='quiz-details'>
 		<div class='quiz-tracker'>
@@ -141,14 +154,6 @@
 			<p>{{{value}}}</p>
 			{{/each}}
 		</div>
-		{{#each copy.censorship_categories}}
-		<div class='category-bar {{{tag}}}-bar'>
-			<p>{{{text}}}</p>
-			<button>
-				<img inline src='arrow-right.svg'>
-			</button>
-		</div>
-		{{/each}}
 	</div>
 	<div id='slide_18' class='slide gradient'>
 		<div class='chart'>

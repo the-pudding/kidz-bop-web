@@ -88,7 +88,93 @@ body
 
             &:hover
                 font-weight 700
-                text-decoration underline              
+                text-decoration underline  
+
+#categories
+    width 100%
+    position absolute
+    height 100vh
+    display none
+    flex-direction column
+    justify-content flex-end
+    visibility hidden
+    opacity 0
+    z-index set-index('overlay')
+
+    &.is-visible
+        visibility visible
+        opacity 1
+        display flex
+
+    .category-bar    
+        width 100%
+        padding 1rem
+        display flex
+        flex-direction row 
+        align-items center
+        justify-content space-between 
+
+        &:hover
+
+            .button-wrapper
+        
+                button
+                    transform translate(-1rem)  
+                    transition 0.25s ease-in-out;
+
+        .button-wrapper
+            display flex
+            flex-direction row
+            align-items center
+
+            p
+                color $off-black
+                font-family $national
+                font-weight 500
+                set-type-size('small', true) 
+                margin 0   
+                padding-right 1rem  
+                display none
+                visibility visible
+                opacity 1  
+
+                &.is-visible
+                    display flex
+                    visibility visible
+                    opacity 1                        
+
+        p
+            color $off-black
+            font-family $national
+            font-weight 700
+            set-type-size('xx-large', true)
+
+        button
+            width 50px
+            height 50px
+            border-radius 50%
+            background rgba($white, 1)
+
+        &.alcohol-bar 
+            background $off-black 
+
+            p
+                color $white
+
+        &.sexual-bar 
+            background $kb-pink
+
+        &.profanity-bar 
+            background $kb-purple   
+
+        &.violence-bar 
+            background $kb-teal
+
+        &.identity-bar 
+            background $kb-blue
+
+        &.other-bar 
+            background $gray-light 
 
 .quiz-details
     z-index set-index('overlay')
@@ -361,54 +447,6 @@ body
             set-type-size('small', true)
             font-family $national
             text-align center 
-
-#slide_17
-    padding 0 
-
-    .category-bar    
-        width 100%
-        padding 1rem
-        display flex
-        flex-direction row 
-        align-items center
-        justify-content space-between 
-
-        &:hover
-            transform translate(-2rem)  
-            transition 0.25s ease-in-out;                    
-
-        p
-            color $off-black
-            font-family $national
-            font-weight 700
-            set-type-size('xx-large', true)
-
-        button
-            width 50px
-            height 50px
-            border-radius 50%
-            background rgba($white, 1)
-
-        &.alcohol-bar 
-            background $off-black 
-
-            p
-                color $white
-
-        &.sexual-bar 
-            background $kb-pink
-
-        &.profanity-bar 
-            background $kb-purple   
-
-        &.violence-bar 
-            background $kb-teal
-
-        &.identity-bar 
-            background $kb-blue
-
-        &.other-bar 
-            background $gray-light 
 
 #slide_18
 
