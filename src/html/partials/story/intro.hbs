@@ -12,7 +12,22 @@
 			</button>
 		</div>
 	</div>
-	<div id='skipper'><p>Skip the quiz. Show me the data.</p></div>
+	<div id='skipper'>
+		<p>Skip the quiz. Show me the data.</p>
+	</div>
+</section>
+<section id='categories'>
+	{{#each copy.censorship_categories}}
+	<div class='category-bar {{{tag}}}-bar'>
+		<p>{{{text}}}</p>
+		<div class='button-wrapper'>
+			<p>Back to categories</p>
+			<button>
+				<img inline src='arrow-right.svg'>
+			</button>
+		</div>
+	</div>
+	{{/each}}
 </section>
 <section id='story'>
 	<div class='quiz-details'>
@@ -73,7 +88,7 @@
 			<p>{{{lyric}}}</p>
 		</div>
 	</div>
-	<div id='slide_{{secondID}}' class='slide gradient quiz'>
+	<div id='slide_{{secondID}}' class='slide gradient quiz' data-answer='{{quizID}}'>
 		<div class='quiz-header'>
 			<div class='song-details'>
 				<p id='artist'>{{{artist}}}</p>
@@ -101,7 +116,7 @@
 
 	<div id='slide_13' class='slide gradient'>
 		<div class='results-wrapper'>
-			<p class='results-count'><span class='correct-count'>X</span> our of 5</p>
+			<p class='results-count'><span class='correct-count'>X</span> out of 5</p>
 			<p class='results-sentence'>Kids, earmuffs! Did you even really try?</p>
 		</div>
 		<div class='text-wrapper'>
@@ -110,19 +125,21 @@
 			{{/each}}
 		</div>
 	</div>
-	<div id='slide_14' class='slide'>
+	<div id='slide_14' class='slide' data-chart='bar'>
 		<div class='text-wrapper top'>
 			{{#each copy.slide_14}}
 			<p>{{{value}}}</p>
 			{{/each}}
 		</div>
+		<div class='chart chart__bar'></div>
 	</div>
-	<div id='slide_15' class='slide'>
+	<div id='slide_15' class='slide' data-chart='bar'>
 		<div class='text-wrapper top'>
 			{{#each copy.slide_15}}
 			<p>{{{value}}}</p>
 			{{/each}}
 		</div>
+		<div class='chart chart__bar'></div>
 	</div>
 	<div id='slide_16' class='slide'>
 		<div class='text-wrapper'>
@@ -137,14 +154,6 @@
 			<p>{{{value}}}</p>
 			{{/each}}
 		</div>
-		{{#each copy.censorship_categories}}
-			<div class='category-bar {{{tag}}}-bar'>
-				<p>{{{text}}}</p>
-				<button>
-					<img inline src='arrow-right.svg'>
-				</button>
-			</div>
-		{{/each}}
 	</div>
 	<div id='slide_18' class='slide gradient'>
 		<div class='chart'>
@@ -154,7 +163,7 @@
 			<div class='dropdown-group'>
 				<div class='select-bg'></div>
 				<select class='first-select'>
-						<option selected>Word</option>
+					<option selected>Word</option>
 				</select>
 			</div>
 		</div>
@@ -169,8 +178,8 @@
 					<div class='toggle'>
 						<p class='toggle-labels toggle-on'>Kidz Bop</p>
 						<label class="switch">
-						<input type="checkbox" class="is-faces">
-						<span class="slider round"></span>
+							<input type="checkbox" class="is-faces">
+							<span class="slider round"></span>
 						</label>
 						<p class='toggle-labels'>Original</p>
 					</div>

@@ -13,6 +13,8 @@ const $songCircles = d3.selectAll('.song-circle');
 const $quizSlidesAll = $slides.filter((d, i, n) =>
   d3.select(n[i]).attr('data-quiz')
 );
+const $count = d3.selectAll('#count');
+const $quizDetails = d3.select('.quiz-details');
 
 let $lyricSpans = null;
 
@@ -42,21 +44,27 @@ function updateSlideLocation() {
   const answerSlide = $currSlideID >= 3 && ($currSlideID + 1) % 2 !== 0;
   // select the previous slide
   // if currently on an answer slide, go back 2
-  $prevSlide = $slides.filter((d, i, n) =>
-    answerSlide
-      ? d3.select(n[i]).attr('data-slide') === `${$currSlideID - 2}`
-      : d3.select(n[i]).attr('data-slide') === `${$currSlideID - 1}`
+  $prevSlide = $slides.filter(
+    (d, i, n) => d3.select(n[i]).attr('data-slide') === `${$currSlideID - 1}`
   );
   // select the global next slide
   $nextSlide = $slides.filter(
     (d, i, n) => d3.select(n[i]).attr('data-slide') === `${$currSlideID + 1}`
   );
 
+  // hide/show category bars
+  if ($currSlideID == 17) {
+    d3.select('#categories').classed('is-visible', true)
+  }
+
   if (answerSlide) {
     $quizSlide = $slides.filter(
       (d, i, n) => d3.select(n[i]).attr('data-slide') === `${$currSlideID - 1}`
     );
   }
+
+  // update buttons
+  updateButtons();
 }
 
 function slideSetup() {
@@ -73,7 +81,6 @@ function checkCensors(censoredIndeces) {
 
   // filter our pre-defined answers based on the current quiz id
   const thisMatch = matches.filter(d => d.quizID === +currQuiz)[0];
-  console.log({ $prevSlide, $currSlide, matches, currQuiz, thisMatch });
 
   // words the user didn't censor that should've been
   const missed = thisMatch.exact.filter(
@@ -84,8 +91,6 @@ function checkCensors(censoredIndeces) {
   const extraCensored = censoredIndeces.filter(
     element => !thisMatch.exact.includes(element)
   );
-
-  console.log({ match: thisMatch.exact, missed, extraCensored });
 
   const selectedAll = allWords.size() === allCensored.size();
 
@@ -142,50 +147,60 @@ function buttonSetup() {
   d3.selectAll('#right').classed('solo', true);
 }
 
-function fwdTap() {
-  const $nextSlideID = $nextSlide.attr('data-slide');
+function findTotalCorrect() {
+  const correct = $quizDetails.selectAll('.is-correct');
+  const correctCount = correct.size();
+  d3.select('.correct-count').text(correctCount);
 
+  console.log({ correct, correctCount });
+}
+
+function updateButtons() {
+  const $left = d3.selectAll('#left');
+  const $right = d3.selectAll('#right');
+  const $rightText = $right.select('button p');
+  // this will return true if a quiz or answer slide, and false if not
+  const quizOrAnswer =
+    $currSlide.attr('data-quiz') || $currSlide.attr('data-answer');
+
+  if ($currSlideID === 2) $rightText.text('Take the quiz');
+  // if current slide is quiz slide, make it read Submit
+  else if ($currSlide.attr('data-quiz')) $rightText.text('Submit');
+  // if current slide is answer slide (and isn't #12), make it read Next Song
+  else if ($currSlide.attr('data-answer') && $currSlideID !== 12)
+    $rightText.text('Next Song');
+  else if ($currSlideID === 12) $rightText.text('Show my results');
+  else if ($currSlideID === 13) $rightText.text('Tell me more');
+
+  // if on slide 2, this will evaluate to true, otherwise false
+  $skipTapDiv.classed('is-visible', $currSlideID === 2);
+
+  // toggling button visibility
+  // if the current slide id is in the array, this should evaulate to true, otherwise false
+  $left.classed('is-visible', [14, 15, 16].includes($currSlideID));
+  $right.classed('is-visible', ![17, 18].includes($currSlideID));
+  $right.classed('solo', $currSlideID <= 13);
+
+  // show quiz details on quiz and answer slides
+  $quizDetails.classed('is-visible', quizOrAnswer);
+
+  // update count if on quiz slides
+  if ($currSlide.attr('data-quiz')) {
+    $count.text($currSlide.attr('data-quiz'));
+  }
+
+  // if on slide 12, count number of correct attempts
+  if ($currSlideID === 13) {
+    findTotalCorrect();
+  }
+}
+
+function fwdTap() {
   // is the current slide a quiz slide?
   const $currQuiz = $currSlide.attr('data-quiz');
 
   $currSlide.classed('is-visible-slide', false);
   $nextSlide.classed('is-visible-slide', true);
-
-  // selects the button text
-  const $buttonText = d3.select('#right button p')
-
-  // changes button text
-  if  ($nextSlideID == 2) { $buttonText.text('Take the quiz') }
-  if  ($nextSlideID == 3 || $nextSlideID == 5 || $nextSlideID == 7 || $nextSlideID == 9 || $nextSlideID == 11) { $buttonText.text('Submit') }
-  if  ($nextSlideID == 4 || $nextSlideID == 6 || $nextSlideID == 8 || $nextSlideID == 10) { $buttonText.text('Next song') }
-  if  ($nextSlideID == 12) { $buttonText.text('Show my results') }
-  if  ($nextSlideID == 13) { $buttonText.text('Tell me more') }
-
-  if ($nextSlideID == 2) { d3.select('#skipper').classed('is-visible', true); }
-
-  if ($nextSlideID == 3) {
-    d3.selectAll('#left').classed('is-visible', false);
-    d3.selectAll('#right').classed('solo', true);
-    d3.select('.quiz-details').classed('is-visible', true);
-    d3.select('#skipper').classed('is-visible', false); 
-  }
-
-  if ($nextSlideID == 14) {
-    d3.selectAll('#left').classed('is-visible', true);
-    d3.selectAll('#right').classed('solo', false);
-    d3.select('.quiz-details').classed('is-visible', false);
-  }
-
-  if ($nextSlideID >= 17 || $currSlideID == 17) {
-    d3.selectAll('#left').classed('is-visible', false);
-    d3.selectAll('#right').classed('is-visible', false);
-  }
-
-  if ($nextSlideID > 3 && $currSlideID % 2 == 0) {
-    let $currCount = d3.selectAll('#count').text();
-    $currCount = parseInt($currCount) + 1;
-    d3.selectAll('#count').text(`${$currCount}`);
-  }
 
   // update current, previous, and next
   updateSlideLocation();
@@ -197,56 +212,56 @@ function fwdTap() {
 }
 
 function bckTap() {
-  const $prevSlideID = $prevSlide.attr('data-slide');
-
   $currSlide.classed('is-visible-slide', false);
   $prevSlide.classed('is-visible-slide', true);
 
-  if ($prevSlideID == 1) {
-    d3.selectAll('#left').classed('is-visible', false);
-    d3.selectAll('#right').classed('solo', true);
-    d3.select('.quiz-details').classed('is-visible', false);
-  }
-  if ($prevSlideID == 2) {
-    d3.select('.quiz-details').classed('is-visible', false);
-    d3.select('#skipper').classed('is-visible', true);
-  }
-
-  if ($prevSlideID > 2 && $currSlideID % 2 !== 0) {
-    let $currCount = d3.selectAll('#count').text();
-    $currCount = parseInt($currCount) - 1;
-    d3.selectAll('#count').text(`${$currCount}`);
-  }
-
   // update current, previous, and next
   updateSlideLocation();
-
 }
 
 function skipTap() {
-  console.log('skip')
+  // temporarily make all slides invisible
+  $slides.classed('is-visible-slide', false);
+  // select the first post-quiz slide and make it visible
+  d3.select('[data-chart="bar"]').classed('is-visible-slide', true);
+  // reset the current, previous, & next slides globally
+  updateSlideLocation();
 }
 
 function catTap() {
-  let clickedCat = this
-  let currCat = d3.select(clickedCat).classed('cat-chosen', true)
-  let notCat = d3.selectAll('.category-bar').filter(function(d, i) { return (this !== clickedCat)}).classed('not-chosen', true)
+  const clickedCat = this;
+  const currCat = d3.select(clickedCat).classed('cat-chosen', true);
+  const currBckText = currCat.select('.button-wrapper p');
+  const currBckButton = currCat.select('.button-wrapper button');
+  console.log(currBckButton)
+  currBckText.classed('is-visible', true);
+  const notCat = d3
+    .selectAll('.category-bar')
+    .filter(function (d, i) { return this !== clickedCat; })
+    .classed('not-chosen', true);
 
-  let currPos = clickedCat.getBoundingClientRect()
-  console.log(currPos.top, currPos.right, currPos.bottom, currPos.left)
+  const currPos = clickedCat.getBoundingClientRect();
 
-  currCat.transition()
-    .duration(500)
+  currCat
+    .transition()
+    .duration(250)
     .delay(100)
     .ease(d3.easeLinear)
-    .style('transform', `translate(0, -${currPos.top}px)`)
+    .style('transform', `translate(0, -${currPos.top}px)`);
 
-  notCat.transition()
+  notCat
+    .transition()
     .duration(250)
     .delay((d, i) => i * 25)
     .ease(d3.easeLinear)
-    .style('transform', 'translate(-100%)')
-
+    .style('transform', 'translate(-100%)');
+  
+  currBckButton
+    .transition()
+    .duration(25)
+    .delay(100)
+    .ease(d3.easeLinear)
+    .style('transform', `rotate(-180deg)`);
 }
 
 function init() {
@@ -257,7 +272,7 @@ function init() {
   $bckTapDiv.on('click', bckTap);
   $skipTapDiv.on('click', skipTap);
   $lyricSpans.on('click', spanCensor);
-  $categoryBars.on('click', catTap)
+  $categoryBars.on('click', catTap);
 }
 
 export default { init, resize };
