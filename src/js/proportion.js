@@ -4,26 +4,29 @@ import './pudding-chart/proportion-chart';
 // selections
 const $slides = d3.selectAll('[data-chart="bar"]');
 const $containers = $slides.selectAll('.chart');
+const charts = [];
 
 let data = [];
 
 function findTotal(d) {
-    const total =
-        d.alcohol + d.sexual + d.profanity + d.violence + d.identity + d.other;
-    return total;
+    const { censored } = d;
+    const ent = censored.map(e => e.value);
+    const sum = d3.sum(ent);
+    return sum;
 }
 
 function cleanData(data) {
     const cleaned = data
         .map(d => ({
-            ...d,
             year: +d.year,
-            alcohol: +d.alcohol,
-            sexual: +d.sexual,
-            profanity: +d.profanity,
-            violence: +d.violence,
-            identity: +d.identity,
-            other: +d.other,
+            censored: d3.entries({
+                alcohol: +d.alcohol,
+                sexual: +d.sexual,
+                profanity: +d.profanity,
+                violence: +d.violence,
+                identity: +d.identity,
+                other: +d.other,
+            }),
         }))
         .map(d => ({
             ...d,
@@ -35,15 +38,18 @@ function cleanData(data) {
 
 function resize() { }
 
-function setup() {
-    const charts = $containers.data(data).stackedBar();
+function setupCharts() {
+    const $sel = d3.select(this);
+    const chart = $sel.data([data]).stackedBar();
+    chart.resize().render();
+    charts.push(chart);
 }
 
 function init() {
     loadData('proportions.csv')
         .then(result => {
             data = cleanData(result);
-            setup();
+            $containers.each(setupCharts);
         })
         .catch(console.error);
 }

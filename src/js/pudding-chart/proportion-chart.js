@@ -19,6 +19,7 @@ d3.selection.prototype.stackedBar = function init(options) {
 
         // data
         let data = $chart.datum();
+        console.log({ data });
 
         // dimensions
         let width = 0;
@@ -29,7 +30,7 @@ d3.selection.prototype.stackedBar = function init(options) {
         const MARGIN_RIGHT = 0;
 
         // scales
-        const scaleX = null;
+        const scaleX = d3.scaleLinear();
         const scaleY = null;
 
         // helper functions
@@ -37,25 +38,53 @@ d3.selection.prototype.stackedBar = function init(options) {
         const Chart = {
             // called once at start
             init() {
+                // add parent div for each year row
                 $chart
                     .selectAll('.year')
-                    .data(data)
-                    .join(enter => enter.append('div').attr('class', 'year'));
+                    .data(data, d => d.year)
+                    .join(enter => {
+                        const year = enter.append('div').attr('class', 'year');
+
+                        // add a p element for the year
+                        year
+                            .append('p')
+                            .attr('class', 'year__number')
+                            .text(d => d.year);
+
+                        // and another div to contain the bars
+                        const container = year.append('div').attr('class', 'year__barCont');
+                        return year;
+                    });
+
+                $chart;
             },
             // on resize, update new dimensions
             resize() {
                 // defaults to grabbing dimensions from container element
                 width = $chart.node().offsetWidth - MARGIN_LEFT - MARGIN_RIGHT;
                 height = $chart.node().offsetHeight - MARGIN_TOP - MARGIN_BOTTOM;
-                $svg
-                    .attr('width', width + MARGIN_LEFT + MARGIN_RIGHT)
-                    .attr('height', height + MARGIN_TOP + MARGIN_BOTTOM);
+                const max = d3.max(data, d => d.total);
+                scaleX.domain([0, max]).range([0, width]);
+
                 return Chart;
             },
             // update scales and render chart
             render() {
-                // offset chart for margins
-                $vis.attr('transform', `translate(${MARGIN_LEFT}, ${MARGIN_TOP})`);
+                const $barCont = $chart.selectAll('.year__barCont');
+
+                const bar = $barCont
+                    .selectAll('.bar')
+                    .data(d => {
+                        console.log({ cen: d.censored });
+                        return d.censored;
+                    })
+                    .join(enter =>
+                        enter
+                            .append('div')
+                            .attr('class', d => `bar bar--${d.key}`)
+                            .style('width', d => `${scaleX(d.value)}px`)
+                            .style('height', '10px')
+                    );
 
                 return Chart;
             },
