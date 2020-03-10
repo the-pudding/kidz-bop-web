@@ -1,5 +1,6 @@
 import matches from './lyrics';
 import prepareSpan from './utils/prepare-span';
+import categories from './categories';
 
 /* global d3 */
 function resize() { }
@@ -15,6 +16,7 @@ const $quizSlidesAll = $slides.filter((d, i, n) =>
 );
 const $count = d3.selectAll('#count');
 const $quizDetails = d3.select('.quiz-details');
+const $catSection = d3.select('#categories');
 
 let $lyricSpans = null;
 
@@ -159,7 +161,9 @@ function updateButtons() {
   const $rightText = $right.select('button p');
   // this will return true if a quiz or answer slide, and false if not
   const quizOrAnswer =
-    $currSlide.attr('data-quiz') || $currSlide.attr('data-answer') || $currSlideID === 13;
+    $currSlide.attr('data-quiz') ||
+    $currSlide.attr('data-answer') ||
+    $currSlideID === 13;
 
   if ($currSlideID === 2) $rightText.text('Take the quiz');
   // if current slide is quiz slide, make it read Submit
@@ -190,7 +194,7 @@ function updateButtons() {
   // if on slide 12, count number of correct attempts
   if ($currSlideID === 13) {
     findTotalCorrect();
-    $quizDetails.classed('total', true)
+    $quizDetails.classed('total', true);
   }
 }
 
@@ -257,6 +261,9 @@ function handleCatBack() {
 
   // trigger a tap back one slide
   bckTap();
+
+  // adds pointer events back to section
+  $catSection.style('pointer-events', 'all');
 }
 
 function catTap() {
@@ -302,7 +309,12 @@ function catTap() {
   // trigger a tap forward one slide
   fwdTap();
 
-  console.log({ $currSlide, $currSlideID });
+  // trigger a data update
+  categories.filter(currCat.attr('data-cat'));
+
+  // removes pointer events to allow for clicking on slide
+  $catSection.style('pointer-events', 'none');
+  currBckButton.style('pointer-events', 'all');
 }
 
 function init() {
