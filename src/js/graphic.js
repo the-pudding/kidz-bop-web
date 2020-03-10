@@ -149,8 +149,9 @@ function updateButtons() {
   if ($currSlideID === 2) $rightText.text('Take the quiz');
   // if current slide is quiz slide, make it read Submit
   else if ($currSlide.attr('data-quiz')) $rightText.text('Submit');
-  // if current slide is answer slide, make it read Next Song
-  else if ($currSlide.attr('data-answer')) $rightText.text('Next Song');
+  // if current slide is answer slide (and isn't #12), make it read Next Song
+  else if ($currSlide.attr('data-answer') && $currSlideID !== 12)
+    $rightText.text('Next Song');
   else if ($currSlideID === 12) $rightText.text('Show my results');
   else if ($currSlideID === 13) $rightText.text('Tell me more');
 
@@ -159,9 +160,9 @@ function updateButtons() {
 
   // toggling button visibility
   // if the current slide id is in the array, this should evaulate to true, otherwise false
-  $left.classed('is-visible', [13, 14, 15].includes($currSlideID));
+  $left.classed('is-visible', [14, 15].includes($currSlideID));
   $right.classed('is-visible', ![16, 17].includes($currSlideID));
-  $right.classed('solo', $currSlideID < 13);
+  $right.classed('solo', $currSlideID <= 13);
 
   // show quiz details on quiz and answer slides
   $quizDetails.classed(
