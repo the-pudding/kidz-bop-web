@@ -159,7 +159,7 @@ function updateButtons() {
   const $rightText = $right.select('button p');
   // this will return true if a quiz or answer slide, and false if not
   const quizOrAnswer =
-    $currSlide.attr('data-quiz') || $currSlide.attr('data-answer');
+    $currSlide.attr('data-quiz') || $currSlide.attr('data-answer') || $currSlideID === 13;
 
   if ($currSlideID === 2) $rightText.text('Take the quiz');
   // if current slide is quiz slide, make it read Submit
@@ -190,6 +190,7 @@ function updateButtons() {
   // if on slide 12, count number of correct attempts
   if ($currSlideID === 13) {
     findTotalCorrect();
+    $quizDetails.classed('total', true)
   }
 }
 
