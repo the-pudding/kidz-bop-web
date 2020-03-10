@@ -142,6 +142,14 @@ function buttonSetup() {
   d3.selectAll('#right').classed('solo', true);
 }
 
+function findTotalCorrect() {
+  const correct = $quizDetails.selectAll('.is-correct');
+  const correctCount = correct.size();
+  d3.select('.correct-count').text(correctCount);
+
+  console.log({ correct, correctCount });
+}
+
 function updateButtons() {
   const $left = d3.selectAll('#left');
   const $right = d3.selectAll('#right');
@@ -174,6 +182,11 @@ function updateButtons() {
   // update count if on quiz slides
   if ($currSlide.attr('data-quiz')) {
     $count.text($currSlide.attr('data-quiz'));
+  }
+
+  // if on slide 12, count number of correct attempts
+  if ($currSlideID === 13) {
+    findTotalCorrect();
   }
 }
 
