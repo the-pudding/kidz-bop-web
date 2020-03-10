@@ -161,7 +161,7 @@ function updateButtons() {
   // toggling button visibility
   // if the current slide id is in the array, this should evaulate to true, otherwise false
   $left.classed('is-visible', [14, 15].includes($currSlideID));
-  $right.classed('is-visible', ![16, 17].includes($currSlideID));
+  $right.classed('is-visible', ![17, 18].includes($currSlideID));
   $right.classed('solo', $currSlideID <= 13);
 
   // show quiz details on quiz and answer slides
