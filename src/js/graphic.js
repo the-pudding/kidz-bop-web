@@ -54,7 +54,7 @@ function updateSlideLocation() {
 
   // hide/show category bars
   if ($currSlideID == 17) {
-    d3.select('#categories').classed('is-visible', true)
+    d3.select('#categories').classed('is-visible', true);
   }
 
   if (answerSlide) {
@@ -151,8 +151,6 @@ function findTotalCorrect() {
   const correct = $quizDetails.selectAll('.is-correct');
   const correctCount = correct.size();
   d3.select('.correct-count').text(correctCount);
-
-  console.log({ correct, correctCount });
 }
 
 function updateButtons() {
@@ -233,11 +231,13 @@ function catTap() {
   const currCat = d3.select(clickedCat).classed('cat-chosen', true);
   const currBckText = currCat.select('.button-wrapper p');
   const currBckButton = currCat.select('.button-wrapper button');
-  console.log(currBckButton)
+  console.log(currBckButton);
   currBckText.classed('is-visible', true);
   const notCat = d3
     .selectAll('.category-bar')
-    .filter(function (d, i) { return this !== clickedCat; })
+    .filter(function (d, i) {
+      return this !== clickedCat;
+    })
     .classed('not-chosen', true);
 
   const currPos = clickedCat.getBoundingClientRect();
@@ -255,7 +255,7 @@ function catTap() {
     .delay((d, i) => i * 25)
     .ease(d3.easeLinear)
     .style('transform', 'translate(-100%)');
-  
+
   currBckButton
     .transition()
     .duration(25)

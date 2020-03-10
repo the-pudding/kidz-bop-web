@@ -19,7 +19,6 @@ d3.selection.prototype.stackedBar = function init(options) {
 
         // data
         let data = $chart.datum();
-        console.log({ data });
 
         // dimensions
         let width = 0;
@@ -65,7 +64,6 @@ d3.selection.prototype.stackedBar = function init(options) {
                 height = $chart.node().offsetHeight - MARGIN_TOP - MARGIN_BOTTOM;
                 const max = d3.max(data, d => d.total);
                 scaleX.domain([0, max]).range([0, width]);
-                console.log({ max, width });
 
                 return Chart;
             },
@@ -76,7 +74,6 @@ d3.selection.prototype.stackedBar = function init(options) {
                 const bar = $barCont
                     .selectAll('.bar')
                     .data(d => {
-                        console.log({ cen: d.censored });
                         return d.censored;
                     })
                     .join(enter =>
