@@ -1,11 +1,12 @@
 /* global d3 */
-import debounce from "lodash.debounce";
-import isMobile from "./utils/is-mobile";
-import linkFix from "./utils/link-fix";
-import graphic from "./graphic";
-import footer from "./footer";
+import debounce from 'lodash.debounce';
+import isMobile from './utils/is-mobile';
+import linkFix from './utils/link-fix';
+import graphic from './graphic';
+// import footer from "./footer";
+import proportion from './proportion';
 
-const $body = d3.select("body");
+const $body = d3.select('body');
 let previousWidth = 0;
 
 function resize() {
@@ -35,15 +36,16 @@ function init() {
   // adds rel="noopener" to all target="_blank" links
   linkFix();
   // add mobile class to body tag
-  $body.classed("is-mobile", isMobile.any());
+  $body.classed('is-mobile', isMobile.any());
   // setup resize event
-  window.addEventListener("resize", debounce(resize, 150));
+  window.addEventListener('resize', debounce(resize, 150));
   // setup sticky header menu
   // setupStickyHeader();
   // kick off graphic code
   graphic.init();
+  proportion.init();
   // load footer stories
-  footer.init();
+  // footer.init();
 }
 
 init();
