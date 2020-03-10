@@ -5,6 +5,7 @@ import linkFix from './utils/link-fix';
 import graphic from './graphic';
 // import footer from "./footer";
 import proportion from './proportion';
+import categories from './categories';
 
 const $body = d3.select('body');
 let previousWidth = 0;
@@ -45,6 +46,7 @@ function init() {
   // kick off graphic code
   graphic.init();
   proportion.init();
+  categories.init();
   // load footer stories
   // footer.init();
 }
