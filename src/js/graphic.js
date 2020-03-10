@@ -253,9 +253,9 @@ function handleCatBack() {
   if (direction === 'back') d3.event.stopPropagation();
 
   back.attr('data-direction', 'forward');
-  // d3.event.stopPropagation();
-  // back.style('pointerEvents', 'none');
-  console.log({ all: d3.selectAll('.category-bar') });
+
+  // trigger a tap back one slide
+  bckTap();
 }
 
 function catTap() {
@@ -296,7 +296,12 @@ function catTap() {
 
   currBckButton.attr('data-direction', 'back');
 
-  currBckButton.on('click', handleCatBack); // .style('pointerEvents', 'all');
+  currBckButton.on('click', handleCatBack);
+
+  // trigger a tap forward one slide
+  fwdTap();
+
+  console.log({ $currSlide, $currSlideID });
 }
 
 function init() {
