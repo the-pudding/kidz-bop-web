@@ -16,6 +16,28 @@ function cleanLyrics(lyr) {
     return cleaned;
 }
 
+function handleToggle() {
+    const container = d3.select(this);
+    const thisSwitch = container.select('input');
+    const checked = thisSwitch.attr('checked');
+    const toggleParent = d3.select(this.parentNode);
+    const headParent = d3.select(toggleParent.node().parentNode);
+    const lyricParent = d3.select(headParent.node().parentNode);
+    const lyrics = lyricParent.select('.origLyric');
+
+    console.log({ parent, lyrics, lyricParent, checked });
+
+    if (checked === 'true') {
+        lyrics.text(d => d.original);
+    } else lyrics.text(d => d.kb);
+
+    console.log({ thisSwitch, checked });
+
+    thisSwitch.attr('checked') === 'true'
+        ? thisSwitch.attr('checked', 'false')
+        : thisSwitch.attr('checked', 'true');
+}
+
 function handleDropdown(val) {
     // generate new lyric sets for each song
     const singleWord = filteredData.filter(d => d.key === val)[0].values;
@@ -56,8 +78,11 @@ function handleDropdown(val) {
             $switch
                 .append('input')
                 .attr('type', 'checkbox')
-                .attr('class', 'is-faces');
+                .attr('class', 'is-kb')
+                .attr('checked', 'false');
             $switch.append('span').attr('class', 'slider round');
+
+            $switch.on('change', handleToggle);
             $toggle
                 .append('p')
                 .attr('class', 'toggle-labels')
