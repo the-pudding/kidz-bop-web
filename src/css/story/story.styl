@@ -1,6 +1,8 @@
 /* CUSTOM STORY STYLE */
-body
-    //overflow hidden
+#content
+    background $kb-teal
+    width 100%
+    height 100vh
 
 #touch
     display flex
@@ -13,6 +15,8 @@ body
     position absolute
     z-index set-index('overlay')
     padding-bottom 2rem
+    +mq('bp-4')
+        top 65vh
 
     .tapper
         display flex
@@ -105,6 +109,11 @@ body
     z-index set-index('overlay')
     align-content stretch
     bottom 0
+    +mq('bp-4')
+        max-width 40em
+        left 50%
+        transform translateX(-50%)
+        bottom 5rem
 
     &.is-visible
         visibility visible
@@ -194,6 +203,11 @@ body
     opacity 0
     padding 2rem
     pointer-events none
+    +mq('bp-4')
+        max-width 40em
+        left 50%
+        margin-top 2rem
+        transform translateX(-50%)
 
     &.is-visible
        visibility visible
@@ -248,7 +262,15 @@ body
     padding 2rem
     position absolute
     opacity 0
+    background $white
     pointer-events none
+    +mq('bp-4')
+        max-width 40em
+        left 50%
+        transform translateX(-50%)
+        margin 2rem 0
+        height 90vh
+        box-shadow 4px 4px 10px rgba($off-black, 0.1)
 
     &.is-visible-slide
         visibility visible
@@ -507,6 +529,8 @@ body
             magrin 1rem 0 0 0   
 
 #slide_18
+    padding-bottom 0
+    overflow scroll
 
     .chart
         height 200px
