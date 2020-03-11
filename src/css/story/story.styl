@@ -96,13 +96,15 @@ body
 #categories
     width 100%
     position absolute
-    height 100vh
+    height 80vh
     display none
     flex-direction column
     justify-content flex-end
     visibility hidden
     opacity 0
     z-index set-index('overlay')
+    align-content stretch
+    bottom 0
 
     &.is-visible
         visibility visible
@@ -116,6 +118,9 @@ body
         flex-direction row 
         align-items center
         justify-content space-between 
+        flex-grow 1
+        p 
+            margin 0
 
         &:hover
 

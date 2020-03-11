@@ -6,9 +6,10 @@ import categories from './categories';
 function resize() { }
 
 const $slides = d3.selectAll('.slide');
-const $fwdTapDiv = d3.selectAll('#right');
-const $bckTapDiv = d3.selectAll('#left');
-const $skipTapDiv = d3.selectAll('#skipper');
+const $touch = d3.select('#touch');
+const $fwdTapDiv = $touch.selectAll('#right');
+const $bckTapDiv = $touch.selectAll('#left');
+const $skipTapDiv = $touch.selectAll('#skipper');
 const $categoryBars = d3.selectAll('.category-bar');
 const $songCircles = d3.selectAll('.song-circle');
 const $quizSlidesAll = $slides.filter((d, i, n) =>
@@ -196,6 +197,12 @@ function updateButtons() {
     findTotalCorrect();
     $quizDetails.classed('total', true);
   }
+
+  // if above slide 16, remove pointer events for touch
+  if ($currSlideID > 16) {
+    console.log({ $touch });
+    $touch.style('pointer-events', 'none');
+  } else $touch.style('pointer-events', 'all');
 }
 
 function fwdTap() {
@@ -284,10 +291,6 @@ function setupArrowButton() {
   });
 }
 
-function handleCatForward(block) {
-  const currPos = block.getBoundingClientRect();
-}
-
 function catTap(block) {
   console.log('catTap');
   const clickedCat = block.node();
@@ -303,20 +306,20 @@ function catTap(block) {
 
   const currPos = block.node().getBoundingClientRect();
 
-  console.log({ $currSlideID });
-  currCat
-    .transition()
-    .duration(250)
-    .delay(100)
-    .ease(d3.easeLinear)
-    .style('transform', `translate(0, -${currPos.top}px)`);
-
+  console.log({ currCat, notCat });
   notCat
     .transition()
     .duration(250)
     .delay((d, i) => i * 25)
     .ease(d3.easeLinear)
     .style('transform', 'translate(-100%)');
+
+  currCat
+    .transition()
+    .duration(250)
+    .delay(100)
+    .ease(d3.easeLinear)
+    .style('transform', `translate(0, -${currPos.top}px)`);
 
   currBckButton
     .transition()
@@ -326,7 +329,7 @@ function catTap(block) {
     .style('transform', `rotate(-180deg)`);
 
   // set the new direction to back
-  // currBckButton.attr('data-direction', 'back');
+  currBckButton.attr('data-direction', 'back');
 
   // trigger a tap forward one slide
   fwdTap();
@@ -348,10 +351,10 @@ function init() {
   $bckTapDiv.on('click', bckTap);
   $skipTapDiv.on('click', skipTap);
   $lyricSpans.on('click', spanCensor);
-  $categoryBars.on('click', function () {
-    const block = d3.select(this);
-    catTap(block);
-  });
+  // $categoryBars.on('click', function () {
+  //   const block = d3.select(this);
+  //   catTap(block);
+  // });
 }
 
 export default { init, resize };
