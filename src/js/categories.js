@@ -16,15 +16,12 @@ function cleanLyrics(lyr) {
     return cleaned;
 }
 
-function handleDropdown() {
-    const val = d3.select(this).property('value');
+function handleDropdown(val) {
     // generate new lyric sets for each song
     const singleWord = filteredData.filter(d => d.key === val)[0].values;
-    console.log({ singleWord, $compare });
     $compare
         .selectAll('.lyric-set')
         .data(singleWord, d => {
-            console.log({ d });
             return d ? d.word : null;
         })
         .join(enter => {
@@ -81,7 +78,10 @@ function updateDropdown() {
                 .attr('value', d => d.key)
         );
 
-    $dropdown.on('change', handleDropdown);
+    $dropdown.on('change', function () {
+        const val = d3.select(this).property('value');
+        handleDropdown(val);
+    });
 }
 
 function filter(cat) {
@@ -91,12 +91,15 @@ function filter(cat) {
         .key(d => d.word)
         .entries(filtered);
 
-    if (filteredData) updateDropdown();
+    if (filteredData) {
+        updateDropdown();
+        const first = filteredData[0].key;
+        handleDropdown(first);
+    }
 }
 
 function resize() { }
 function init() {
-    console.log('init');
     loadData(['cat_crosswalk.csv', 'cat_lyrics.csv'])
         .then(result => {
             const cw = result[0].map(d => [d.word, d.category]);
