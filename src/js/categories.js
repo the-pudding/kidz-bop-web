@@ -2,6 +2,10 @@ import loadData from './load-data';
 
 let cwMap = null;
 let data = [];
+let filteredData = [];
+
+const $dropdown = d3.select('.first-select');
+const $compare = d3.select('#slide_18').select('.compare-wrapper');
 
 function cleanLyrics(lyr) {
     const cleaned = lyr.map(d => ({
@@ -12,14 +16,82 @@ function cleanLyrics(lyr) {
     return cleaned;
 }
 
+function handleDropdown() {
+    const val = d3.select(this).property('value');
+    // generate new lyric sets for each song
+    const singleWord = filteredData.filter(d => d.key === val)[0].values;
+    console.log({ singleWord, $compare });
+    $compare
+        .selectAll('.lyric-set')
+        .data(singleWord, d => {
+            console.log({ d });
+            return d ? d.word : null;
+        })
+        .join(enter => {
+            const $set = enter.append('div').attr('class', 'lyric-set');
+
+            const $head = $set.append('div').attr('class', 'lyric-head');
+            $set
+                .append('p')
+                .attr('class', 'origLyric')
+                .text(d => d.kb);
+
+            const $deets = $head.append('div').attr('class', 'deets');
+            $deets
+                .append('p')
+                .attr('class', 'song')
+                .text(d => d.song);
+            $deets
+                .append('p')
+                .attr('class', 'kb-deets')
+                .text(d => d.kb_deets);
+            $deets
+                .append('p')
+                .attr('class', 'orig-deets')
+                .text(d => d.original_deets);
+
+            const $toggle = $head.append('div').attr('class', 'toggle');
+            $toggle
+                .append('p')
+                .attr('class', 'toggle-labels toggle-on')
+                .text('Kidz Bop');
+            const $switch = $toggle.append('label').attr('class', 'switch');
+            $switch
+                .append('input')
+                .attr('type', 'checkbox')
+                .attr('class', 'is-faces');
+            $switch.append('span').attr('class', 'slider round');
+            $toggle
+                .append('p')
+                .attr('class', 'toggle-labels')
+                .text('Original');
+        });
+}
+
+function updateDropdown() {
+    $dropdown
+        .selectAll('option')
+        .data(filteredData, d => {
+            return d.key;
+        })
+        .join(enter =>
+            enter
+                .append('option')
+                .text(d => d.key)
+                .attr('value', d => d.key)
+        );
+
+    $dropdown.on('change', handleDropdown);
+}
+
 function filter(cat) {
     const filtered = data.filter(d => d.category === cat);
-    const nested = d3
+    filteredData = d3
         .nest()
         .key(d => d.word)
         .entries(filtered);
 
-    console.log({ nested });
+    if (filteredData) updateDropdown();
 }
 
 function resize() { }

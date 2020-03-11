@@ -20,7 +20,7 @@
 	{{#each copy.censorship_categories}}
 	<div class='category-bar {{{tag}}}-bar' data-cat={{tag}}>
 		<p>{{{text}}}</p>
-		<div class='button-wrapper'>
+		<div class='button-wrapper' data-direction='forward'>
 			<p>Back to categories</p>
 			<button>
 				<img inline src='arrow-right.svg'>
@@ -163,7 +163,6 @@
 			<div class='dropdown-group'>
 				<div class='select-bg'></div>
 				<select class='first-select'>
-					<option selected>Word</option>
 				</select>
 			</div>
 		</div>

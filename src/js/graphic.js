@@ -199,6 +199,7 @@ function updateButtons() {
 }
 
 function fwdTap() {
+  console.log({ $currSlide });
   // is the current slide a quiz slide?
   const $currQuiz = $currSlide.attr('data-quiz');
 
@@ -231,14 +232,13 @@ function skipTap() {
   updateSlideLocation();
 }
 
-function handleCatBack() {
-  const back = d3.select(this);
-  const parent = d3.select(this.parentNode);
-  const btnText = parent.select('p');
-  const direction = back.attr('data-direction');
+function handleCatBack(arrow) {
+  const btnText = arrow.select('p');
+  const direction = arrow.attr('data-direction');
 
   btnText.classed('is-visible', false);
-  back
+  arrow
+    .select('button')
     .transition()
     .duration(25)
     .delay(100)
@@ -257,7 +257,7 @@ function handleCatBack() {
   // prevent catTap() from also being called
   if (direction === 'back') d3.event.stopPropagation();
 
-  back.attr('data-direction', 'forward');
+  // arrow.attr('data-direction', 'forward');
 
   // trigger a tap back one slide
   bckTap();
@@ -266,12 +266,34 @@ function handleCatBack() {
   $catSection.style('pointer-events', 'all');
 }
 
-function catTap() {
-  const clickedCat = this;
-  const currCat = d3.select(clickedCat).classed('cat-chosen', true);
+function setupArrowButton() {
+  const allArrows = $categoryBars.selectAll('.button-wrapper');
+  allArrows.on('click', function () {
+    const button = d3.select(this);
+    const dir = button.attr('data-direction');
+    console.log({ dir });
+    if (dir === 'back') handleCatBack(button);
+    else if (dir === 'forward') {
+      const parent = d3.select(this.parentNode);
+      d3.event.stopPropagation();
+      catTap(parent);
+    }
+
+    // update direction
+    button.attr('data-direction', dir === 'back' ? 'forward' : 'back');
+  });
+}
+
+function handleCatForward(block) {
+  const currPos = block.getBoundingClientRect();
+}
+
+function catTap(block) {
+  console.log('catTap');
+  const clickedCat = block.node();
+  const currCat = block.classed('cat-chosen', true);
   const currBckText = currCat.select('.button-wrapper p');
   const currBckButton = currCat.select('.button-wrapper button');
-  console.log({ currBckButton });
   currBckText.classed('is-visible', true);
   const notCat = $categoryBars
     .filter(function findNotCat() {
@@ -279,8 +301,9 @@ function catTap() {
     })
     .classed('not-chosen', true);
 
-  const currPos = clickedCat.getBoundingClientRect();
+  const currPos = block.node().getBoundingClientRect();
 
+  console.log({ $currSlideID });
   currCat
     .transition()
     .duration(250)
@@ -302,9 +325,8 @@ function catTap() {
     .ease(d3.easeLinear)
     .style('transform', `rotate(-180deg)`);
 
-  currBckButton.attr('data-direction', 'back');
-
-  currBckButton.on('click', handleCatBack);
+  // set the new direction to back
+  // currBckButton.attr('data-direction', 'back');
 
   // trigger a tap forward one slide
   fwdTap();
@@ -321,11 +343,15 @@ function init() {
   slideSetup();
   spanSetup();
   buttonSetup();
+  setupArrowButton();
   $fwdTapDiv.on('click', fwdTap);
   $bckTapDiv.on('click', bckTap);
   $skipTapDiv.on('click', skipTap);
   $lyricSpans.on('click', spanCensor);
-  $categoryBars.on('click', catTap);
+  $categoryBars.on('click', function () {
+    const block = d3.select(this);
+    catTap(block);
+  });
 }
 
 export default { init, resize };
