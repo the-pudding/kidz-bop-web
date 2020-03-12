@@ -319,7 +319,7 @@ function catTap(block) {
     .duration(250)
     .delay(100)
     .ease(d3.easeLinear)
-    .style('transform', `translate(0, -${currPos.top}px)`);
+    .style('transform', `translate(0, -${currPos.top -70}px)`);
 
   currBckButton
     .transition()

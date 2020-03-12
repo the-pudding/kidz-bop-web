@@ -7,7 +7,7 @@ header
 	background-color $white
 	font-family $sans
 
-	a.logo
+	a.wordmark
 		display block
 		border none
 		max-width 9rem
@@ -21,26 +21,67 @@ header
 header.is-sticky
 	position fixed
 	transform translate3d(0,0,0)
-	background-color $white
-	box-shadow 0 0 7px 1px $gray-light
-	height 3rem
+	background-color rgba($white, 0.2)
+	box-shadow 0
+	height 4.5rem
 	display flex
-	align-items center
+	align-items flex-start
+	//border-bottom 2px solid rgba($white, 1)
+	box-shadow 4px 4px 10px rgba($off-black, 0.1)
+	+mq('bp-4')
+		background-color $white
+		box-shadow 0 0 7px 1px $gray-light
+		align-items center
+		height 3rem
+		border-bottom none
 	
-	a.logo
+	a.wordmark
 		margin 0 auto
+		display none
+		+mq('bp-4')
+			display block
+
+	a.logo
+		margin 0.5rem
+		display block
+		border-bottom 0
+		+mq('bp-4')
+			display none
+
+		.roundel
+			background-color $off-black
+			width 50px	
+			height 50px
+			border-radius 50%
+			display flex
+			align-items center
+			justify-content center
+			box-shadow 4px 4px 10px rgba($off-black, 0.1) 	
+
+			svg
+				display block
+				width 45%
+
+				#rightP
+					fill rgba($white, 1)
+
+				#leftP
+					fill rgba($gray-light)	
 	
 	.header__toggle
 		position fixed
 		transform translate3d(0,0,0)
 		top 0
 		right 0
-		padding 0.75rem
+		padding 1.25rem 0.75rem 0.75rem 0.75rem
 		cursor pointer
 		line-height 1
 		z-index set-index(overlay)
 		border none 
 		background-color transparent
+		+mq('bp-4')
+			padding 0.75rem
+
 		svg
 			stroke $off-black
 		

@@ -1,6 +1,6 @@
 /* CUSTOM STORY STYLE */
 #content
-    background $kb-teal
+    background lighten($kb-teal, 10)
     width 100%
     height 100vh
 
@@ -16,7 +16,7 @@
     z-index set-index('overlay')
     padding-bottom 2rem
     +mq('bp-4')
-        top 65vh
+        top 68vh
 
     .tapper
         display flex
@@ -112,6 +112,7 @@
     +mq('bp-4')
         max-width 40em
         left 50%
+        height 60vh
         transform translateX(-50%)
         bottom 5rem
 
@@ -201,13 +202,15 @@
     width 100%
     justify-content flex-end
     opacity 0
-    padding 2rem
+    padding 5.5rem 2rem 2rem 2rem
     pointer-events none
+    margin-top 0
     +mq('bp-4')
         max-width 40em
         left 50%
-        margin-top 2rem
-        transform translateX(-50%)
+        margin-top 6rem
+        transform translate(-50%, 50%)
+        padding 6rem 2rem 2rem 2rem
 
     &.is-visible
        visibility visible
@@ -266,10 +269,13 @@
     pointer-events none
     +mq('bp-4')
         max-width 40em
+        max-height 40em
         left 50%
-        transform translateX(-50%)
+        top 50%
+        transform translate(-50%, -50%)
         margin 2rem 0
-        height 90vh
+        height 80%
+        width 80%
         box-shadow 4px 4px 10px rgba($off-black, 0.1)
 
     &.is-visible-slide
@@ -313,6 +319,9 @@
         align-items center
         justify-content center
         flex-direction column 
+        padding-top 5rem
+        +mq('bp-4')
+            padding-top 1rem
 
         h1
             set-type-size('xx-large', true)
@@ -354,10 +363,16 @@
         display flex
         justify-content center
         flex-direction column
+        margin-bottom 8rem
+        +mq('bp-4')
+            margin-bottom 4rem
 
         &.top
             justify-content flex-start
-            height 20vh
+            height 10vh
+            margin-top 5rem
+            +mq('bp-4')
+                margin-top 0
 
         p    
             set-type-size('large', true)
@@ -413,6 +428,9 @@
         display flex
         flex-direction row     
         justify-content space-between 
+        padding-top 3.5rem
+        +mq('bp-4')
+            padding-top 4rem
 
         .song-details
             display flex
@@ -515,7 +533,7 @@
         display flex
         flex-direction column
         align-items center 
-        padding-top 3rem   
+        padding-top 8rem   
 
         .results-count
             font-family $national
