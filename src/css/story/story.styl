@@ -26,6 +26,20 @@
         #left
             margin-right 2rem
 
+            &.solo
+                margin-left 0 
+
+                button
+                    width 15rem
+                    border-radius 4.5rem
+
+                    p
+                        margin 0  
+                        display block
+
+                    svg
+                        display none 
+
         #right
             margin-left 2rem   
 
@@ -105,6 +119,7 @@
     flex-direction column
     justify-content flex-end
     visibility hidden
+    overflow hidden
     opacity 0
     z-index set-index('overlay')
     align-content stretch
@@ -138,12 +153,17 @@
         
                 button
                     transform translate(-1rem)  
-                    transition 0.25s ease-in-out;
+                    transition 0.25s ease-in-out
+                    background rgba($white, 1)
 
         .button-wrapper
             display flex
             flex-direction row
             align-items center
+            justify-content center
+            border-radius 50%
+            width 4.5rem
+            height 4.5rem
 
             p
                 color $off-black
@@ -168,10 +188,16 @@
             set-type-size('xx-large', true)
 
         button
-            width 50px
-            height 50px
+            width 4.5rem
+            height 4.5rem
             border-radius 50%
-            background rgba($white, 1)
+            background rgba($white, 0.3)
+            box-shadow 4px 4px 10px rgba($off-black, 0.1)
+            display flex
+            border 2px solid $white 
+            flex-direction row
+            align-items center
+            justify-content center
 
         &.alcohol-bar 
             background $off-black 
@@ -194,6 +220,21 @@
         &.other-bar 
             background $gray-light 
 
+        &.back-bar
+
+            p
+                font-weight 500  
+                color $gray 
+
+            &:hover     
+
+                .button-wrapper
+
+                    button
+                        transform translate(1rem)
+                        transition 0.25s ease-in-out;    
+
+
 .quiz-details
     z-index set-index('overlay')
     display flex
@@ -202,7 +243,7 @@
     width 100%
     justify-content flex-end
     opacity 0
-    padding 5.5rem 2rem 2rem 2rem
+    padding 2rem
     pointer-events none
     margin-top 0
     +mq('bp-4')
@@ -370,7 +411,7 @@
         &.top
             justify-content flex-start
             height 10vh
-            margin-top 5rem
+            margin-top 0
             +mq('bp-4')
                 margin-top 0
 
@@ -428,7 +469,7 @@
         display flex
         flex-direction row     
         justify-content space-between 
-        padding-top 3.5rem
+        padding-top 0
         +mq('bp-4')
             padding-top 4rem
 
@@ -469,6 +510,21 @@
         justify-content center
         flex-direction column
         margin-top 2rem
+
+        .quiz-feedback
+            display flex
+            justify-content center
+            p   
+                display inline-block
+                background-color $off-black
+                set-type-size('large', true)
+                font-family $national
+                text-align center
+                color $white
+                padding 0.5rem 1rem
+
+                span
+                    font-weight 700
 
         .lyric-set
             background $white
@@ -550,9 +606,11 @@
     padding-bottom 0
     overflow scroll
 
-    .chart
-        height 200px
-        width 100%
+    .dropdown-text
+        p
+            set-type-size('x-large', true)
+            font-family $national
+            margin 0 0 0.5rem 0
 
     .dropdown
         width 100%
@@ -561,7 +619,7 @@
             position relative
             width 100%
             margin 0 auto
-            height 6rem
+            height 5.5rem
             display flex
             justify-content center
             cursor pointer 

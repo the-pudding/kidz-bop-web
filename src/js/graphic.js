@@ -55,6 +55,11 @@ function updateSlideLocation() {
     (d, i, n) => d3.select(n[i]).attr('data-slide') === `${$currSlideID + 1}`
   );
 
+  // hide header
+  if ($currSlideID == 2) {
+    d3.select('header').classed('is-visible', false)
+  }
+
   // hide/show category bars
   if ($currSlideID == 17) {
     d3.select('#categories').classed('is-visible', true);
@@ -180,9 +185,10 @@ function updateButtons() {
 
   // toggling button visibility
   // if the current slide id is in the array, this should evaulate to true, otherwise false
-  $left.classed('is-visible', [14, 15, 16].includes($currSlideID));
+  $left.classed('is-visible', [14, 15, 16, 18].includes($currSlideID));
   $right.classed('is-visible', ![17, 18].includes($currSlideID));
   $right.classed('solo', $currSlideID <= 13);
+  $left.classed('solo', $currSlideID == 18);
 
   // show quiz details on quiz and answer slides
   $quizDetails.classed('is-visible', quizOrAnswer);
@@ -297,7 +303,7 @@ function catTap(block) {
   const currCat = block.classed('cat-chosen', true);
   const currBckText = currCat.select('.button-wrapper p');
   const currBckButton = currCat.select('.button-wrapper button');
-  currBckText.classed('is-visible', true);
+  //currBckText.classed('is-visible', true);
   const notCat = $categoryBars
     .filter(function findNotCat() {
       return this !== clickedCat;
@@ -319,14 +325,15 @@ function catTap(block) {
     .duration(250)
     .delay(100)
     .ease(d3.easeLinear)
-    .style('transform', `translate(0, -${currPos.top -70}px)`);
+    .style('transform', 'translate(100%)');
+    //.style('transform', `translate(0, -${currPos.top -70}px)`);
 
-  currBckButton
-    .transition()
-    .duration(25)
-    .delay(100)
-    .ease(d3.easeLinear)
-    .style('transform', `rotate(-180deg)`);
+  // currBckButton
+  //   .transition()
+  //   .duration(25)
+  //   .delay(100)
+  //   .ease(d3.easeLinear)
+  //   .style('transform', `rotate(-180deg)`);
 
   // set the new direction to back
   currBckButton.attr('data-direction', 'back');

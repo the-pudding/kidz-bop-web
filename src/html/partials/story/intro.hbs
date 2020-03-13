@@ -2,6 +2,7 @@
 	<div class='tapper'>
 		<div id='left' class='is-visible'>
 			<button>
+				<p>Back to categories</p>
 				<img inline src='arrow-left.svg'>
 			</button>
 		</div>
@@ -28,6 +29,14 @@
 		</div>
 	</div>
 	{{/each}}
+	<div class='category-bar back-bar' data-cat=back>
+		<div class='button-wrapper' data-direction='back'>
+			<button>
+				<img inline src='arrow-left.svg'>
+			</button>
+		</div>
+		<p>back</p>
+	</div>
 </section>
 <section id='story'>
 	<div class='quiz-details'>
@@ -91,6 +100,9 @@
 			</div>
 		</div>
 		<div class='compare-wrapper'>
+			<div class='quiz-feedback'>
+				<p><span>Feedback!</span> Sentence about how you did goes here.</p>
+			</div>
 			<div class='lyric-set'>
 				<div class='lyric-head'>
 					<p>Original</p>
@@ -151,8 +163,8 @@
 		</div>
 	</div>
 	<div id='slide_18' class='slide gradient'>
-		<div id='spark-chart' class='chart'>
-
+		<div class='before-text dropdown-text'>
+			<p>Words tagged "Category" appear in X of X Kidz Bop songs and are censored X% of the time. Within this category, </p>
 		</div>
 		<div class='dropdown'>
 			<div class='dropdown-group'>
@@ -160,6 +172,9 @@
 				<select class='first-select'>
 				</select>
 			</div>
+		</div>
+		<div class='before-text dropdown-text'>
+			<p>appears in 32 Kidz Bop songs and was censored in 24 (75%).</p>
 		</div>
 		<div class='compare-wrapper'>
 			<div class='lyric-set'>

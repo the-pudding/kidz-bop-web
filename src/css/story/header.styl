@@ -21,19 +21,21 @@ header
 header.is-sticky
 	position fixed
 	transform translate3d(0,0,0)
-	background-color rgba($white, 0.2)
+	background-color transparent
 	box-shadow 0
 	height 4.5rem
-	display flex
+	display none
 	align-items flex-start
-	//border-bottom 2px solid rgba($white, 1)
-	box-shadow 4px 4px 10px rgba($off-black, 0.1)
+	&.is-visible
+		display flex	
 	+mq('bp-4')
 		background-color $white
 		box-shadow 0 0 7px 1px $gray-light
 		align-items center
 		height 3rem
 		border-bottom none
+		display flex
+
 	
 	a.wordmark
 		margin 0 auto
