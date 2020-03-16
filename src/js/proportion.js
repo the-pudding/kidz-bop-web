@@ -48,7 +48,7 @@ function setupCharts() {
 }
 
 function init() {
-    loadData('proportions.csv')
+    loadData('proportions-kb.csv')
         .then(result => {
             data = cleanData(result);
             $containers.each(setupCharts);
