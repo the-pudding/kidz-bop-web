@@ -27,7 +27,7 @@
             margin-right 2rem
 
             &.solo
-                margin-left 0 
+                margin-right 0 
 
                 button
                     width 15rem
@@ -516,12 +516,16 @@
             justify-content center
             p   
                 display inline-block
-                background-color $off-black
                 set-type-size('large', true)
                 font-family $national
                 text-align center
-                color $white
-                padding 0.5rem 1rem
+                color $off-black
+
+                &.slide-in
+                    animation-name fadeInUp
+                    animation-duration 750ms
+                    animation-timing-function ease-in-out
+                    animation-fill-mode both
 
                 span
                     font-weight 700
@@ -608,9 +612,40 @@
 
     .dropdown-text
         p
-            set-type-size('x-large', true)
+            set-type-size('large', true)
             font-family $national
             margin 0 0 0.5rem 0
+
+            .alcohol-sent
+                background-color $off-black
+                color $white
+                padding 0.25rem 0.5rem
+                font-weight 700
+
+            .sexual-sent
+                background-color $kb-pink
+                padding 0.25rem 0.5rem
+                font-weight 700
+
+            .profanity-sent
+                background-color $kb-purple
+                padding 0.25rem 0.5rem
+                font-weight 700 
+
+            .violence-sent
+                background-color $kb-green
+                padding 0.25rem 0.5rem
+                font-weight 700   
+
+            .identity-sent
+                background-color $kb-teal
+                padding 0.25rem 0.5rem
+                font-weight 700  
+
+            .other-sent
+                background-color $gray
+                padding 0.25rem 0.5rem
+                font-weight 700                         
 
     .dropdown
         width 100%
@@ -718,5 +753,18 @@
                     none
 
                 input:checked + .slider:before
-                    transform translateX(1.5rem)        
+                    transform translateX(1.5rem)    
+
+@keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 40px, 0)
+    opacity: 0
+    display: none
+  }
+  to {
+    transform: translate3d(0, 0, 0)
+    opacity: 1
+    display: flex
+  }
+}
                                 

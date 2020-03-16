@@ -15,9 +15,13 @@ const $songCircles = d3.selectAll('.song-circle');
 const $quizSlidesAll = $slides.filter((d, i, n) =>
   d3.select(n[i]).attr('data-quiz')
 );
+const $answerSlidesAll = $slides.filter((d, i, n) =>
+  d3.select(n[i]).attr('data-answer')
+);
 const $count = d3.selectAll('#count');
 const $quizDetails = d3.select('.quiz-details');
 const $catSection = d3.select('#categories');
+const $feedbackSentences = d3.selectAll('.quiz-feedback p')
 
 let $lyricSpans = null;
 
@@ -106,6 +110,8 @@ function checkCensors(censoredIndeces) {
     return d3.select(n[i]).attr('data-quiz') === currQuiz;
   });
 
+  // add animations to feedback
+
   // Game Logic: if all words are censored, wrong and stop there
   // Else, see if they got an exact match, if so, Winner!
   // Else, see if at least main word is censored, if so, that's good, give it to them
@@ -113,13 +119,19 @@ function checkCensors(censoredIndeces) {
 
   if (selectedAll) {
     thisCircle.classed('is-wrong', true).classed('is-correct', false);
+    $feedbackSentences.html(`<span>Whoa!</span> You can't censor it all.`)
   } else if (missed.length === 0 && extraCensored.length === 0) {
     // if they got an exact match, they win!
     thisCircle.classed('is-correct', true).classed('is-wrong', false);
+    $feedbackSentences.html(`<span>Correct!</span> Do you secretly have a Kidz Bop playlist?`)
   } else if (missed.length > 0 && censoredIndeces.includes(thisMatch.main)) {
     // if they missed some words, but still got the main one, correct
     thisCircle.classed('is-correct', true).classed('is-wrong', false);
-  } else thisCircle.classed('is-wrong', true).classed('is-correct', false);
+    $feedbackSentences.html(`<span>This counts!</span> You found the main censored word, but there are more changes. `)
+  } else {
+    thisCircle.classed('is-wrong', true).classed('is-correct', false);
+    $feedbackSentences.html(`<span>Yikes!</span> This still needs a parental advisory label.`)
+  }
 }
 
 function findCensored() {
@@ -159,6 +171,11 @@ function findTotalCorrect() {
   const correct = $quizDetails.selectAll('.is-correct');
   const correctCount = correct.size();
   d3.select('.correct-count').text(correctCount);
+  d3.select('.results-sentence').text(function() {
+    if (correctCount < 2) { return `Kids, earmuffs! Did you even really try?!`}
+    else if (correctCount < 4 && correctCount > 2) { return `This might seem safe for the radio, but not for Kidz Bop.`}
+    else { return `The FCC has nothing on you!`}
+  })
 }
 
 function updateButtons() {
@@ -205,14 +222,14 @@ function updateButtons() {
   }
 
   // if above slide 16, remove pointer events for touch
-  if ($currSlideID > 16) {
-    console.log({ $touch });
+  if ($currSlideID > 16 && $currSlideID < 18) {
+    //console.log({ $touch });
     $touch.style('pointer-events', 'none');
   } else $touch.style('pointer-events', 'all');
 }
 
 function fwdTap() {
-  console.log({ $currSlide });
+  //console.log({ $currSlide });
   // is the current slide a quiz slide?
   const $currQuiz = $currSlide.attr('data-quiz');
 
@@ -284,7 +301,7 @@ function setupArrowButton() {
   allArrows.on('click', function () {
     const button = d3.select(this);
     const dir = button.attr('data-direction');
-    console.log({ dir });
+    //.log({ dir });
     if (dir === 'back') handleCatBack(button);
     else if (dir === 'forward') {
       const parent = d3.select(this.parentNode);
@@ -298,8 +315,8 @@ function setupArrowButton() {
 }
 
 function catTap(block) {
-  console.log('catTap');
-  const clickedCat = block.node();
+  //console.log('catTap');
+  const clickedCat = block.node().attr;
   const currCat = block.classed('cat-chosen', true);
   const currBckText = currCat.select('.button-wrapper p');
   const currBckButton = currCat.select('.button-wrapper button');
@@ -312,7 +329,7 @@ function catTap(block) {
 
   const currPos = block.node().getBoundingClientRect();
 
-  console.log({ currCat, notCat });
+  //console.log({ currCat, notCat, block });
   notCat
     .transition()
     .duration(250)
@@ -327,16 +344,27 @@ function catTap(block) {
     .ease(d3.easeLinear)
     .style('transform', 'translate(100%)');
     //.style('transform', `translate(0, -${currPos.top -70}px)`);
+  
+  // replace category san on dropdown page
+  const categoryAttr =  currCat.node().getAttribute('data-cat')
+  const categorySpan = d3.selectAll('#category-sent')
+  categorySpan.text(function() {
+    if (categoryAttr == 'alcohol') { return 'alcohol & drugs'}
+    else { return categoryAttr }
+  })
+  categorySpan.classed(`${categoryAttr}-sent`, true)
 
-  // currBckButton
-  //   .transition()
-  //   .duration(25)
-  //   .delay(100)
-  //   .ease(d3.easeLinear)
-  //   .style('transform', `rotate(-180deg)`);
+  // hide the category bars completely  
+  $catSection
+    .transition()
+    .duration(0)
+    .delay(1000)
+    .ease(d3.easeLinear)
+    .style('display', 'none')
+    
 
   // set the new direction to back
-  currBckButton.attr('data-direction', 'back');
+  //currBckButton.attr('data-direction', 'back');
 
   // trigger a tap forward one slide
   fwdTap();
