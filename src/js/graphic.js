@@ -179,6 +179,7 @@ function findTotalCorrect() {
 }
 
 function updateButtons() {
+  const $prompt = d3.selectAll('#prompt');
   const $left = d3.selectAll('#left');
   const $right = d3.selectAll('#right');
   const $rightText = $right.select('button p');
@@ -206,6 +207,13 @@ function updateButtons() {
   $right.classed('is-visible', ![17, 18].includes($currSlideID));
   $right.classed('solo', $currSlideID <= 13);
   $left.classed('solo', $currSlideID == 18);
+
+  // show tapping prompt
+  $prompt.classed('is-visible', $currSlideID == 3)
+  if ($prompt.classed('is-visible')) {
+    console.log('yup')
+    //window.addEventListener('click', $prompt.classed('is-visible', false))
+  }
 
   // show quiz details on quiz and answer slides
   $quizDetails.classed('is-visible', quizOrAnswer);
