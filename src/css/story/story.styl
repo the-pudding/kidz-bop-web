@@ -708,6 +708,7 @@
                 font-weight 500
                 set-type-size('small', true)
                 color $gray
+                width 3.75rem
 
             .toggle-on
                 font-weight 700  
@@ -745,15 +746,13 @@
                         background-color $white
                         transition 0.4s
                         border-radius 50%
-
-                input:checked + .slider
-                    background-color $gray-dark
+                        transform translateX(1.5rem) 
 
                 input:focus + .slider
                     none
 
                 input:checked + .slider:before
-                    transform translateX(1.5rem)    
+                    transform translateX(0)    
 
 @keyframes fadeInUp {
   from {

@@ -24,14 +24,33 @@ function handleToggle() {
     const headParent = d3.select(toggleParent.node().parentNode);
     const lyricParent = d3.select(headParent.node().parentNode);
     const lyrics = lyricParent.select('.origLyric');
+    const thisToggleKB = toggleParent.selectAll('.toggle-kb');
+    const thisToggleOG = toggleParent.selectAll('.toggle-og');
 
-    console.log({ parent, lyrics, lyricParent, checked });
+    //console.log({ parent, lyrics, lyricParent, checked });
+    console.log(toggleParent)
 
     if (checked === 'true') {
-        lyrics.text(d => d.original);
-    } else lyrics.text(d => d.kb);
+        lyrics
+            .transition()
+            .duration(100)
+            .delay(0)
+            .ease(d3.easeLinear)
+            .text(d => d.original);
+        thisToggleKB.classed('toggle-on', false)
+        thisToggleOG.classed('toggle-on', true)
+    } else {
+        lyrics
+            .transition()
+            .duration(100)
+            .delay(0)
+            .ease(d3.easeLinear)
+            .text(d => d.kb);
+        thisToggleKB.classed('toggle-on', true)
+        thisToggleOG.classed('toggle-on', false)
+    }    
 
-    console.log({ thisSwitch, checked });
+    //console.log({ thisSwitch, checked });
 
     thisSwitch.attr('checked') === 'true'
         ? thisSwitch.attr('checked', 'false')
@@ -72,20 +91,20 @@ function handleDropdown(val) {
             const $toggle = $head.append('div').attr('class', 'toggle');
             $toggle
                 .append('p')
-                .attr('class', 'toggle-labels toggle-on')
+                .attr('class', 'toggle-labels toggle-kb toggle-on')
                 .text('Kidz Bop');
             const $switch = $toggle.append('label').attr('class', 'switch');
             $switch
                 .append('input')
                 .attr('type', 'checkbox')
                 .attr('class', 'is-kb')
-                .attr('checked', 'false');
+                .attr('checked', 'true');
             $switch.append('span').attr('class', 'slider round');
 
             $switch.on('change', handleToggle);
             $toggle
                 .append('p')
-                .attr('class', 'toggle-labels')
+                .attr('class', 'toggle-labels toggle-og')
                 .text('Original');
         });
 }

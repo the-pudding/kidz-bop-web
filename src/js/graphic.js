@@ -345,7 +345,7 @@ function catTap(block) {
     .style('transform', 'translate(100%)');
     //.style('transform', `translate(0, -${currPos.top -70}px)`);
   
-  // replace category san on dropdown page
+  // replace category span on dropdown page
   const categoryAttr =  currCat.node().getAttribute('data-cat')
   const categorySpan = d3.selectAll('#category-sent')
   categorySpan.text(function() {
