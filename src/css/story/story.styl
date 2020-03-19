@@ -344,6 +344,7 @@
                 background-repeat no-repeat
                 background-size 20px 20px
                 background-position center
+                animation ampUp 0.3s ease 1;
 
             &.is-wrong
                 border 2px solid rgba($off-black, 1) 
@@ -351,7 +352,8 @@
                 background-image url('assets/images/x.png')
                 background-repeat no-repeat
                 background-size 20px 20px
-                background-position center                         
+                background-position center 
+                animation ampUp 0.3s ease 1;                        
 
 .slide
     width 100%
@@ -554,9 +556,30 @@
             font-family $national
             font-weight 700 
             span 
+                position relative
                 background-color none 
                 &.censored 
                     background-color $off-black
+                &.hintSpan
+                    background-color rgba($white, 0.5) 
+                    //border-radius 0.5rem  
+                    //padding 0 0.25rem
+                    animation fadeBG 1.5s ease infinite
+                    &::before
+                        font-weight 500
+                        set-type-size('small', true)
+                        content 'Click on the words to censor'
+                        background-image url('assets/images/touch.png')
+                        background-repeat no-repeat
+                        background-position 0% 40%
+                        background-size 24px 24px 
+                        position absolute
+                        top -2rem
+                        width 15rem
+                        color $white
+                        text-indent 1.65rem
+                        //animation fadeHint 1.2s ease infinite
+                        pointer-events none
 
     .compare-wrapper
         width 100%
@@ -571,19 +594,25 @@
             justify-content center
             p   
                 display inline-block
-                set-type-size('large', true)
+                set-type-size('small', true)
                 font-family $national
                 text-align center
                 color $off-black
 
                 &.slide-in
-                    animation-name fadeInUp
-                    animation-duration 750ms
-                    animation-timing-function ease-in-out
-                    animation-fill-mode both
+                    animation fadeInUp 0.3s ease
+
+                &.is-correct
+                    span
+                        background-color $kb-teal 
+                        color $off-black
 
                 span
                     font-weight 700
+                    background-color $off-black
+                    color $white
+                    padding 0.25rem 0.5rem 
+                    set-type-size('large', true)
 
         .lyric-set
             background $white
@@ -835,4 +864,27 @@
     opacity: 0;
   }
 }
-                                
+
+@keyframes fadeBG {
+  0% {
+    background-color: rgba($white, 0.2)
+  }
+  50% {
+    background-color: rgba($white, 0.5)
+  }
+  100% {
+    background-color: rgba($white, 0.2)
+  }
+}  
+
+@keyframes ampUp {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

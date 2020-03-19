@@ -42,6 +42,13 @@ function spanSetup() {
   $lyricSpans = d3.selectAll('.lyric-wrapper span');
 }
 
+function spanHintSetup() {
+  const firstQuizSlide = d3.selectAll('#slide_3')
+  const firstLyrics = firstQuizSlide.selectAll('.lyric-wrapper p')
+  const firstSpan = firstLyrics.selectAll('span')
+  firstSpan.attr('class', function(d, i) { return i ? null : 'hintSpan'; })
+}
+
 function updateSlideLocation() {
   // sets the current slide to whichever is visible
   $currSlide = d3.select('.is-visible-slide');
@@ -110,6 +117,13 @@ function checkCensors(censoredIndeces) {
     return d3.select(n[i]).attr('data-quiz') === currQuiz;
   });
 
+  const thisFeedbackSlide = d3.selectAll('.slide').filter((d, i, n) => {
+    return d3.select(n[i]).attr('data-answer') === currQuiz;
+  })
+
+  const thisFeedbackSent = thisFeedbackSlide.selectAll('.compare-wrapper .quiz-feedback p')
+
+
   // add animations to feedback
 
   // Game Logic: if all words are censored, wrong and stop there
@@ -119,18 +133,18 @@ function checkCensors(censoredIndeces) {
 
   if (selectedAll) {
     thisCircle.classed('is-wrong', true).classed('is-correct', false);
-    $feedbackSentences.html(`<span>Whoa!</span> You can't censor it all.`)
+    thisFeedbackSent.classed('slide-in', true).classed('is-wrong', true).html(`<span>Whoa!</span><br> You can't censor it all.`)
   } else if (missed.length === 0 && extraCensored.length === 0) {
     // if they got an exact match, they win!
     thisCircle.classed('is-correct', true).classed('is-wrong', false);
-    $feedbackSentences.html(`<span>Correct!</span> Do you secretly have a Kidz Bop playlist?`)
+    thisFeedbackSent.classed('slide-in', true).classed('is-correct', true).html(`<span>Correct!</span><br> Do you secretly have a Kidz Bop playlist?`)
   } else if (missed.length > 0 && censoredIndeces.includes(thisMatch.main)) {
     // if they missed some words, but still got the main one, correct
     thisCircle.classed('is-correct', true).classed('is-wrong', false);
-    $feedbackSentences.html(`<span>This counts!</span> You found the main censored word, but there are more changes. `)
+    thisFeedbackSent.classed('slide-in', true).classed('is-correct', true).html(`<span>This counts!</span><br> You found the main censored word, but there are more changes. `)
   } else {
     thisCircle.classed('is-wrong', true).classed('is-correct', false);
-    $feedbackSentences.html(`<span>Yikes!</span> This still needs a parental advisory label.`)
+    thisFeedbackSent.classed('slide-in', true).classed('is-wrong', true).html(`<span>Yikes!</span><br> This still needs a parental advisory label.`)
   }
 }
 
@@ -154,6 +168,9 @@ function findCensored() {
 function spanCensor() {
   // select the word that was clicked
   const word = d3.select(this);
+
+  // remove prompt
+  $lyricSpans.classed('hintSpan', false)
 
   // is this word already censored?
   const isCensored = word.classed('censored');
@@ -209,11 +226,11 @@ function updateButtons() {
   $left.classed('solo', $currSlideID == 18);
 
   // show tapping prompt
-  $prompt.classed('is-visible', $currSlideID == 3)
-  if ($prompt.classed('is-visible')) {
-    console.log('yup')
-    //window.addEventListener('click', $prompt.classed('is-visible', false))
-  }
+  // $prompt.classed('is-visible', $currSlideID == 3)
+  // if ($prompt.classed('is-visible')) {
+  //   console.log('yup')
+  //   //window.addEventListener('click', $prompt.classed('is-visible', false))
+  // }
 
   // show quiz details on quiz and answer slides
   $quizDetails.classed('is-visible', quizOrAnswer);
@@ -390,14 +407,11 @@ function init() {
   spanSetup();
   buttonSetup();
   setupArrowButton();
+  spanHintSetup();
   $fwdTapDiv.on('click', fwdTap);
   $bckTapDiv.on('click', bckTap);
   $skipTapDiv.on('click', skipTap);
   $lyricSpans.on('click', spanCensor);
-  // $categoryBars.on('click', function () {
-  //   const block = d3.select(this);
-  //   catTap(block);
-  // });
 }
 
 export default { init, resize };
