@@ -62,19 +62,31 @@
     flex-direction column
     width 100%
     height 25vh
-    top 75vh
+    bottom 0rem
     align-items center
     justify-content flex-end
     position absolute
-    z-index set-index('overlay')
+    z-index 999
     padding-bottom 2rem
     +mq('bp-4')
         top 68vh
+
+    .bottom-fade
+        height 12rem
+        position absolute
+        bottom 0
+        background linear-gradient(0deg, rgba($white, 1) 0%, rgba($white, 0.95) 50%, rgba($white, 0) 100%)
+        width 100%  
+        opacity 0
+
+        &.is-visible
+            opacity 1  
 
     .tapper
         display flex
         flex-direction row
         justify-content center
+        z-index 999
 
         #left
             margin-right 2rem
@@ -146,20 +158,23 @@
                     width 2rem
                     height 2rem
 
-    #skipper
-        visibility hidden
-        opacity 0
+    .directions 
+        z-index 999               
 
-        &.is-visible
-            visibility visible
-            opacity 1
-
-        p
+        #skipper, #begin
+            visibility hidden
+            opacity 0
             font-family $national 
             set-type-size('small', true)
             margin 1rem 0 0 0
             padding 0
             opacity 0.5 
+            display none
+
+            &.is-visible
+                visibility visible
+                opacity 1
+                display block
 
             &:hover
                 font-weight 700
@@ -204,6 +219,9 @@
 
         &:hover
 
+            p
+                font-weight 700
+
             .button-wrapper
         
                 button
@@ -217,8 +235,8 @@
             align-items center
             justify-content center
             border-radius 50%
-            width 4.5rem
-            height 4.5rem
+            width 3.5rem
+            height 3.5rem
 
             p
                 color $off-black
@@ -239,12 +257,12 @@
         p
             color $off-black
             font-family $national
-            font-weight 700
+            //font-weight 700
             set-type-size('xx-large', true)
 
         button
-            width 4.5rem
-            height 4.5rem
+            width 3.5rem
+            height 3.5rem
             border-radius 50%
             background rgba($white, 0.3)
             box-shadow 4px 4px 10px rgba($off-black, 0.1)
@@ -281,7 +299,10 @@
                 font-weight 500  
                 color $gray 
 
-            &:hover     
+            &:hover  
+
+                p
+                    font-weight 700   
 
                 .button-wrapper
 
@@ -408,7 +429,13 @@
                     fill $gray-light  
 
                 #rightP
-                    fill $white  
+                    fill $white !important
+
+                    path
+                        fill $white !important
+
+                    .st0
+                        fill $white !important
 
     .title
         width 100%
@@ -432,9 +459,6 @@
             display flex
             align-items center
             justify-content center
-
-            svg
-                width 100%
 
     .byline
         width 100%
@@ -467,8 +491,9 @@
 
         &.top
             justify-content flex-start
-            height 10vh
+            height 7rem
             margin-top 0
+            margin-bottom 2rem
             +mq('bp-4')
                 margin-top 0
 
@@ -479,27 +504,39 @@
 
         .alcohol-span
             font-weight 700
-            color $off-black   
+            color $white
+            background $off-black 
+            padding 0 0.25rem 
 
         .sexual-span
             font-weight 700
-            color $kb-pink
+            color $off-black
+            background $kb-pink
+            padding 0 0.25rem 
 
         .profanity-span
             font-weight 700
-            color $kb-purple
+            color $off-black
+            background $kb-purple
+            padding 0 0.25rem 
 
         .violence-span
             font-weight 700
-            color $kb-teal
+            color $off-black
+            background $kb-teal
+            padding 0 0.25rem 
 
         .identity-span
             font-weight 700
-            color $kb-blue
+            color $off-black
+            background $kb-blue
+            padding 0 0.25rem 
 
         .other-span
             font-weight 700
-            color $gray                        
+            color $off-black
+            background $gray
+            padding 0 0.25rem                      
 
     .button-wrapper   
         width 100%
@@ -539,6 +576,7 @@
             p
                 margin 0
                 padding 0
+                set-type-size('root', true)
 
             #artist
                 text-transform uppercase
@@ -587,7 +625,7 @@
         display flex
         justify-content center
         flex-direction column
-        margin-top 2rem
+        //margin-top 5rem
 
         .quiz-feedback
             display flex
@@ -611,26 +649,26 @@
                     font-weight 700
                     background-color $off-black
                     color $white
-                    padding 0.25rem 0.5rem 
+                    padding 0 0.25rem 
                     set-type-size('large', true)
 
         .lyric-set
             background $white
             border 2px solid $off-black
-            padding 2rem
-            margin-bottom 2rem
+            padding 1.5rem
+            margin-bottom 1.5rem
 
             .lyric-head
                 width 100%
                 display flex
                 flex-direction row
                 justify-content space-between
-                padding-bottom 1.5rem
+                padding-bottom 1rem
                 border-bottom 2px solid $off-black
                 border-style dashed
 
                 p
-                    set-type-size('medium', true)
+                    set-type-size('root', true)
                     font-family $national
                     font-weight 700
                     margin 0
@@ -640,10 +678,10 @@
                     stroke $gray    
 
             p
-                set-type-size('xx-large', true)
+                set-type-size('x-large', true)
                 font-family $national
                 margin 0 
-                padding-top 1.5rem 
+                padding-top 1rem 
 
             .origLyric
                 span
@@ -694,41 +732,44 @@
     padding-bottom 0
     overflow scroll
 
+    .after-text
+        margin-bottom 3rem    
+
     .dropdown-text
         p
             set-type-size('large', true)
             font-family $national
-            margin 0 0 0.5rem 0
+            margin 0 
 
             .alcohol-sent
                 background-color $off-black
                 color $white
-                padding 0.25rem 0.5rem
+                padding 0.25rem
                 font-weight 700
 
             .sexual-sent
                 background-color $kb-pink
-                padding 0.25rem 0.5rem
+                padding 0.25rem
                 font-weight 700
 
             .profanity-sent
                 background-color $kb-purple
-                padding 0.25rem 0.5rem
+                padding 0.25rem
                 font-weight 700 
 
             .violence-sent
                 background-color $kb-green
-                padding 0.25rem 0.5rem
+                padding 0.25rem
                 font-weight 700   
 
             .identity-sent
                 background-color $kb-teal
-                padding 0.25rem 0.5rem
+                padding 0.25rem
                 font-weight 700  
 
             .other-sent
                 background-color $gray
-                padding 0.25rem 0.5rem
+                padding 0.25rem
                 font-weight 700                         
 
     .dropdown
@@ -737,8 +778,8 @@
         .dropdown-group
             position relative
             width 100%
-            margin 0 auto
-            height 5.5rem
+            margin 0.5rem auto
+            height 4.5rem
             display flex
             justify-content center
             cursor pointer 
@@ -747,7 +788,7 @@
                 width 100%
                 border 0
                 background-color transparent
-                set-type-size('x-large', true)
+                set-type-size('large', true)
                 font-family $national
                 font-weight 700
                 color $off-black
@@ -756,18 +797,18 @@
                 position absolute
                 cursor pointer
                 appearance none
-                text-indent 2rem
+                text-indent 1rem
                 background-image url('assets/images/arrow.png')
                 background-repeat no-repeat
                 background-position 95% 50%
-                background-size 30px 30px  
+                background-size 20px 20px  
 
             .select-bg
                 position absolute
                 border 2px solid $white
                 background-color rgba($white, 0.3)
                 width 100%
-                height 5rem    
+                height 4.5rem    
                 box-shadow 4px 4px 10px rgba($off-black, 0.1)    
 
     .compare-wrapper
@@ -794,6 +835,9 @@
                 color $gray
                 width 3.75rem
 
+            .toggle-og
+                width 3rem    
+
             .toggle-on
                 font-weight 700  
                 color $off-black  
@@ -801,8 +845,8 @@
             .switch
                 margin 0 0.25rem
                 position relative
-                width 3rem
-                height 1.5 rem    
+                width 2.5rem
+                height 1.25 rem    
 
                 input
                     opacity 0
@@ -818,25 +862,75 @@
                     bottom 0
                     background-color $off-black
                     transition 0.4s
-                    border-radius 1.5rem
+                    border-radius 1.25rem
 
                     &::before
                         position absolute
                         content ''
-                        height 1rem
-                        width 1rem
+                        height 0.75rem
+                        width 0.75rem
                         left 0.25rem
                         bottom 0.25rem
                         background-color $white
                         transition 0.4s
                         border-radius 50%
-                        transform translateX(1.5rem) 
+                        transform translateX(1.25rem) 
 
                 input:focus + .slider
                     none
 
                 input:checked + .slider:before
-                    transform translateX(0)    
+                    transform translateX(0)  
+
+
+#slide_1
+
+    svg
+        width 65%
+        margin 1rem 0
+        animation popIn 0.3s ease-in-out
+        animation-iteration-count 1
+        //transform scale(0)
+        
+        .pathKB
+            stroke-dashoffset 0
+            stroke-dasharray 100%
+            animation dash 1s linear
+            animation-delay 0.3s
+            opacity 1
+
+
+.st0
+    fill $white
+            
+@keyframes popIn {
+  0% {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.75);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+@keyframes dash {
+  0% {
+      stroke-dashoffset: 100%;
+      opacity: 0
+  }
+  50% {
+    stroke-dashoffset: 100%;
+    opacity: 1
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 1
+  }
+}
+
 
 @keyframes fadeInUp {
   from {

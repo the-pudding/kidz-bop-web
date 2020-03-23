@@ -1,30 +1,23 @@
 <section id='touch'>
+	<div class='bottom-fade'></div>
 	<div class='tapper'>
-		<div id='left' class='is-visible'>
+		<div id='left'>
 			<button>
 				<p>Back to categories</p>
 				<img inline src='arrow-left.svg'>
 			</button>
 		</div>
-		<div id='right' class='is-visible'>
+		<div id='right' class='is-visible solo'>
 			<button>
 				<p>Let's find out</p>
 				<img inline src='arrow-right.svg'>
 			</button>
 		</div>
 	</div>
-	<div id='skipper'>
-		<p>Skip the quiz. Show me the data.</p>
+	<div class='directions'>
+		<p id='skipper'>Skip the quiz. Show me the data.</p>
+		<p id='begin'>Take me back to the beginnning.</p>
 	</div>
-</section>
-<section id='prompt'>
-	<div class='pulse-container'>
-		<div class='bg-pulse'></div>
-		<div class='pulser'>
-			<img inline src='touch.svg'>
-		</div>
-	</div>
-	<p>Click on a word to censor</p>
 </section>
 <section id='categories'>
 	{{#each copy.censorship_categories}}
@@ -64,7 +57,7 @@
 		<div class='title'>
 			<h1>{{meta.title1}}</h1>
 			<div class='kb-logo'>
-				<img inline src='kb-logo.svg'>
+				<img inline src='kb_title.svg'>
 			</div>
 			<h1>{{meta.title2}}</h1>
 		</div>
@@ -74,7 +67,7 @@
 				<p>{{meta.author1.name}}</p>
 			</div>
 			<div>
-				<p class='bolded'>Design + development by</p>
+				<p class='bolded'>Design + Dev by</p>
 				<p>{{meta.author2.name}}</p>
 				<p>{{meta.author3.name}}</p>
 			</div>
@@ -172,6 +165,7 @@
 		</div>
 	</div>
 	<div id='slide_18' class='slide gradient'>
+		<div class='bottom-fade'></div>
 		<div class='before-text dropdown-text'>
 			<p>Words tagged as <span id='category-sent'></span> appear in X of X Kidz Bop songs and are censored X% of the time. Within this category, </p>
 		</div>
@@ -182,7 +176,7 @@
 				</select>
 			</div>
 		</div>
-		<div class='before-text dropdown-text'>
+		<div class='after-text dropdown-text'>
 			<p>appears in 32 Kidz Bop songs and was censored in 24 (75%).</p>
 		</div>
 		<div class='compare-wrapper'>

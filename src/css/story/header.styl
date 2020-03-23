@@ -43,6 +43,11 @@ header.is-sticky
 		+mq('bp-4')
 			display block
 
+		svg
+
+			.st0
+				fill $off-black	
+
 	a.logo
 		margin 0.5rem
 		display block
@@ -113,7 +118,7 @@ header.is-sticky
 		padding 1rem 1.5rem
 		background-color $off-black
 		color $off-white
-		z-index set-index(overlay)
+		z-index set-index(overlay) !important
 		transition transform 200ms ease-in-out
 		+mq('bp-3')
 			border-left 1px solid $gray-dark

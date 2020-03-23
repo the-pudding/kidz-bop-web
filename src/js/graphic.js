@@ -10,6 +10,7 @@ const $touch = d3.select('#touch');
 const $fwdTapDiv = $touch.selectAll('#right');
 const $bckTapDiv = $touch.selectAll('#left');
 const $skipTapDiv = $touch.selectAll('#skipper');
+const $beginTapDiv = $touch.selectAll('#begin');
 const $categoryBars = d3.selectAll('.category-bar');
 const $songCircles = d3.selectAll('.song-circle');
 const $quizSlidesAll = $slides.filter((d, i, n) =>
@@ -73,7 +74,17 @@ function updateSlideLocation() {
 
   // hide/show category bars
   if ($currSlideID == 17) {
-    d3.select('#categories').classed('is-visible', true);
+    $catSection.classed('is-visible', true).style('pointer-events', 'all')
+    $categoryBars
+      .classed('not-chosen', false)
+      .classed('cat-chosen', false)
+      .transition()
+      .duration(250)
+      .delay((d, i) => i * 25)
+      .ease(d3.easeLinear)
+      .style('transform', 'translate(0, 0)');
+  } else if ($currSlideID < 17) {
+    $catSection.classed('is-visible', false)
   }
 
   if (answerSlide) {
@@ -214,9 +225,12 @@ function updateButtons() {
     $rightText.text('Next Song');
   else if ($currSlideID === 12) $rightText.text('Show my results');
   else if ($currSlideID === 13) $rightText.text('Tell me more');
+  else if ($currSlideID === 1) $rightText.text(`Let's find out`);
 
   // if on slide 2, this will evaluate to true, otherwise false
-  $skipTapDiv.classed('is-visible', $currSlideID === 2);
+  $skipTapDiv.classed('is-visible', [2].includes($currSlideID));
+  $beginTapDiv.classed('is-visible', [18].includes($currSlideID));
+  d3.selectAll('.bottom-fade').classed('is-visible', [18].includes($currSlideID));
 
   // toggling button visibility
   // if the current slide id is in the array, this should evaulate to true, otherwise false
@@ -287,6 +301,15 @@ function skipTap() {
   updateSlideLocation();
 }
 
+function beginTap() {
+  // temporarily make all slides invisible
+  $slides.classed('is-visible-slide', false);
+  // select the first post-quiz slide and make it visible
+  d3.select('#slide_1').classed('is-visible-slide', true);
+  // reset the current, previous, & next slides globally
+  updateSlideLocation();
+}
+
 function handleCatBack(arrow) {
   const btnText = arrow.select('p');
   const direction = arrow.attr('data-direction');
@@ -340,17 +363,15 @@ function setupArrowButton() {
 }
 
 function catTap(block) {
-  //console.log('catTap');
   const clickedCat = block.node().attr;
   const currCat = block.classed('cat-chosen', true);
+  currCat.classed('not-chosen', false)
   const currBckText = currCat.select('.button-wrapper p');
   const currBckButton = currCat.select('.button-wrapper button');
-  //currBckText.classed('is-visible', true);
-  const notCat = $categoryBars
-    .filter(function findNotCat() {
-      return this !== clickedCat;
-    })
-    .classed('not-chosen', true);
+  const notCat = d3.selectAll('.category-bar').filter(function() {
+    return !this.classList.contains('cat-chosen')
+  })
+  console.log(notCat)
 
   const currPos = block.node().getBoundingClientRect();
 
@@ -365,7 +386,7 @@ function catTap(block) {
   currCat
     .transition()
     .duration(250)
-    .delay(100)
+    .delay(250)
     .ease(d3.easeLinear)
     .style('transform', 'translate(100%)');
     //.style('transform', `translate(0, -${currPos.top -70}px)`);
@@ -380,12 +401,12 @@ function catTap(block) {
   categorySpan.classed(`${categoryAttr}-sent`, true)
 
   // hide the category bars completely  
-  $catSection
-    .transition()
-    .duration(0)
-    .delay(1000)
-    .ease(d3.easeLinear)
-    .style('display', 'none')
+  // $catSection
+  //   .transition()
+  //   .duration(0)
+  //   .delay(1000)
+  //   .ease(d3.easeLinear)
+  //   .style('display', 'none')
     
 
   // set the new direction to back
@@ -411,6 +432,7 @@ function init() {
   $fwdTapDiv.on('click', fwdTap);
   $bckTapDiv.on('click', bckTap);
   $skipTapDiv.on('click', skipTap);
+  $beginTapDiv.on('click', beginTap);
   $lyricSpans.on('click', spanCensor);
 }
 
