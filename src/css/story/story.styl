@@ -96,7 +96,7 @@
 
                 button
                     width 15rem
-                    border-radius 4.5rem
+                    border-radius 4rem
 
                     p
                         margin 0  
@@ -113,7 +113,7 @@
 
                 button
                     width 15rem
-                    border-radius 4.5rem
+                    border-radius 4rem
 
                     p
                         margin 0  
@@ -131,12 +131,15 @@
                 display block 
 
             button
-                width 4.5rem
-                height 4.5rem
+                width 4rem
+                height 4rem
                 border 2px solid $white 
                 border-radius 50%
                 text-align center  
                 text-transform uppercase
+                display flex
+                justify-content center
+                align-items center
                 padding 1rem  
                 font-family $national
                 font-weight 700
@@ -148,11 +151,11 @@
                 p
                     margin 0 
                     display none
+                    padding 0
 
                 &:hover
                     background rgba($white, 1) 
                     transform translate(0, -10px)
-
 
                 svg
                     width 2rem
@@ -166,7 +169,7 @@
             opacity 0
             font-family $national 
             set-type-size('small', true)
-            margin 1rem 0 0 0
+            margin 0.5rem 0 0 0
             padding 0
             opacity 0.5 
             display none
@@ -342,6 +345,7 @@
 
     .song-count
         set-type-size('small', true)
+        line-height 1.5
         font-family $national
         margin 0
         padding 0
@@ -352,29 +356,37 @@
         flex-direction row
 
         .song-circle
-            width 25px
-            height 25px
+            width 1.25rem
+            height 1.25rem
             border-radius 50%
             border 2px solid rgba($white, 0.5)
-            margin-left 0.5rem
+            margin-left 0.25rem
+            +mq('bp-4')
+                width 1.5rem
+                height 1.5rem
+                margin-left 0.5rem
 
             &.is-correct
                 border 2px solid rgba($kb-teal, 1) 
                 background-color $kb-teal 
                 background-image url('assets/images/check.png')
                 background-repeat no-repeat
-                background-size 20px 20px
+                background-size 0.75rem 0.75rem
                 background-position center
-                animation ampUp 0.3s ease 1;
+                animation ampUp 0.3s ease 1
+                +mq('bp-4')
+                   background-size 1rem 1rem 
 
             &.is-wrong
                 border 2px solid rgba($off-black, 1) 
                 background-color $off-black
                 background-image url('assets/images/x.png')
                 background-repeat no-repeat
-                background-size 20px 20px
+                background-size 0.75rem 0.75rem
                 background-position center 
-                animation ampUp 0.3s ease 1;                        
+                animation ampUp 0.3s ease 1
+                +mq('bp-4')
+                   background-size 1rem 1rem                       
 
 .slide
     width 100%
@@ -471,6 +483,10 @@
         div
             width 50%
 
+            a
+                &:hover
+                    opacity 0.5
+
             p
                 margin 0   
                 set-type-size('root', true)
@@ -497,10 +513,16 @@
             +mq('bp-4')
                 margin-top 0
 
+        a
+            &:hover
+                opacity 0.5       
+
         p    
-            set-type-size('large', true)
+            set-type-size('root', true)
             font-family $national
             margin 0 0 1rem 0
+            +mq('bp-4')
+                set-type-size('medium', true)
 
         .alcohol-span
             font-weight 700
@@ -570,13 +592,15 @@
         .song-details
             display flex
             flex-direction column  
-            font-family $national
-            set-type-size('large', true)  
+            font-family $national 
 
             p
                 margin 0
                 padding 0
-                set-type-size('root', true)
+                set-type-size('small', true)
+                line-height 1.5
+                +mq('bp-4')
+                    set-type-size('root', true)
 
             #artist
                 text-transform uppercase
@@ -625,7 +649,7 @@
         display flex
         justify-content center
         flex-direction column
-        //margin-top 5rem
+        margin-top 2.5rem
 
         .quiz-feedback
             display flex
@@ -636,6 +660,7 @@
                 font-family $national
                 text-align center
                 color $off-black
+
 
                 &.slide-in
                     animation fadeInUp 0.3s ease
@@ -650,7 +675,9 @@
                     background-color $off-black
                     color $white
                     padding 0 0.25rem 
-                    set-type-size('large', true)
+                    set-type-size('medium', true)
+                    +mq('bp-4')
+                        set-type-size('large', true)
 
         .lyric-set
             background $white
@@ -668,20 +695,24 @@
                 border-style dashed
 
                 p
-                    set-type-size('root', true)
+                    set-type-size('small', true)
                     font-family $national
                     font-weight 700
                     margin 0
                     padding-top 0
+                    +mq('bp-4')
+                        set-type-size('root', true)
 
                 svg
                     stroke $gray    
 
             p
-                set-type-size('x-large', true)
+                set-type-size('large', true)
                 font-family $national
                 margin 0 
                 padding-top 1rem 
+                +mq('bp-4')
+                    set-type-size('x-large', true)
 
             .origLyric
                 span
@@ -715,7 +746,7 @@
         display flex
         flex-direction column
         align-items center 
-        padding-top 8rem   
+        padding-top 4rem   
 
         .results-count
             font-family $national
@@ -726,7 +757,8 @@
         .results-sentence
             font-family $national
             set-type-size('large', true)  
-            magrin 1rem 0 0 0   
+            margin 1rem 0   
+            text-align center
 
 #slide_18
     padding-bottom 0
@@ -737,9 +769,11 @@
 
     .dropdown-text
         p
-            set-type-size('large', true)
+            set-type-size('root', true)
             font-family $national
             margin 0 
+            +mq('bp-4')
+                set-type-size('large', true)
 
             .alcohol-sent
                 background-color $off-black
@@ -779,7 +813,7 @@
             position relative
             width 100%
             margin 0.5rem auto
-            height 4.5rem
+            height 3.5rem
             display flex
             justify-content center
             cursor pointer 
@@ -793,7 +827,7 @@
                 font-weight 700
                 color $off-black
                 border-radius none
-                height 5rem
+                height 3.5rem
                 position absolute
                 cursor pointer
                 appearance none
@@ -808,11 +842,12 @@
                 border 2px solid $white
                 background-color rgba($white, 0.3)
                 width 100%
-                height 4.5rem    
+                height 3.5rem    
                 box-shadow 4px 4px 10px rgba($off-black, 0.1)    
 
     .compare-wrapper
         justify-content flex-start
+        margin-top 0
 
         .lyric-head
 

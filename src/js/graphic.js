@@ -152,7 +152,7 @@ function checkCensors(censoredIndeces) {
   } else if (missed.length > 0 && censoredIndeces.includes(thisMatch.main)) {
     // if they missed some words, but still got the main one, correct
     thisCircle.classed('is-correct', true).classed('is-wrong', false);
-    thisFeedbackSent.classed('slide-in', true).classed('is-correct', true).html(`<span>This counts!</span><br> You found the main censored word, but there are more changes. `)
+    thisFeedbackSent.classed('slide-in', true).classed('is-correct', true).html(`<span>This counts!</span><br> You found the main censored word.`)
   } else {
     thisCircle.classed('is-wrong', true).classed('is-correct', false);
     thisFeedbackSent.classed('slide-in', true).classed('is-wrong', true).html(`<span>Yikes!</span><br> This still needs a parental advisory label.`)
