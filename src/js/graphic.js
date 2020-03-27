@@ -352,24 +352,28 @@ function handleCatBack(arrow) {
 }
 
 function setupArrowButton() {
-  const allArrows = $categoryBars.selectAll('.button-wrapper');
+  //const allArrows = $categoryBars.selectAll('.button-wrapper');
+  const allArrows = $categoryBars
   allArrows.on('click', function () {
-    const button = d3.select(this);
-    const dir = button.attr('data-direction');
+    //const button = d3.select(this);
+    //const dir = button.attr('data-direction');
     //.log({ dir });
-    if (dir === 'back') handleCatBack(button);
-    else if (dir === 'forward') {
-      const parent = d3.select(this.parentNode);
-      d3.event.stopPropagation();
-      catTap(parent);
-    }
+    // if (dir === 'back') handleCatBack(button);
+    // else if (dir === 'forward') {
+    //   const parent = d3.select(this.parentNode);
+    //   console.log(parent)
+    //   d3.event.stopPropagation();
+    const thisBar = d3.select(this)
+    catTap(thisBar);
+    //}
 
     // update direction
-    button.attr('data-direction', dir === 'back' ? 'forward' : 'back');
+    //button.attr('data-direction', dir === 'back' ? 'forward' : 'back');
   });
 }
 
 function catTap(block) {
+  //console.log(block)
   const clickedCat = block.node().attr;
   const currCat = block.classed('cat-chosen', true);
   currCat.classed('not-chosen', false)
@@ -378,7 +382,7 @@ function catTap(block) {
   const notCat = d3.selectAll('.category-bar').filter(function() {
     return !this.classList.contains('cat-chosen')
   })
-  console.log(notCat)
+  //console.log(notCat)
 
   const currPos = block.node().getBoundingClientRect();
 
