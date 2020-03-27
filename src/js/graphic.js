@@ -141,9 +141,12 @@ function checkCensors(censoredIndeces) {
   );
 
   // were each of the main words censored?
-  const mainWords = thisMatch.main.map(d => {
-    return censoredIndeces.includes(d);
-  });
+  let mainWords = null;
+  if (thisMatch.main) {
+    mainWords = thisMatch.main.map(d => {
+      return censoredIndeces.includes(d);
+    });
+  } else mainWords = ['true'];
 
   // add animations to feedback
 
