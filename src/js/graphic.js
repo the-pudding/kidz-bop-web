@@ -202,7 +202,7 @@ function findTotalCorrect() {
   const correctCount = correct.size();
   d3.select('.correct-count').text(correctCount);
   d3.select('.results-sentence').text(function() {
-    if (correctCount < 2) { return `Kids, earmuffs! Did you even really try?!`}
+    if (correctCount <= 2) { return `Kids, earmuffs! Did you even really try?!`}
     else if (correctCount < 4 && correctCount > 2) { return `This might seem safe for the radio, but not for Kidz Bop.`}
     else { return `The FCC has nothing on you!`}
   })
