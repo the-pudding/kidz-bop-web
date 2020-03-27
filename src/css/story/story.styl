@@ -59,13 +59,16 @@
 
 #touch
     display flex
+    position fixed
+    left 0
+    bottom 0
     flex-direction column
     width 100%
     height 25vh
     bottom 0rem
     align-items center
     justify-content flex-end
-    position absolute
+    //position absolute
     z-index 999
     padding-bottom 2rem
     +mq('bp-4')
@@ -78,9 +81,11 @@
         background linear-gradient(0deg, rgba($white, 1) 0%, rgba($white, 0.95) 50%, rgba($white, 0) 100%)
         width 100%  
         opacity 0
+        display none
 
         &.is-visible
-            opacity 1  
+            opacity 1 
+            display flex 
 
     .tapper
         display flex
@@ -238,8 +243,8 @@
             align-items center
             justify-content center
             border-radius 50%
-            width 3.5rem
-            height 3.5rem
+            width 3rem
+            height 3rem
 
             p
                 color $off-black
@@ -264,8 +269,8 @@
             set-type-size('xx-large', true)
 
         button
-            width 3.5rem
-            height 3.5rem
+            width 3rem
+            height 3rem
             border-radius 50%
             background rgba($white, 0.3)
             box-shadow 4px 4px 10px rgba($off-black, 0.1)
@@ -649,7 +654,7 @@
         display flex
         justify-content center
         flex-direction column
-        margin-top 2.5rem
+        margin-top 1.5rem
 
         .quiz-feedback
             display flex
@@ -660,6 +665,7 @@
                 font-family $national
                 text-align center
                 color $off-black
+                margin 0 0 1.5rem 0
 
 
                 &.slide-in
@@ -763,6 +769,7 @@
 #slide_18
     padding-bottom 0
     overflow scroll
+    height auto
 
     .after-text
         margin-bottom 3rem    
@@ -847,7 +854,10 @@
 
     .compare-wrapper
         justify-content flex-start
-        margin-top 0
+        margin 0 0 15rem 0
+
+        .lyric-set:last-child
+            margin-bottom 10rem
 
         .lyric-head
 

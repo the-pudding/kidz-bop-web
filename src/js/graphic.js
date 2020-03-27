@@ -68,7 +68,9 @@ function updateSlideLocation() {
   );
 
   // hide header
-  if ($currSlideID == 2) {
+  if ($currSlideID == 1) {
+    d3.select('header').classed('is-visible', true)
+  } else {
     d3.select('header').classed('is-visible', false)
   }
 
@@ -308,6 +310,11 @@ function beginTap() {
   d3.select('#slide_1').classed('is-visible-slide', true);
   // reset the current, previous, & next slides globally
   updateSlideLocation();
+  // resets quiz counting
+  d3.selectAll('.censored').classed('censored', false)
+  d3.selectAll('.song-circle').classed('is-wrong', false)
+  d3.selectAll('.song-circle').classed('is-correct', false)
+  d3.selectAll('.quiz-details').classed('total', false)
 }
 
 function handleCatBack(arrow) {
