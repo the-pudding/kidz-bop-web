@@ -155,8 +155,6 @@ function checkCensors(censoredIndeces) {
   // Else, see if at least main word is censored, if so, that's good, give it to them
   // Otherwise, loser
 
-  console.log({ thisMatch });
-
   if (selectedAll) {
     thisCircle.classed('is-wrong', true).classed('is-correct', false);
     thisFeedbackSent
@@ -171,6 +169,21 @@ function checkCensors(censoredIndeces) {
       .classed('is-correct', true)
       .html(
         `<span>Correct!</span><br> Do you secretly have a Kidz Bop playlist?`
+      );
+  } else if (
+    thisMatch.uncensored &&
+    censoredIndeces.includes(thisMatch.uncensored)
+  ) {
+    // if they missed some words, but also censored one that you would expect to be censored (e.g., champagne)
+    // but that wasn't censored in this instance, it's wrong.
+    const wrongWord = d3.select(allWords.nodes()[thisMatch.uncensored]).text();
+
+    thisCircle.classed('is-wrong', true).classed('is-correct', false);
+    thisFeedbackSent
+      .classed('slide-in', true)
+      .classed('is-wrong', true)
+      .html(
+        `<span>Oops</span><br> You'd think that "${wrongWord}" would be censored, but it wasn't.`
       );
   } else if (missed.length > 0 && !mainWords.includes(false)) {
     // if they missed some words, but still got the main one, correct
