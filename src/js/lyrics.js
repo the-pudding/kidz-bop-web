@@ -1,12 +1,12 @@
 export default [
     {
         quizID: 1,
-        main: 10,
-        exact: [6, 7, 8, 9, 10],
+        main: [4, 10],
+        exact: [2, 3, 4, 5, 8, 9, 10],
     },
     {
         quizID: 2,
-        main: 13,
+        main: [3, 13],
         exact: [3, 11, 12, 13],
     },
     {
@@ -16,12 +16,12 @@ export default [
     },
     {
         quizID: 4,
-        main: 12,
-        exact: [0, 1, 2, 4, 9, 12],
+        main: 7,
+        exact: [7, 8, 9],
     },
     {
         quizID: 5,
-        main: 5,
-        exact: [5],
+        main: 8,
+        exact: [8],
     },
 ];
