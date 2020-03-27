@@ -6,6 +6,8 @@ import categories from './categories';
 function resize() {}
 
 const $slides = d3.selectAll('.slide');
+const $methodOpen = d3.select('#method-button');
+const $methodClose = d3.select('#method svg');
 const $touch = d3.select('#touch');
 const $fwdTapDiv = $touch.selectAll('#right');
 const $bckTapDiv = $touch.selectAll('#left');
@@ -336,6 +338,14 @@ function fwdTap() {
   }
 }
 
+function methodOpen() {
+  d3.select('#method').classed('is-visible', true)
+}
+
+function methodClose() {
+  d3.select('#method').classed('is-visible', false)
+}
+
 function bckTap() {
   $currSlide.classed('is-visible-slide', false);
   $prevSlide.classed('is-visible-slide', true);
@@ -492,6 +502,9 @@ function init() {
   buttonSetup();
   setupArrowButton();
   spanHintSetup();
+  $methodOpen.on('click', methodOpen)
+  $methodClose.on('click', methodClose)
+  d3.select('#method').on('click', methodClose)
   $fwdTapDiv.on('click', fwdTap);
   $bckTapDiv.on('click', bckTap);
   $skipTapDiv.on('click', skipTap);

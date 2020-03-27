@@ -1041,3 +1041,63 @@
     transform: scale(1);
   }
 }
+
+#method-button
+    border-bottom 1px solid $off-black
+    cursor pointer
+
+    &:hover
+        opacity 0.5
+
+#method
+    display flex
+    position fixed
+    top 0
+    left 0
+    z-index set-index('overlay')
+    background-color rgba($white, 0.95)
+    width 100%
+    height 100vh
+    padding 2rem
+    transition transform 200ms ease-in-out
+    transform translateY(100%)
+
+    &.is-visible
+        transform translateY(0)
+        display flex
+        position absolute
+        z-index set-index('overlay')
+        background-color rgba($white, 0.95)
+        width 100%
+        height 100vh
+        padding 2rem
+
+    button
+        background-color transparent
+        height 2rem
+        width 2rem
+        display flex
+        align-items center
+        justify-content center
+        position absolute
+        top 1rem
+        right 0.5rem
+
+        svg
+            stroke $off-black
+            width 100%
+
+            &:hover
+                opacity 0.5
+
+    .text-wrapper
+
+        h5
+            font-family $national
+            font-weight 700
+            text-transform uppercase
+            set-type-size('root', true)
+
+        p
+            font-family $national
+            set-type-size('root', true)
