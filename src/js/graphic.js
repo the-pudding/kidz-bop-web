@@ -3,7 +3,7 @@ import prepareSpan from './utils/prepare-span';
 import categories from './categories';
 
 /* global d3 */
-function resize() { }
+function resize() {}
 
 const $slides = d3.selectAll('.slide');
 const $touch = d3.select('#touch');
@@ -22,7 +22,7 @@ const $answerSlidesAll = $slides.filter((d, i, n) =>
 const $count = d3.selectAll('#count');
 const $quizDetails = d3.select('.quiz-details');
 const $catSection = d3.select('#categories');
-const $feedbackSentences = d3.selectAll('.quiz-feedback p')
+const $feedbackSentences = d3.selectAll('.quiz-feedback p');
 
 let $lyricSpans = null;
 
@@ -44,10 +44,12 @@ function spanSetup() {
 }
 
 function spanHintSetup() {
-  const firstQuizSlide = d3.selectAll('#slide_3')
-  const firstLyrics = firstQuizSlide.selectAll('.lyric-wrapper p')
-  const firstSpan = firstLyrics.selectAll('span')
-  firstSpan.attr('class', function(d, i) { return i ? null : 'hintSpan'; })
+  const firstQuizSlide = d3.selectAll('#slide_3');
+  const firstLyrics = firstQuizSlide.selectAll('.lyric-wrapper p');
+  const firstSpan = firstLyrics.selectAll('span');
+  firstSpan.attr('class', function(d, i) {
+    return i ? null : 'hintSpan';
+  });
 }
 
 function updateSlideLocation() {
@@ -69,14 +71,14 @@ function updateSlideLocation() {
 
   // hide header
   if ($currSlideID == 1) {
-    d3.select('header').classed('is-visible', true)
+    d3.select('header').classed('is-visible', true);
   } else {
-    d3.select('header').classed('is-visible', false)
+    d3.select('header').classed('is-visible', false);
   }
 
   // hide/show category bars
   if ($currSlideID == 17) {
-    $catSection.classed('is-visible', true).style('pointer-events', 'all')
+    $catSection.classed('is-visible', true).style('pointer-events', 'all');
     $categoryBars
       .classed('not-chosen', false)
       .classed('cat-chosen', false)
@@ -86,7 +88,7 @@ function updateSlideLocation() {
       .ease(d3.easeLinear)
       .style('transform', 'translate(0, 0)');
   } else if ($currSlideID < 17) {
-    $catSection.classed('is-visible', false)
+    $catSection.classed('is-visible', false);
   }
 
   if (answerSlide) {
@@ -132,10 +134,16 @@ function checkCensors(censoredIndeces) {
 
   const thisFeedbackSlide = d3.selectAll('.slide').filter((d, i, n) => {
     return d3.select(n[i]).attr('data-answer') === currQuiz;
-  })
+  });
 
-  const thisFeedbackSent = thisFeedbackSlide.selectAll('.compare-wrapper .quiz-feedback p')
+  const thisFeedbackSent = thisFeedbackSlide.selectAll(
+    '.compare-wrapper .quiz-feedback p'
+  );
 
+  // were each of the main words censored?
+  const mainWords = thisMatch.main.map(d => {
+    return censoredIndeces.includes(d);
+  });
 
   // add animations to feedback
 
@@ -144,20 +152,38 @@ function checkCensors(censoredIndeces) {
   // Else, see if at least main word is censored, if so, that's good, give it to them
   // Otherwise, loser
 
+  console.log({ thisMatch });
+
   if (selectedAll) {
     thisCircle.classed('is-wrong', true).classed('is-correct', false);
-    thisFeedbackSent.classed('slide-in', true).classed('is-wrong', true).html(`<span>Whoa!</span><br> You can't censor it all.`)
+    thisFeedbackSent
+      .classed('slide-in', true)
+      .classed('is-wrong', true)
+      .html(`<span>Whoa!</span><br> You can't censor it all.`);
   } else if (missed.length === 0 && extraCensored.length === 0) {
     // if they got an exact match, they win!
     thisCircle.classed('is-correct', true).classed('is-wrong', false);
-    thisFeedbackSent.classed('slide-in', true).classed('is-correct', true).html(`<span>Correct!</span><br> Do you secretly have a Kidz Bop playlist?`)
-  } else if (missed.length > 0 && censoredIndeces.includes(thisMatch.main)) {
+    thisFeedbackSent
+      .classed('slide-in', true)
+      .classed('is-correct', true)
+      .html(
+        `<span>Correct!</span><br> Do you secretly have a Kidz Bop playlist?`
+      );
+  } else if (missed.length > 0 && !mainWords.includes(false)) {
     // if they missed some words, but still got the main one, correct
     thisCircle.classed('is-correct', true).classed('is-wrong', false);
-    thisFeedbackSent.classed('slide-in', true).classed('is-correct', true).html(`<span>This counts!</span><br> You found the main censored word.`)
+    thisFeedbackSent
+      .classed('slide-in', true)
+      .classed('is-correct', true)
+      .html(`<span>This counts!</span><br> You found the main censored word.`);
   } else {
     thisCircle.classed('is-wrong', true).classed('is-correct', false);
-    thisFeedbackSent.classed('slide-in', true).classed('is-wrong', true).html(`<span>Yikes!</span><br> This still needs a parental advisory label.`)
+    thisFeedbackSent
+      .classed('slide-in', true)
+      .classed('is-wrong', true)
+      .html(
+        `<span>Yikes!</span><br> This still needs a parental advisory label.`
+      );
   }
 }
 
@@ -183,7 +209,7 @@ function spanCensor() {
   const word = d3.select(this);
 
   // remove prompt
-  $lyricSpans.classed('hintSpan', false)
+  $lyricSpans.classed('hintSpan', false);
 
   // is this word already censored?
   const isCensored = word.classed('censored');
@@ -202,10 +228,14 @@ function findTotalCorrect() {
   const correctCount = correct.size();
   d3.select('.correct-count').text(correctCount);
   d3.select('.results-sentence').text(function() {
-    if (correctCount <= 2) { return `Kids, earmuffs! Did you even really try?!`}
-    else if (correctCount < 4 && correctCount > 2) { return `This might seem safe for the radio, but not for Kidz Bop.`}
-    else { return `The FCC has nothing on you!`}
-  })
+    if (correctCount <= 2) {
+      return `Kids, earmuffs! Did you even really try?!`;
+    }
+    if (correctCount < 4 && correctCount > 2) {
+      return `This might seem safe for the radio, but not for Kidz Bop.`;
+    }
+    return `The FCC has nothing on you!`;
+  });
 }
 
 function updateButtons() {
@@ -232,7 +262,10 @@ function updateButtons() {
   // if on slide 2, this will evaluate to true, otherwise false
   $skipTapDiv.classed('is-visible', [2].includes($currSlideID));
   $beginTapDiv.classed('is-visible', [18].includes($currSlideID));
-  d3.selectAll('.bottom-fade').classed('is-visible', [18].includes($currSlideID));
+  d3.selectAll('.bottom-fade').classed(
+    'is-visible',
+    [18].includes($currSlideID)
+  );
 
   // toggling button visibility
   // if the current slide id is in the array, this should evaulate to true, otherwise false
@@ -264,13 +297,13 @@ function updateButtons() {
 
   // if above slide 16, remove pointer events for touch
   if ($currSlideID > 16 && $currSlideID < 18) {
-    //console.log({ $touch });
+    // console.log({ $touch });
     $touch.style('pointer-events', 'none');
   } else $touch.style('pointer-events', 'all');
 }
 
 function fwdTap() {
-  //console.log({ $currSlide });
+  // console.log({ $currSlide });
   // is the current slide a quiz slide?
   const $currQuiz = $currSlide.attr('data-quiz');
 
@@ -311,10 +344,10 @@ function beginTap() {
   // reset the current, previous, & next slides globally
   updateSlideLocation();
   // resets quiz counting
-  d3.selectAll('.censored').classed('censored', false)
-  d3.selectAll('.song-circle').classed('is-wrong', false)
-  d3.selectAll('.song-circle').classed('is-correct', false)
-  d3.selectAll('.quiz-details').classed('total', false)
+  d3.selectAll('.censored').classed('censored', false);
+  d3.selectAll('.song-circle').classed('is-wrong', false);
+  d3.selectAll('.song-circle').classed('is-correct', false);
+  d3.selectAll('.quiz-details').classed('total', false);
 }
 
 function handleCatBack(arrow) {
@@ -352,41 +385,41 @@ function handleCatBack(arrow) {
 }
 
 function setupArrowButton() {
-  //const allArrows = $categoryBars.selectAll('.button-wrapper');
-  const allArrows = $categoryBars
-  allArrows.on('click', function () {
-    //const button = d3.select(this);
-    //const dir = button.attr('data-direction');
-    //.log({ dir });
+  // const allArrows = $categoryBars.selectAll('.button-wrapper');
+  const allArrows = $categoryBars;
+  allArrows.on('click', function() {
+    // const button = d3.select(this);
+    // const dir = button.attr('data-direction');
+    // .log({ dir });
     // if (dir === 'back') handleCatBack(button);
     // else if (dir === 'forward') {
     //   const parent = d3.select(this.parentNode);
     //   console.log(parent)
     //   d3.event.stopPropagation();
-    const thisBar = d3.select(this)
+    const thisBar = d3.select(this);
     catTap(thisBar);
-    //}
+    // }
 
     // update direction
-    //button.attr('data-direction', dir === 'back' ? 'forward' : 'back');
+    // button.attr('data-direction', dir === 'back' ? 'forward' : 'back');
   });
 }
 
 function catTap(block) {
-  //console.log(block)
+  // console.log(block)
   const clickedCat = block.node().attr;
   const currCat = block.classed('cat-chosen', true);
-  currCat.classed('not-chosen', false)
+  currCat.classed('not-chosen', false);
   const currBckText = currCat.select('.button-wrapper p');
   const currBckButton = currCat.select('.button-wrapper button');
   const notCat = d3.selectAll('.category-bar').filter(function() {
-    return !this.classList.contains('cat-chosen')
-  })
-  //console.log(notCat)
+    return !this.classList.contains('cat-chosen');
+  });
+  // console.log(notCat)
 
   const currPos = block.node().getBoundingClientRect();
 
-  //console.log({ currCat, notCat, block });
+  // console.log({ currCat, notCat, block });
   notCat
     .transition()
     .duration(250)
@@ -400,29 +433,30 @@ function catTap(block) {
     .delay(250)
     .ease(d3.easeLinear)
     .style('transform', 'translate(100%)');
-    //.style('transform', `translate(0, -${currPos.top -70}px)`);
-  
-  // replace category span on dropdown page
-  const categoryAttr =  currCat.node().getAttribute('data-cat')
-  const categorySpan = d3.selectAll('#category-sent')
-  categorySpan.text(function() {
-    if (categoryAttr == 'alcohol') { return 'alcohol & drugs'}
-    else { return categoryAttr }
-  })
-  categorySpan.attr('class', null)
-  categorySpan.classed(`${categoryAttr}-sent`, true)
+  // .style('transform', `translate(0, -${currPos.top -70}px)`);
 
-  // hide the category bars completely  
+  // replace category span on dropdown page
+  const categoryAttr = currCat.node().getAttribute('data-cat');
+  const categorySpan = d3.selectAll('#category-sent');
+  categorySpan.text(function() {
+    if (categoryAttr == 'alcohol') {
+      return 'alcohol & drugs';
+    }
+    return categoryAttr;
+  });
+  categorySpan.attr('class', null);
+  categorySpan.classed(`${categoryAttr}-sent`, true);
+
+  // hide the category bars completely
   // $catSection
   //   .transition()
   //   .duration(0)
   //   .delay(1000)
   //   .ease(d3.easeLinear)
   //   .style('display', 'none')
-    
 
   // set the new direction to back
-  //currBckButton.attr('data-direction', 'back');
+  // currBckButton.attr('data-direction', 'back');
 
   // trigger a tap forward one slide
   fwdTap();
