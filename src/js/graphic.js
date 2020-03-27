@@ -409,6 +409,7 @@ function catTap(block) {
     if (categoryAttr == 'alcohol') { return 'alcohol & drugs'}
     else { return categoryAttr }
   })
+  categorySpan.attr('class', null)
   categorySpan.classed(`${categoryAttr}-sent`, true)
 
   // hide the category bars completely  

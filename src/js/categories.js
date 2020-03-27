@@ -92,7 +92,7 @@ function handleDropdown(val) {
             $toggle
                 .append('p')
                 .attr('class', 'toggle-labels toggle-kb toggle-on')
-                .text('Kidz Bop');
+                .text('KB');
             const $switch = $toggle.append('label').attr('class', 'switch');
             $switch
                 .append('input')
@@ -105,7 +105,7 @@ function handleDropdown(val) {
             $toggle
                 .append('p')
                 .attr('class', 'toggle-labels toggle-og')
-                .text('Original');
+                .text('OG');
         });
 }
 
