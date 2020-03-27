@@ -176,14 +176,15 @@ function checkCensors(censoredIndeces) {
   ) {
     // if they missed some words, but also censored one that you would expect to be censored (e.g., champagne)
     // but that wasn't censored in this instance, it's wrong.
-    const wrongWord = d3.select(allWords.nodes()[thisMatch.uncensored]).text();
+    let wrongWord = d3.select(allWords.nodes()[thisMatch.uncensored]).text();
+    wrongWord = wrongWord.replace(',','');
 
     thisCircle.classed('is-wrong', true).classed('is-correct', false);
     thisFeedbackSent
       .classed('slide-in', true)
       .classed('is-wrong', true)
       .html(
-        `<span>Oops</span><br> You'd think that "${wrongWord}" would be censored, but it wasn't.`
+        `<span>Oops!</span><br> Kidz Bop didn't actually censor "${wrongWord}" here.`
       );
   } else if (missed.length > 0 && !mainWords.includes(false)) {
     // if they missed some words, but still got the main one, correct
