@@ -415,20 +415,15 @@ function setupArrowButton() {
   // const allArrows = $categoryBars.selectAll('.button-wrapper');
   const allArrows = $categoryBars;
   allArrows.on('click', function() {
-    // const button = d3.select(this);
-    // const dir = button.attr('data-direction');
-    // .log({ dir });
-    // if (dir === 'back') handleCatBack(button);
-    // else if (dir === 'forward') {
-    //   const parent = d3.select(this.parentNode);
-    //   console.log(parent)
-    //   d3.event.stopPropagation();
-    const thisBar = d3.select(this);
-    catTap(thisBar);
-    // }
+    const bar = d3.select(this)
+    const dir = bar.attr('data-cat')
+    if (dir === 'back') handleCatBack(bar)
+    else {
+      catTap(bar);
+    }
 
     // update direction
-    // button.attr('data-direction', dir === 'back' ? 'forward' : 'back');
+    //button.attr('data-direction', dir === 'back' ? 'forward' : 'back');
   });
 }
 
