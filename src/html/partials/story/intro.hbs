@@ -9,27 +9,6 @@
 			{{/each}}
 		</div>
 </section>
-<section id='touch'>
-	<div class='tapper'>
-		<div id='left'>
-			<button>
-				<p>Back to categories</p>
-				<img inline src='arrow-left.svg'>
-			</button>
-		</div>
-		<div id='right' class='is-visible solo'>
-			<button>
-				<p>Let's find out</p>
-				<img inline src='arrow-right.svg'>
-			</button>
-		</div>
-	</div>
-	<div class='directions'>
-		<p id='skipper'>Skip the quiz. Show me the data.</p>
-		<p id='begin'>Take me back to the beginnning.</p>
-	</div>
-	<div class='bottom-fade'></div>
-</section>
 <section id='categories'>
 	{{#each copy.censorship_categories}}
 	<div class='category-bar {{{tag}}}-bar' data-cat={{tag}}>
@@ -51,6 +30,27 @@
 	</div>
 </section>
 <section id='story'>
+	<section id='touch'>
+		<div class='tapper'>
+			<div id='left'>
+				<button>
+					<p>Back to categories</p>
+					<img inline src='arrow-left.svg'>
+				</button>
+			</div>
+			<div id='right' class='is-visible solo'>
+				<button>
+					<p>Let's find out</p>
+					<img inline src='arrow-right.svg'>
+				</button>
+			</div>
+		</div>
+		<div class='directions'>
+			<p id='skipper'>Skip the quiz. Show me the data.</p>
+			<p id='begin'>Take me back to the beginnning.</p>
+		</div>
+		<div class='bottom-fade'></div>
+	</section>
 	<div class='quiz-details'>
 		<div class='quiz-tracker'>
 			<p class='song-count'>Song <span id='count'>1</span> of 5</p>
@@ -177,7 +177,7 @@
 	<div id='slide_18' class='slide gradient'>
 		<div class='bottom-fade'></div>
 		<div class='before-text dropdown-text'>
-			<p>Words tagged as <span id='category-sent'></span> appear in X of X Kidz Bop songs and are censored X% of the time. Within this category, </p>
+			<p>Words classified as <span id='category-sent'></span> appear in X of X Kidz Bop songs and are censored X% of the time. Within this category, the word </p>
 		</div>
 		<div class='dropdown'>
 			<div class='dropdown-group'>

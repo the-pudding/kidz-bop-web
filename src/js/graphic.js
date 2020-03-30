@@ -186,7 +186,7 @@ function checkCensors(censoredIndeces) {
       .classed('slide-in', true)
       .classed('is-wrong', true)
       .html(
-        `<span>Oops!</span><br> Kidz Bop didn't actually censor "${wrongWord}" here.`
+        `<span>Oops!</span><br> Kidz Bop didn't actually censor "${wrongWord}."`
       );
   } else if (missed.length > 0 && !mainWords.includes(false)) {
     // if they missed some words, but still got the main one, correct

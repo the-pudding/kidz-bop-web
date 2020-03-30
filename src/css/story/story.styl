@@ -1,8 +1,25 @@
 /* CUSTOM STORY STYLE */
-#content
+body
     background lighten($kb-teal, 10)
+
+#story
+    position absolute
+    left 50%
+    top 0
+    transform translate(-50%, 0)  
+    width 100% 
+    height 100% 
+
+#content
     width 100%
     height 100vh
+    position relative
+    +mq('bp-4')
+        width 100%
+        height 55em
+        margin-top 3rem
+        padding-top 5rem
+
 
 #prompt
     display none
@@ -72,7 +89,12 @@
     z-index 999
     padding-bottom 2rem
     +mq('bp-4')
-        top 68vh
+        position absolute
+        width 100%
+        margin 0 auto
+        bottom 0
+        left 0
+        padding-bottom 4rem
 
     .bottom-fade
         height 12rem
@@ -83,6 +105,8 @@
         opacity 0
         display none
         pointer-events none
+        +mq('bp-4')
+            max-width 30em
 
         &.is-visible
             opacity 1 
@@ -179,6 +203,8 @@
             padding 0
             opacity 0.5 
             display none
+            +mq('bp-4')
+                set-type-size('root', true)  
 
             &.is-visible
                 visibility visible
@@ -204,11 +230,12 @@
     align-content stretch
     bottom 0
     +mq('bp-4')
-        max-width 40em
+        position absolute
+        max-width 30em
+        bottom 2rem
         left 50%
         height 60vh
         transform translateX(-50%)
-        bottom 5rem
 
     &.is-visible
         visibility visible
@@ -268,6 +295,9 @@
             font-family $national
             //font-weight 700
             set-type-size('x-large', true)
+            +mq('bp-4')
+                set-type-size('xx-large', true)
+
 
         button
             width 3rem
@@ -332,11 +362,12 @@
     pointer-events none
     margin-top 0
     +mq('bp-4')
-        max-width 40em
+        position absolute
+        margin-top 5rem
+        max-width 30em
         left 50%
-        margin-top 6rem
-        transform translate(-50%, 50%)
-        padding 6rem 2rem 2rem 2rem
+        transform translate(-50%, 0)
+        padding 2rem 2rem 0rem 2rem
 
     &.is-visible
        visibility visible
@@ -356,6 +387,8 @@
         margin 0
         padding 0
         text-align right
+        +mq('bp-4')
+          set-type-size('root', true)  
 
     .song-circles
         display flex
@@ -405,15 +438,15 @@
     background $white
     pointer-events none
     +mq('bp-4')
-        max-width 40em
-        max-height 40em
+        position absolute
+        width 100%
+        top 0
         left 50%
-        top 50%
-        transform translate(-50%, -50%)
-        margin 2rem 0
-        height 80%
-        width 80%
-        box-shadow 4px 4px 10px rgba($off-black, 0.1)
+        max-width 30em
+        max-height 50em
+        margin 5rem auto 0 auto
+        box-shadow 4px 4px 10px rgba($off-black, 0.1) 
+        transform translate(-50%, 0)
 
     &.is-visible-slide
         visibility visible
@@ -422,7 +455,7 @@
 
 
     &.gradient
-        background linear-gradient(-45deg, $kb-teal 0%, $kb-purple 50%, $kb-pink 100%)
+        background linear-gradient(-45deg, $kb-teal 0%, $kb-purple 50%, $kb-pink 100%)   
 
     .header
         width 100%
@@ -471,6 +504,8 @@
             font-family $national
             font-weight 700
             margin 0
+            +mq('bp-4')
+              set-type-size('xxx-large', true)  
 
         .kb-logo
             width 100%
@@ -482,21 +517,32 @@
         width 100%
         height 100vh
         display flex
-        //align-items flex-end
         flex-direction row
         margin-top 3rem
+        +mq('bp-4')
+            flex-direction column
 
         div
             width 50%
+            margin-bottom 0
+            +mq('bp-4')
+                width 100%
+                margin-bottom 1rem
+                
+            a   
+                color $off-black
 
-            a
                 &:hover
-                    opacity 0.5
+                    color rgba($off-black, 0.5)
 
             p
                 margin 0   
                 set-type-size('root', true)
                 font-family $national
+                text-align left
+                +mq('bp-4')
+                    text-align center
+                    set-type-size('medium', true)
 
                 &.bolded
                     font-weight 700
@@ -528,43 +574,49 @@
             font-family $national
             margin 0 0 1rem 0
             +mq('bp-4')
-                set-type-size('medium', true)
+                set-type-size('large', true)
 
         .alcohol-span
             font-weight 700
             color $white
             background $off-black 
-            padding 0 0.25rem 
+            padding 0 0.25rem
+            white-space nowrap 
 
         .sexual-span
             font-weight 700
             color $off-black
             background $kb-pink
             padding 0 0.25rem 
+            white-space nowrap 
 
         .profanity-span
             font-weight 700
             color $off-black
             background $kb-purple
             padding 0 0.25rem 
+            white-space nowrap 
 
         .violence-span
             font-weight 700
             color $off-black
             background $kb-teal
             padding 0 0.25rem 
+            white-space nowrap 
 
         .identity-span
             font-weight 700
             color $off-black
             background $kb-blue
             padding 0 0.25rem 
+            white-space nowrap 
 
         .other-span
             font-weight 700
             color $off-black
             background $gray
-            padding 0 0.25rem                      
+            padding 0 0.25rem 
+            white-space nowrap                      
 
     .button-wrapper   
         width 100%
@@ -592,8 +644,6 @@
         flex-direction row     
         justify-content space-between 
         padding-top 0
-        +mq('bp-4')
-            padding-top 4rem
 
         .song-details
             display flex
@@ -606,7 +656,8 @@
                 set-type-size('small', true)
                 line-height 1.5
                 +mq('bp-4')
-                    set-type-size('root', true)
+                    set-type-size('medium', true)
+                    line-height 1.25
 
             #artist
                 text-transform uppercase
@@ -619,12 +670,17 @@
         justify-content flex-start
         flex-direction column
         margin-top 5rem
+        +mq('bp-4')
+            margin-top 7rem
 
         p    
             set-type-size('xxx-large', true)
             line-height 1.25
             font-family $national
             font-weight 700 
+            +mq('bp-4')
+                set-type-size('xxxx-large', true)
+
             span 
                 position relative
                 background-color none 
@@ -650,6 +706,9 @@
                         text-indent 1.65rem
                         //animation fadeHint 1.2s ease infinite
                         pointer-events none
+                        +mq('bp-4')
+                           set-type-size('root', true) 
+                           width 21rem
 
     .compare-wrapper
         width 100%
@@ -658,6 +717,8 @@
         justify-content flex-start
         flex-direction column
         margin-top 1.5rem
+        +mq('bp-4')
+            margin-top 3rem
 
         .quiz-feedback
             display flex
@@ -669,6 +730,8 @@
                 text-align center
                 color $off-black
                 margin 0 0 1.5rem 0
+                +mq('bp-4')
+                    set-type-size('medium', true)
 
 
                 &.slide-in
@@ -686,7 +749,7 @@
                     padding 0 0.25rem 
                     set-type-size('medium', true)
                     +mq('bp-4')
-                        set-type-size('large', true)
+                        set-type-size('x-large', true)
 
         .lyric-set
             background $white
@@ -702,6 +765,8 @@
                 padding-bottom 0.25rem
                 border-bottom 2px solid $off-black
                 //border-style dashed
+                +mq('bp-4')
+                  padding-bottom 1rem  
 
                 p
                     set-type-size('small', true)
@@ -710,7 +775,7 @@
                     margin 0
                     padding-top 0
                     +mq('bp-4')
-                        set-type-size('root', true)
+                        set-type-size('medium', true)
 
                 a
                     border-bottom none        
@@ -719,6 +784,9 @@
                     width 24px
                     height 24px 
                     cursor pointer
+                    +mq('bp-4')
+                        width 30px
+                        height 30px
 
                     .st0
                         fill $gray-light 
@@ -837,6 +905,8 @@
             display flex
             justify-content center
             cursor pointer 
+            +mq('bp-4')
+                height 4rem
 
             select
                 width 100%
@@ -855,7 +925,10 @@
                 background-image url('assets/images/arrow.png')
                 background-repeat no-repeat
                 background-position 95% 50%
-                background-size 20px 20px  
+                background-size 20px 20px
+                +mq('bp-4')
+                    set-type-size('x-large', true)
+                    height 4rem 
 
             .select-bg
                 position absolute
@@ -863,7 +936,9 @@
                 background-color rgba($white, 0.3)
                 width 100%
                 height 3.5rem    
-                box-shadow 4px 4px 10px rgba($off-black, 0.1)    
+                box-shadow 4px 4px 10px rgba($off-black, 0.1)
+                +mq('bp-4')  
+                    height 4rem    
 
     .compare-wrapper
         justify-content flex-start
@@ -878,7 +953,7 @@
 
                 p
                     line-height 1.25
-                    font-weight 500     
+                    font-weight 500  
 
                 .song
                     font-weight 700
@@ -894,9 +969,14 @@
                 set-type-size('small', true)
                 color $gray
                 width 3.75rem
+                +mq('bp-4')
+                    set-type-size('root', true)
+
 
             .toggle-labels
-                width 1.2rem    
+                width 1.2rem 
+                +mq('bp-4')  
+                    width 1.3rem  
 
             .toggle-on
                 font-weight 700  
@@ -906,7 +986,9 @@
                 margin 0 0.25rem
                 position relative
                 width 2.5rem
-                height 1.25 rem    
+                height 1.25 rem  
+                +mq('bp-4')  
+                    margin 0.25rem 0.25rem 0 0.25rem
 
                 input
                     opacity 0
@@ -950,7 +1032,8 @@
         margin 1rem 0
         animation popIn 0.3s ease-in-out
         animation-iteration-count 1
-        //transform scale(0)
+        +mq('bp-4')
+            width 80%
         
         .pathKB
             stroke-dashoffset 0
@@ -1058,7 +1141,7 @@
     z-index set-index('overlay')
     background-color rgba($white, 0.95)
     width 100%
-    height auto
+    height 100vh
     padding 2rem
     transition transform 200ms ease-in-out
     transform translateY(100%)
