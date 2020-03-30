@@ -28,7 +28,7 @@ function handleToggle() {
     const thisToggleOG = toggleParent.selectAll('.toggle-og');
 
     //console.log({ parent, lyrics, lyricParent, checked });
-    console.log(toggleParent)
+    //console.log(toggleParent)
 
     if (checked === 'true') {
         lyrics
@@ -82,7 +82,7 @@ function handleDropdown(val) {
             $deets
                 .append('p')
                 .attr('class', 'kb-deets')
-                .text(d => d.kb_deets);
+                .text(d => `Kidz Bop (${d.kb_deets})`);
             $deets
                 .append('p')
                 .attr('class', 'orig-deets')
@@ -129,11 +129,16 @@ function updateDropdown() {
 }
 
 function filter(cat) {
+
     const filtered = data.filter(d => d.category === cat);
     filteredData = d3
         .nest()
         .key(d => d.word)
         .entries(filtered);
+    
+        
+    console.log(filteredData)
+
 
     if (filteredData) {
         updateDropdown();

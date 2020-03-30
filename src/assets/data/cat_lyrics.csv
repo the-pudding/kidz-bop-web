@@ -1,10 +1,899 @@
-word,song,original_deets,original,kb_deets,kb
-champagne,Livin' La Vida Loca,Ricky Martin,She never drinks the water makes you order French champagne,Kidz Bop 2001,She never drinks the water makes you order French champagne
-champagne,Livin' La Vida Loca,Ricky Martin,She never drinks the water makes you order French champagne,Kidz Bop 2001,She never drinks the water makes you order French champagne
-champagne,Livin' La Vida Loca,Ricky Martin,She never drinks the water makes you order French champagne,Kidz Bop 2001,She never drinks the water makes you order French champagne
-Jack,TiK ToK,Ke$ha,Before I leave brush my teeth with a bottle of Jack,Kidz Bop 2001,Before I leave brush my teeth and then I go and pack
-Jack,TiK ToK,Ke$ha,Before I leave brush my teeth with a bottle of Jack,Kidz Bop 2001,Before I leave brush my teeth and then I go and pack
-booty,Old Town Road,Lil Nas X,things and stuff,Kidz Bop 2001,whatever
-booty,Old Town Road,Lil Nas X,things and stuff,Kidz Bop 2001,whatever
-test,Puddin,Us,more testing,Kidz Bop 2001,does this work
-test,Puddin,Us,more testing,Kidz Bop 2001,does this work
+word,song,original_deets,kb_deets,original,kb
+bitch,7 rings,Ariana Grande,2019,Bought matching diamonds for six of my bitches,Bought matching diamonds so they know what this is
+blow,till the world ends,Britney Spears,2011,"Baby, let me blow your mind tonight","Baby, come on wave your hands tonight"
+touch,till the world ends,Britney Spears,2011,"Get you off with the touch, dancing in the dark",Set it off with a track dancing in the dark
+high,ex's and oh's,Elle King,2016,"I get high, and I love to get low","I get by, and I love to lay low"
+man,ex's and oh's,Elle King,2016,"Well, I had me a boy, turned him into a man","Well, I knew me a boy, and yes he was a friend"
+champagne,my house,Flo Rida,2016,"Keep our clothes on the floor, open up champagne","Keep our hands in the air, open up and dance"
+body,wild ones,Flo Rida,2012,"What happens to that body, it's a private show",Round up baby 'til the Kidz Bop show
+body,wild ones,Flo Rida,2012,Tear up that body,*cuts verse*
+bottle,wild ones,Flo Rida,2012,"After bottle, we all get bent then again tomorrow","After a while, we all'll get up again tomorrow"
+champagne,wild ones,Flo Rida,2012,"Tolerance, bottoms up when the champagne","Tell them this, both hands, its off the chain"
+clothes,wild ones,Flo Rida,2012,Got the clothes coming off,Got the sounds coming off
+freak,wild ones,Flo Rida,2012,"Wild out baby, 'til the freak, it shows",Oh oh it sounds like everyone knows
+high,wild ones,Flo Rida,2012,"I like 'em untamed, don't tell me high pain","I like to explain, don't tell me how lame"
+hell,cruise,Florida Georgia Line,2014,"Hell, I can't get you out of my head",*cuts verse*
+amen,exit sign,Hilltop Hoods,2019,"But don't mind it if it cause offence, we make moves not amends",*cuts verse*
+fuck,exit sign,Hilltop Hoods,2019,But I don't give a fuck about the money,But I don't give a thought about the money
+fuck,exit sign,Hilltop Hoods,2019,And I don't give a fuck about the party,And I don't give a thought about the party
+fuck,exit sign,Hilltop Hoods,2019,I give a fuck about in this phoney world is Ari,I give a thought about in this phoney world is Ari
+god,exit sign,Hilltop Hoods,2019,"You in it for your fifteen minutes, it's quarter past then, goddamn",*cuts verse*
+jesus,exit sign,Hilltop Hoods,2019,"Jesus wept, ha, I don't mean it",*cuts verse*
+sleep,love yourself,Justin Bieber,2016,"But now I know, I'm better sleeping on my own","And now I know, I'm better living on my own"
+cigarette,alejandro,Lady Gaga,2010,Just smoke my cigarette and hush,Just walk away from me and hush
+damn,downtown,Macklemore & Ryan Lewis,2016,"Mow your damn lawn and sit the hell down""",Mow your own lawn and sit right back down
+bar,nothing breaks like a heart,Mark Ronson,2017,Spin endless circles in the bar (Spin 'round in the bar),Spin endless circles where you are (Spin 'round where you are)
+bullet,nothing breaks like a heart,Mark Ronson,2017,These silver bullet cigarettes,These are just nothing but regrets
+cigarette,nothing breaks like a heart,Mark Ronson,2017,These silver bullet cigarettes,These are just nothing but regrets
+cuts,nothing breaks like a heart,Mark Ronson,2017,It cuts you deep and leaves a scar,It runs real deep and leaves a scar
+die,nothing breaks like a heart,Mark Ronson,2017,We live and die by pretty lies,We live a life of pretty lies
+drunk,nothing breaks like a heart,Mark Ronson,2017,We were drunk in love in Tennessee,We were dumb and love in Tennessee
+smoking,nothing breaks like a heart,Mark Ronson,2017,"It's smoking, we both know it","It's going, oh, we both know it"
+kiss,like i'm gonna lose you,Meghan Trainor,2016,"So I'll kiss you longer, babe (Hey), any chance that I get","So I'll stay here longer baby, any chance that I get"
+skin,mercy,Shawn Mendes,2017,Ripping all the skin from off my bones,Feeling all the hurt inside my bones
+bullet,bad blood,Taylor Swift,2015,Band-aids don't fix bullet holes,Band-aids don't fix don't you know
+cut,bad blood,Taylor Swift,2015,You made a really deep cut,So take a look at what you've done
+knives,bad blood,Taylor Swift,2015,Still got scars in my back from your knives,I don't think I want you back in my life
+god,i gotta feeling - 1461400,The Black Eyed Peas,2009,"Go out and smash it like, ""Oh, my God!""","Go out and smash it like, oh, my gosh"
+neck,this feeling,The Chainsmokers,2019,They got their hands at my neck this time,They got their hands in the air this time
+body,dj got us falling in love,Usher,2011,Put your hands on my body,Put your hands up in the air
+damn,easier,5 Seconds of Summer,2019,Cause you're so damn beautiful,"Cause you're so, so beautiful"
+damn,easier,5 Seconds of Summer,2019,You're so damn beautiful,"You're so, so beautiful"
+damn,youngblood,5 Seconds of Summer,2018,You beat me at my own damn game,You beat me at my own big game
+dead,youngblood,5 Seconds of Summer,2018,And I'm just a dead man walking tonight,But I'm just a sad man walking tonight
+dead,youngblood,5 Seconds of Summer,2018,So I’m just a dead man crawling tonight,So I’m just a sad man crawling tonight
+drunk,youngblood,5 Seconds of Summer,2018,Then one of us gets too drunk,Then one of us gets too lost
+god,youngblood,5 Seconds of Summer,2018,Hope to God you see my face,"Like to think you see my face (Yeah, ooh, ooh)"
+freak,try again,Aaliyah,2002,"Step to, step to, freaky-freaky",*cuts verse*
+shit,rolling in the deep,Adele,2011,"Go ahead and sell me out, and then I'll lay your shit bare",Go ahead and sell me out and I'll lay it up there
+body,send my love,Adele,2017,"You put your hands on, on my body and told me","You had your arms wraped, wraped around me, you told me, umm"
+kiss,set fire to the rain (feat. ethan bortnick),Adele,2012,Until you kissed my lips and you saved me,Until you hold my hands and you saved me
+lips,set fire to the rain (feat. ethan bortnick),Adele,2012,Until you kissed my lips and you saved me,Until you hold my hands and you saved me
+men,don't matter,Akon,2007,Men steady comin' after you,Boys steady comin' after you
+women,don't matter,Akon,2007,Women steady comin' after me,The girls steady comin' after me
+marijuana,here,Alessia Cara,2016,Under clouds of marijuana,Over here just where I wanna be
+cut,scars to your beautiful,Alessia Cara,2017,So she tries to cover up her pain and cut her woes away,So she tries to cover up her pain and hold woes away
+ass,"honey, i'm good.",Andy Grammer,2017,I got her and she got me and you got that ass,I've got her and she got me and you've got that look
+damn,"honey, i'm good.",Andy Grammer,2017,"And these long, long legs are damn near everywhere","And these long, long days, oh they're everywhere"
+drink,"honey, i'm good.",Andy Grammer,2017,Drinking from that unholy grail,Searching now for that holy grail
+legs,"honey, i'm good.",Andy Grammer,2017,"And these long, long legs are damn near everywhere","And these long, long days, oh they're everywhere"
+men,"honey, i'm good.",Andy Grammer,2017,"Now, better men than me have failed",Now better ones than me have failed
+unholy,"honey, i'm good.",Andy Grammer,2017,Drinking from that unholy grail,Searching now for that holy grail
+bottle,cups,Anna Kendrick,2014,Two bottle'a whiskey for the way,I got my memories for the way
+whiskey,cups,Anna Kendrick,2014,Two bottle'a whiskey for the way,I got my memories for the way
+addict,7 rings,Ariana Grande,2019,Think retail therapy my new addiction,Think retail therapy my new addition
+ass,7 rings,Ariana Grande,2019,"When you see them racks, they stacked up like my ass, yeah","When you see them racks, they stacked up like real fast, yeah"
+bitch,7 rings,Ariana Grande,2019,"Been through some bad shit, I should be a sad bitch","Been through the baddest, it should be the saddest"
+bottle,7 rings,Ariana Grande,2019,"Yeah, breakfast at Tiffany's and bottles of bubbles","Yeah, breakfast at Tiffany's, it won't burst my bubble"
+bubbles,7 rings,Ariana Grande,2019,"Yeah, breakfast at Tiffany's and bottles of bubbles","Yeah, breakfast at Tiffany's, it won't burst my bubble"
+juice,7 rings,Ariana Grande,2019,"Never mind, I got the juice","Never mind, what is the use?"
+shit,7 rings,Ariana Grande,2019,"Been through some bad shit, I should be a sad bitch","Been through the baddest, it should be the saddest"
+tattoo,7 rings,Ariana Grande,2019,Girls with tattoos who like getting in trouble,Girls with a dream who like getting in trouble
+crazy,"​break up with your girlfriend, i'm bored",Ariana Grande,2019,You could call me crazy 'cause I want you,*cuts verse*
+fuck,"​break up with your girlfriend, i'm bored",Ariana Grande,2019,Took one fuckin' look at your face (Hmm),Took another look at your face (Hmm)
+fuck,"​break up with your girlfriend, i'm bored",Ariana Grande,2019,And I never even ever fuckin' met you,*cuts verse*
+shit,"​break up with your girlfriend, i'm bored",Ariana Grande,2019,This shit always happen to me (Yeah),These things always happen to me (Yeah)
+medicate,breathin,Ariana Grande,2018,"I can so over-complicate, people tell me to medicate","I can so over-complicate, people tell me to elevate"
+shit,breathin,Ariana Grande,2018,I know that all this shit's fabricated,How did I know this is fabricated? Oh
+touch,problem,Ariana Grande,2015,Every time you touch me and say you love me,Every time you see me and say you love me
+fuck,"thank u, next (us version)",Ariana Grande,2019,I'm so fuckin' grateful for my ex,"I'm so, I'm so grateful for my ex"
+fuck,"thank u, next (us version)",Ariana Grande,2019,I'm so fuckin'—,"I'm so, I’m so—"
+shit,"thank u, next (us version)",Ariana Grande,2019,"That shit's amazing (Yeah, she's amazing)","That's so amazing (Yeah, she's amazing)"
+shit,"thank u, next (us version)",Ariana Grande,2019,Gon' make that shit last,Gon' make that thing last
+hell,l.o.v.e,Ashlee Simpson,2006,I don't even know where the hell he goes,I don't even know where the heck he goes
+man,l.o.v.e,Ashlee Simpson,2006,Don't need any man in this room,Don't need any boys in this room
+shit,my happy ending,Avril Lavigne,2005,All the shit that you do (all the shit that you do),All the stuff that you do?
+clothes,when you're gone,Avril Lavigne,2008,"And the clothes you left, they lie on the floor","And the things you left, they lie on the floor, oh no"
+hell,airplanes,B.o.B,2011,And back when I was rappin' for the hell of it,And back when I was rappin' for the thrill of it
+shit,airplanes,B.o.B,2011,And get back to the music that started this shit?,And get back to the music that started this hit
+hell,nothin' on you,B.o.B,2010,Most of it really was for the hell of the fun,Most of it really was for the love of the fun
+skirt,nothin' on you,B.o.B,2010,"Tryna chase skirts, livin' in the summer sun",Tryna' chase dreams livin' in the summer sun
+high,mía (ft. drake),Bad Bunny,2019,"Dile que tú eres mía desde la high (Desde la high, yeh)",Tell them that you are mine from high (From high)
+man,move it like this,Baha Men,2003,(move it man),Yeah
+woman,who let the dogs out,Baha Men,2002,I heard a woman shout out,The poor woman shout out
+woman,who let the dogs out,Baha Men,2002,"You put a woman in front and her man behind (Yippie, Yi, Yo)","You fetch a women in front and her man behind (Yippie yi, yo)"
+woman,who let the dogs out,Baha Men,2002,I heard a woman shout out,The poor woman shout out
+dress,beautiful (bazzi),Bazzi,2019,The way that dress fall off you is amazing,*cuts verse*
+god,beautiful (bazzi),Bazzi,2019,Swear to God that I loved her,"Yeah, you know that I loved her"
+god,beautiful (bazzi),Bazzi,2019,"Swear to God you're beautiful, yeah","You should know you're beautiful, yeah"
+henny,beautiful (bazzi),Bazzi,2019,Now a Backwood and some Henny got you faded,This is all I need to hear to know we made it
+naked,beautiful (bazzi),Bazzi,2019,But nothing can compare to when you're naked,But nothing can compare to when you're singing
+naked,beautiful (bazzi),Bazzi,2019,"(Perfect when you naked, together with you)","(Nothing can compare, you're better when you, hey, Oh)"
+kiss,eastside,"​benny blanco, Halsey & Khalid",2019,Used to kiss underneath the light on the back of the bus (Yeah),Used to talk underneath the light on the back of the bus
+war,crazy in love,Beyoncé,2004,"A star like Ringo, war like a Green Beret","A star like Ringo, roll like a green beret"
+bed,irreplaceable,Beyoncé,2007,Cause you made your bed,*cuts verse*
+man,irreplaceable,Beyoncé,2007,"Talkin' 'bout, how I'll never ever find a man like you",Talkin' 'bout how I'll never ever find a boy like you
+high,sweet dreams,Beyoncé,2010,"Boy, you're my temporary high","Boy, you're my certain type of guy"
+tattoo,sweet dreams,Beyoncé,2010,Tattoo your name across my heart,I've got your name across my heart
+ass,1985,Bowling for Soup,2005,She was gonna shake her ass on the hood of Whitesnake’s car,She was gonna shake it fast on the hood of Whitesnake's car
+die,the great escape,Boys Like Girls,2008,Let it die,Let it fly
+drunk,the great escape,Boys Like Girls,2008,Lets get drunk and ride around,Let's have fun and ride around
+intoxicate,toxic,Britney Spears,2004,Intoxicate me now with your lovin' now,*cuts verse*
+ass,24k magic,Bruno Mars,2016,Bad bitches and ya ugly ass friends (Haha),*cuts verse*
+bless,24k magic,Bruno Mars,2016,Hashtag blessed,*cuts verse*
+gang,24k magic,Bruno Mars,2016,Gangstas (gangstas),*cuts verse*
+jesus,24k magic,Bruno Mars,2016,Got to blame it on Jesus,*cuts verse*
+man,24k magic,Bruno Mars,2016,"Ooh shit, I'm a dangerous man with some money in my pocket","Ooh yeah, I'm a dangerous one with some money in my pocket"
+man,24k magic,Bruno Mars,2016,I'm a dangerous man with some money in my pocket,I'm a dangerous one with some money in my pocket
+pimp,24k magic,Bruno Mars,2016,I gotta show 'em how a pimp get it in,*cuts verse*
+shit,24k magic,Bruno Mars,2016,"Ooh shit, I'm a dangerous man with some money in my pocket","Ooh yeah, I'm a dangerous one with some money in my pocket"
+shit,24k magic,Bruno Mars,2016,"Spend your money like money ain't shit (Whoop, whoop)",*cuts verse*
+sip,24k magic,Bruno Mars,2016,"First, take your sip (sip), do your dip (dip)",*cuts verse*
+grind,finesse,Bruno Mars,2018,Cause I love the way it feels when we grind,Cause I love the way we dance all the time (all the time)
+shit,finesse,Bruno Mars,2018,Shut that shit down on sight,Shut the thing down on sight
+sex,locked out of heaven,Bruno Mars,2013,Cause your sex takes me to paradise,Cause your love takes me to paradise
+sex,locked out of heaven,Bruno Mars,2013,"Yeah, your sex takes me to paradise",Your love takes me to paradise
+ass,that's what i like,Bruno Mars,2017,You and your ass invited,You and your friends invited
+champagne,that's what i like,Bruno Mars,2017,Strawberry champagne on ice,Strawberry milkshakes so nice
+freak,that's what i like,Bruno Mars,2017,You can be my freaka (Brrrt!),You can come and see though
+ice,that's what i like,Bruno Mars,2017,Strawberry champagne on ice,Strawberry milkshakes so nice
+sex,that's what i like,Bruno Mars,2017,Sex by the fire at night,Hang by the fire at night
+freak,the lazy song,Bruno Mars,2011,Cause in my castle I'm the freaking man,Cause in my castle I'm the only man
+god,the lazy song,Bruno Mars,2011,"(Oh my god, this is great)",(OMG you're so great)
+sex,the lazy song,Bruno Mars,2011,"Meet a really nice girl, have some really nice sex","Meet a really nice girl, send a really nice text"
+fuck,treasure,Bruno Mars,2014,"Baby squirrel, you's a sexy mother-fucker",*cuts verse*
+sex,treasure,Bruno Mars,2014,"Baby squirrel, you's a sexy mother-fucker",*cuts verse*
+sex,treasure,Bruno Mars,2014,"You're wonderful, flawless, ooh you're a sexy lady",You're wonderful thoughtless i knew you'd drive me crazy (drive me crazy)
+bed,feels,Calvin Harris,2017,"In the same bed, but it still feel long distance",*cuts verse*
+cut,feels,Calvin Harris,2017,I cut off all my exes for your x and o's,*cuts verse*
+god,feels,Calvin Harris,2017,"Goddamn, I know you love to make an entrance",*cuts verse*
+pills,feels,Calvin Harris,2017,I know you ain't afraid to pop pills (Hey),I know you ain't afraid to like this (Hey)
+high,i need your love,Calvin Harris,2014,"I feel so high, I come alive","I feel so good, I come alive"
+skin,one kiss,Calvin Harris & Dua Lipa,2018,I just wanna feel your skin on mine,See your eyes glued like the morning
+pills,giant,Calvin Harris & Rag’n’Bone Man,2019,I saw the pills on the table for your unrequited love,"I saw it on, on the table for your unrequited love"
+damn,havana,Camila Cabello,2018,"Fresh out East Atlanta with no manners, damn (Fresh out East Atlanta)",*cuts verse*
+bang,i like it,"Cardi B, Bad Bunny & J Balvin",2018,"This is the new religion bang in Latino gang, gang, ¡yeh!",*cuts verse*
+bitch,i like it,"Cardi B, Bad Bunny & J Balvin",2018,Where's my pen? Bitch I'm signin' (Signin'),"Where's my pen? Yeah, I'm signin' (What?)"
+bitch,i like it,"Cardi B, Bad Bunny & J Balvin",2018,Flexing on bitches as hard as I can,Flexing on songs as hard as I can
+bitch,i like it,"Cardi B, Bad Bunny & J Balvin",2018,Told that bitch I'm sorry though (Sorry though),Told that kid I'm sorry though (Sorry though)
+bitch,i like it,"Cardi B, Bad Bunny & J Balvin",2018,Bad bitch make you nervous (I said I like it),Kidz Bop makes it perfect (I said I like it)
+blow,i like it,"Cardi B, Bad Bunny & J Balvin",2018,"Drop the top and blow the brains, woo (Woo, I said I like it like that)","Drop the top, wind in our hair (I said I like it like that)"
+body,i like it,"Cardi B, Bad Bunny & J Balvin",2018,"They call me Cardi Bardi, banging body","They call us Kidz Bop, banging party"
+club,i like it,"Cardi B, Bad Bunny & J Balvin",2018,I spend in the club what you have in the bank (¡Wuh; ¡yeh!),*cuts verse*
+diablo,i like it,"Cardi B, Bad Bunny & J Balvin",2018,"El Diablo me llama, pero Jesucristo me abraza (Amén)",*cuts verse*
+gang,i like it,"Cardi B, Bad Bunny & J Balvin",2018,"Certified, you know I'm gang, gang, gang, gang (I said I like it like—woo)","Certified, you know I'm that, that, that, that (I said I like it like-, woo)"
+gang,i like it,"Cardi B, Bad Bunny & J Balvin",2018,"This is the new religion bang in Latino gang, gang, ¡yeh!",*cuts verse*
+gang,i like it,"Cardi B, Bad Bunny & J Balvin",2018,"Certified, you know I'm gang, gang, gang, gang (I said I like it like—woo)","Certified, you know I'm that, that, that, that (I said I like it like-, woo)"
+hookah,i like it,"Cardi B, Bad Bunny & J Balvin",2018,"Y arranca pa'l carajo, cabrón, que a ti no te vo'a pasar la hookah (Hookah, hookah)",*cuts verse*
+nigga,i like it,"Cardi B, Bad Bunny & J Balvin",2018,I like proving niggas wrong,I like proving others wrong
+shit,i like it,"Cardi B, Bad Bunny & J Balvin",2018,I run this shit like cardio,"I run this song like cardio, yeah"
+skin,call me maybe,Carly Rae Jepsen,2012,"Ripped jeans, skin was showin'","Ripped jeans, smile was showin'"
+club,evacuate the dance floor,Cascada,2010,"Come on and evacuate, feel the club is heating up",*cuts verse*
+club,evacuate the dance floor,Cascada,2010,That got everybody in the club goin' mad?,*cuts verse*
+intoxicate,evacuate the dance floor,Cascada,2010,"Watch me, I'm intoxicated, take in the show (Ah-ah)","Watch me I'm infatuated, taking the show"
+kill,evacuate the dance floor,Cascada,2010,"Oh, oh, stop, this beat is killing me","Oh, oh, stop, this beat is moving me"
+overdose,evacuate the dance floor,Cascada,2010,"Wrap it up, you can't stop 'cause it feels like an overdose","Wrap it up, can't stop cause it feels like it's really close"
+overdose,evacuate the dance floor,Cascada,2010,"(Feels like an overdose, like an overdose)",(Feels like it's really close)
+dress,attention,Charlie Puth,2017,"I know that dress is karma, perfume regret","I know that dress is karma, filled with regret"
+drunk,how long,Charlie Puth,2018,"I was drunk, I was gone, that don't make it right, but","I was lost, I was gone, that don't make it right, but"
+dress,we don't talk anymore,Charlie Puth,2017,What kind of dress you're wearing tonight,"Girl, look you're wearing tonight"
+overdose,we don't talk anymore,Charlie Puth,2017,I overdosed,I overlooked
+cuttin,no promises,Cheat Codes,2018,"Cutting me up like a knife and I feel it, deep in my bones","Cut me right up in my love and I feel it, deep in my bones"
+knife,no promises,Cheat Codes,2018,"Cutting me up like a knife and I feel it, deep in my bones","Cut me right up in my love and I feel it, deep in my bones"
+high,forever,Chris Brown,2009,"It's a long way down, we so high off the ground",*cuts verse*
+sex,what a girl wants,Christina Aguilera,2001,"Sexy, cool, like you",*cuts verse*
+man,you make me feel...,Cobra Starship,2012,"Well, then I'm your man",Then grab my hand
+pray,damaged,Danity Kane,2008,"(That makes you pray, makes you cry)",*cuts verse*
+dead,it's not over,Daughtry,2007,Cause a part of me is dead and in the ground,Cause a part of me is standing on the ground
+kill,it's not over,Daughtry,2007,"This love is killing me, but you're the only one",This love is hurting me but you are the only one
+bitch,hey mama,David Guetta,2015,"None of them bitches ain't taking you, just tell them to make a U",*cuts verse*
+dick,hey mama,David Guetta,2015,"Whole crew got the juice, yo' dick game the truth",*cuts verse*
+freak,hey mama,David Guetta,2015,"Keep him pleased, rub him down, be a lady and a freak, oh",*cuts verse*
+fuck,hey mama,David Guetta,2015,"It ain't nothin' new, I been fuckin' with you",*cuts verse*
+juice,hey mama,David Guetta,2015,"Whole crew got the juice, yo' dick game the truth",*cuts verse*
+man,hey mama,David Guetta,2015,"Be my woman, girl, I'll be your man","Be my only girl I'll, be your one"
+woman,hey mama,David Guetta,2015,"Be my woman, girl, I'll be your man","Be my only girl I'll, be your one"
+woman,hey mama,David Guetta,2015,"Yes, I'll be your woman, yes, I'll be your baby","Be my only girl I'll, be your one"
+sleep,without you,David Guetta,2012,I can't take one more sleepless night,I can't take one more lonely day
+kiss,hide away,Daya,2016,Boys seem to like the girls who like to kiss and tell,Boys seem to like the girls who answer on their cell
+undress,hide away,Daya,2016,The ones who get undressed before the second date,The ones who get impressed before the second date
+bitch,confident,Demi Lovato,2016,"Bitch, I run this show",Yeah I run this show
+freak,confident,Demi Lovato,2016,"I used to hold my freak back, now I'm letting go","I used to hold myself back, now I'm letting go"
+bitch,sorry not sorry,Demi Lovato,2017,Payback is a bad bitch,Payback's gonna happen
+bitch,sorry not sorry,Demi Lovato,2017,"Now, payback is a bad bitch","Now, paybacks I'm havin'"
+bitch,sorry not sorry,Demi Lovato,2017,Payback is a bad bitch,Payback's gonna happen
+fuck,sorry not sorry,Demi Lovato,2017,You fuckin' with a savage,You dealin' with a savage
+booty,survivor,Destiny’s Child,2002,I will survive being bootylicious,*cuts verse*
+sex,survivor,Destiny’s Child,2002,I will survive being sexy,*cuts verse*
+touch,latch,Disclosure,2015,"I'm so encaptured, got me wrapped up in your touch","I’m so en-captured, got me wrapped up in you so much"
+bed,i'm the one,DJ Khaled,2017,"She don't got no bed frame, she don't got no tables",*cuts verse*
+bitch,i'm the one,DJ Khaled,2017,"Baby, that's only me, bitch, it okay with me",*cuts verse*
+bitch,i'm the one,DJ Khaled,2017,"Well, bitch, you're lookin' at the one","Well, yeah, you're lookin' at the one"
+bitch,i'm the one,DJ Khaled,2017,"Bitch, you blow my high",Yeah you blow my mind
+body,i'm the one,DJ Khaled,2017,Not just any fuckin' body,Not just any somebody
+booty,i'm the one,DJ Khaled,2017,Then she went and put that booty on that Gucci belt,*cuts verse*
+bottle,i'm the one,DJ Khaled,2017,"She say she want bottles, she ain't got no table",*cuts verse*
+club,i'm the one,DJ Khaled,2017,When I met her in the club I asked her who she felt,*cuts verse*
+coochie,i'm the one,DJ Khaled,2017,"She like the price, she see the ice, it make her coochie melt",*cuts verse*
+fuck,i'm the one,DJ Khaled,2017,Not just any fuckin' body,Not just any somebody
+gang,i'm the one,DJ Khaled,2017,"Mula Gang, winnin' record","With my friends, winnin' record"
+god,i'm the one,DJ Khaled,2017,"Oh my God, she hit me up all day, get no response","Oh my gosh, she hit me up all day, get no response"
+god,i'm the one,DJ Khaled,2017,"God, forgive me! Tunechi F finessin', I'm a legend","Please forgive me! Listening and dancing', I'm a legend"
+god,i'm the one,DJ Khaled,2017,"I'm just flexin' on my exes, oh God",I'm just flexin' on my exes
+high,i'm the one,DJ Khaled,2017,"Bitch, you blow my high",Yeah you blow my mind
+ice,i'm the one,DJ Khaled,2017,"She like the price, she see the ice, it make her coochie melt",*cuts verse*
+molly,i'm the one,DJ Khaled,2017,"And when she on the molly, she a zombie",And when she hear this song she dances crazy
+nigga,i'm the one,DJ Khaled,2017,She want a nigga that pull her hair and hold the door for her,*cuts verse*
+bitch,no brainer,DJ Khaled,2018,"But we in this bitch, bitch, I'm not no lame",*cuts verse*
+blow,no brainer,DJ Khaled,2018,I blow the brains outta your mind (Ooh),We'll make you feel outta your mind (Ooh)
+damn,no brainer,DJ Khaled,2018,I'll be your excuse (Damn right),I'll be your excuse (Yeah right)
+god,no brainer,DJ Khaled,2018,She told me that she love that I make music for God,*cuts verse*
+high,no brainer,DJ Khaled,2018,Way high,*cuts verse*
+damn,cake by the ocean,DNCE,2016,"Ah, ya, ya, ya, ya I keep on hopin' we'll eat cake by the ocean (I keep on hopin', hot damn)",Ah ya ya ya ya I keep on hoping we'll eat cake by the ocean
+fuck,cake by the ocean,DNCE,2016,Let's lose our minds and go fucking crazy,Let's lose our minds and go crazy crazy
+fuck,cake by the ocean,DNCE,2016,"You're fucking delicious, haha",Hey!
+fuck,cake by the ocean,DNCE,2016,Let's lose our minds and go fucking crazy,Let's lose our minds and go crazy crazy
+fuck,cake by the ocean,DNCE,2016,Let's lose our minds and go (And go what?) fucking crazy (That's right),Let's lose our minds and go crazy crazy
+god,cake by the ocean,DNCE,2016,Goddamn,Oh yeah
+die,god's plan,Drake,2018,I don't wanna die for them to miss me,I don't wanna go for them to miss me
+god,god's plan,Drake,2018,"Might go down a G.O.D., yeah, wait","Might go down that way with me, yeah, wait"
+shit,god's plan,Drake,2018,"They gon' tell the story, shit was different with me","They gon' tell the story, that was different with me"
+shit,god's plan,Drake,2018,"Someone watchin' this shit close, yep, close","Someone watchin' this stuff close, yeah, close"
+champagne,hotline bling,Drake,2016,Glasses of champagne out on the dance floor,Dancing your heart out there on the dance floor
+touch,hotline bling,Drake,2016,Why you always touching road?,*cuts verse*
+ass,in my feelings,Drake,2018,"Bring that ass, bring that ass, bring that ass back!",*cuts verse*
+ass,in my feelings,Drake,2018,"Clap that ass, you're the only one I love",*cuts verse*
+bitch,in my feelings,Drake,2018,Two bad bitches and we kissin' in the Wraith,"All of us kids, and we hangin' in the Wraith"
+champagne,in my feelings,Drake,2018,I buy you Champagne but you love some Henny,I buy you somethin' cost more than a penny
+fuck,in my feelings,Drake,2018,Fuck that Netflix and chill—what's your net-net-net worth?,*cuts verse*
+fuck,in my feelings,Drake,2018,Because my Instagram is weak as fuck,*cuts verse*
+henny,in my feelings,Drake,2018,I buy you Champagne but you love some Henny,I buy you somethin' cost more than a penny
+kill,in my feelings,Drake,2018,I swear you gotta feel me before they try and kill me,I swear you gotta feel me before they try and throw me
+kiss,in my feelings,Drake,2018,Two bad bitches and we kissin' in the Wraith,"All of us kids, and we hangin' in the Wraith"
+kiss,in my feelings,Drake,2018,"Kissin'-kissin' in the Wraith, kiss-kissin' in the Wraith","Hangin'-hangin' in the Wraith, hangin'-hangin' in the Wraith"
+neck,in my feelings,Drake,2018,I show him how that neck work,*cuts verse*
+nigga,in my feelings,Drake,2018,"I got a new boy, and that nigga trade!",*cuts verse*
+nigga,in my feelings,Drake,2018,Shawty say the nigga that she with can't hit,*cuts verse*
+shit,in my feelings,Drake,2018,This shit got me in my feelings,I buy you somethin' cost more than a penny
+shit,in my feelings,Drake,2018,"I'm just being real, my shit, look,–",*cuts verse*
+smoke,in my feelings,Drake,2018,Skate and Smoke and Rap,*cuts verse*
+hennessy,one dance,Drake,2016,Got a Hennessy in my hand,Got both of your hands in my hands
+wine,one dance,Drake,2016,"Wine it, wine it, very long time","Love me, love me, very long time"
+wine,one dance,Drake,2016,"Back up, back up, back up and wine it","Get up, get up, get up and sing it"
+kiss,he loves u not,Dream (Girl Group),2002,(Sweet kiss),*cuts verse*
+bed,new rules,Dua Lipa,2018,You know you're gonna wake up in his bed in the morning,You know you're gonna meet up with your friends in the morning
+drunk,new rules,Dua Lipa,2018,You know he's only callin' 'cause he's drunk and alone,You know he's only callin' 'cause he's sad and alone
+sleep,new rules,Dua Lipa,2018,"Eat, sleep, and breathe it",*cuts verse*
+champagne,beautiful people,Ed Sheeran,2019,Champagne and rolled-up notes,In pain and no one knows
+cigarette,castle on the hill,Ed Sheeran,2017,Fifteen years old and smoking hand-rolled cigarettes,"Once we got older, hoping the fun never ends"
+clothes,castle on the hill,Ed Sheeran,2017,One friend left to sell clothes,*cuts verse*
+drink,castle on the hill,Ed Sheeran,2017,We'd buy cheap spirits and drink them straight,We'd buy cheap toys and then they'd break
+drunk,castle on the hill,Ed Sheeran,2017,Running from the law through the backfields and getting drunk with my friends,Running down the road through the back fields and hanging out with my friends
+kiss,castle on the hill,Ed Sheeran,2017,"Had my first kiss on a Friday night, I don't reckon that I did it right","Had my first job on a Friday night, I don't reckon I did it right"
+overdose,castle on the hill,Ed Sheeran,2017,One's brother overdosed,*cuts verse*
+smoking,castle on the hill,Ed Sheeran,2017,Fifteen years old and smoking hand-rolled cigarettes,"Once we got older, hoping the fun never ends"
+spirits,castle on the hill,Ed Sheeran,2017,We'd buy cheap spirits and drink them straight,We'd buy cheap toys and then they'd break
+bar,galway girl,Ed Sheeran,2019,I met her on Grafton street right outside of the bar,I met her on Grafton Street right outside of the store
+bar,galway girl,Ed Sheeran,2019,"Chatted some more, one more drink at the bar","Chatted some more, one more song on guitar"
+bar,galway girl,Ed Sheeran,2019,A cappella in the bar using her feet for a beat,A cappella in the back using her feet for a beat
+bottle,galway girl,Ed Sheeran,2019,To finish some Doritos and another bottle of wine,*cuts verse*
+cigarette,galway girl,Ed Sheeran,2019,She shared a cigarette with me while her brother played the guitar,She sang a song and taught me while her brother played the guitar
+drink,galway girl,Ed Sheeran,2019,"Said it was one of my friend's songs, do you want to drink on?","Said, ""It was one of my friend's songs, do you want to sing on?"""
+drink,galway girl,Ed Sheeran,2019,"Chatted some more, one more drink at the bar","Chatted some more, one more song on guitar"
+ink,galway girl,Ed Sheeran,2019,"She asked me what does it mean, the Gaelic ink on your arm?","She asked me, ""What does it mean, the Gaelic thing on your arm?"""
+jack,galway girl,Ed Sheeran,2019,"She took Jamie as a chaser, Jack for the fun",She took me out to a party just for the fun
+kiss,galway girl,Ed Sheeran,2019,Kissed her on the neck and then I took her by the hand,Kissed her on the cheek and then I took her by the hand
+kiss,galway girl,Ed Sheeran,2019,And then she kissed me like there was nobody else in the room,And she looked at me like there was nobody else in the room
+man,galway girl,Ed Sheeran,2019,But she fell in love with an English man,But she fell in love with an English friend
+neck,galway girl,Ed Sheeran,2019,Kissed her on the neck and then I took her by the hand,Kissed her on the cheek and then I took her by the hand
+smoke,galway girl,Ed Sheeran,2019,"Our coats both smell of smoke, whisky and wine",*cuts verse*
+wine,galway girl,Ed Sheeran,2019,"Our coats both smell of smoke, whisky and wine",*cuts verse*
+wine,galway girl,Ed Sheeran,2019,To finish some Doritos and another bottle of wine,*cuts verse*
+dress,perfect (2017),Ed Sheeran,2018,"When I saw you in that dress, looking so beautiful","When you said you looked a mess, I whispered underneath my breath"
+kiss,perfect (2017),Ed Sheeran,2018,"But darling, just kiss me slow, your heart is all I own","But darling, just take it slow, your heart is all I own"
+man,perfect (2017),Ed Sheeran,2018,"Be my girl, I'll be your man","Be my girl, I'll be the one"
+woman,perfect (2017),Ed Sheeran,2018,"Well I found a woman, stronger than anyone I know","Well I found the one, stronger than anyone I know"
+body,sing! (ft. pharrell williams),Ed Sheeran,2014,To hold your body close,So everybody knows
+bottle,sing! (ft. pharrell williams),Ed Sheeran,2014,Then she handed me a bottle of water filled with tequila,"Then she handed me of a bottle of water, said nice to meet ya"
+drink,sing! (ft. pharrell williams),Ed Sheeran,2014,But somethin' to drink and maybe somethin' to smoke,But something to sing and maybe to joke
+drunk,sing! (ft. pharrell williams),Ed Sheeran,2014,I meant to drive home but I drunk all of it now,"I meant to drive home, but I've sung all of it"
+kiss,sing! (ft. pharrell williams),Ed Sheeran,2014,"One thing led to another, now she's kissin' my mouth",One thing led to another now I'm running my mouth
+shit,sing! (ft. pharrell williams),Ed Sheeran,2014,Deep shit if anybody finds out,Deep If anybody finds out
+smoke,sing! (ft. pharrell williams),Ed Sheeran,2014,But somethin' to drink and maybe somethin' to smoke,But something to sing and maybe to joke
+sober,sing! (ft. pharrell williams),Ed Sheeran,2014,"Not soberin' up, we just sit on the couch","Now, waiting it out, I just sit on the couch"
+tequila,sing! (ft. pharrell williams),Ed Sheeran,2014,Then she handed me a bottle of water filled with tequila,"Then she handed me of a bottle of water, said nice to meet ya"
+hell,i don't care,Ed Sheeran & Justin Bieber,2019,"Finish my drink, say, ""Shall we dance?"" (Hell, yeah)","Finish my drink, say, ""Shall we dance?"" Oh yeah"
+kiss,i don't care,Ed Sheeran & Justin Bieber,2019,"Read your lips, I'd rather kiss 'em right back","Move your lips, I'd rather say it right back"
+pour,on my mind,Ellie Goulding,2016,"Poured it down, so I poured it down",Kept it down so I kept it down
+tattoo,on my mind,Ellie Goulding,2016,You wanted my heart but I just liked your tattoos,"You wanted my heart, and I just felt so confused"
+bitch,close to me,Ellie Goulding & Diplo,2019,"I had to cut my bitch off, she bein' stubborn (Stubborn)","I had to cut my words off, I'm bein' stubborn (Stubborn)"
+body,close to me,Ellie Goulding & Diplo,2019,And I don't wanna be somebody without your body,And I don't wanna be somebody without somebody
+fuck,close to me,Ellie Goulding & Diplo,2019,"I make it known I fuck with you, not undercover ('Cover)","I make it known I hang with you, not undercover ('Cover)"
+clothes,american boy,Estelle,2009,Am I shallow ‘cause all my clothes designer?,*cuts verse*
+crazy,american boy,Estelle,2009,"He crazy, I know what you thinking",*cuts verse*
+drink,american boy,Estelle,2009,"Ribena, I know what you're drinking",*cuts verse*
+fuck,american boy,Estelle,2009,"Reluctantly, because most of this press don't fuck with me",*cuts verse*
+hell,american boy,Estelle,2009,So to hell with all that rubbish,*cuts verse*
+kill,american boy,Estelle,2009,Who killing them in the UK?,*cuts verse*
+crazy,crazy for this girl,Evan & Jaron,2002,"Yeah, I'm crazy for this girl",*cuts verse*
+blood,uma thurman,Fall Out Boy,2015,"The blood, the blood, the blood of the lamb","The love, the love, the love of a lamb"
+death,uma thurman,Fall Out Boy,2015,May nothing but death do us part,May nothing but this do us part
+death,uma thurman,Fall Out Boy,2015,And may death find you alive,And may love find you alive
+hell,uma thurman,Fall Out Boy,2015,"And CK Eternity, oh hell yes","It ends through eternity, oh yeah yes"
+sex,uma thurman,Fall Out Boy,2015,"The stench, the stench of summer sex","The stench, the stench, of sunny heads"
+skin,big girls don't cry,Fergie,2008,The smell of your skin lingers on me now,The smell of the air lingers with me now
+god,clumsy,Fergie,2008,"She can't help it, the girl can't help it (Oh, God!)","She can't help it, the girl can't help it, oh babe"
+ass,glamorous,Fergie,2007,"If you ain't got no money, take yo' broke ass home, you say it!",If you ain't got no money take your broke self home
+champagne,glamorous,Fergie,2007,Popping champagne,"We flyin' first class, livin' the life"
+champagne,glamorous,Fergie,2007,"I'm talking champagne wishes, caviar dreams",*cuts verse*
+damn,glamorous,Fergie,2007,"Damn, it's been a long road and the industry is cold","Yeah, it's been a long road and the industry is cold"
+dope,glamorous,Fergie,2007,"When I'd rock on MTV, that'd be really dope","When I'd rock on MTV, that'd be really cool"
+fetish,glamorous,Fergie,2007,Plus I gotta keep enough lettuce to support your shoe fetish,*cuts verse*
+fuck,glamorous,Fergie,2007,Telling me these crazy things that I don't wanna know (Fuck y'all),Tellin' me these crazy things that I don't want to know
+hell,glamorous,Fergie,2007,"I still go to Taco Bell, drive-thru, raw as hell","I still go to Taco Bell, drive through, raw, yeah"
+body,that's my girl,Fifth Harmony,2017,Got yourself this flawless body,Got yourself this stress out body
+damn,that's my girl,Fifth Harmony,2017,"Yeah, who's been working so damn hard?","Yeah, who's been working so so hard?"
+club,worth it,Fifth Harmony,2015,Uh in the club with the lights off,*cuts verse*
+ball,club can't handle me,Flo Rida,2011,Ball out 'cause that's the business,Fall out cause that's the business
+ball,club can't handle me,Flo Rida,2011,"We can ball, so, ahh!","We can ball, so, ah"
+ass,gdfr,Flo Rida,2015,Get that ass on the floor,*cuts verse*
+blow,gdfr,Flo Rida,2015,My team blowin' on that slam,*cuts verse*
+freak,gdfr,Flo Rida,2015,"If you're a freak, then you comin' home with me",If you can dance then you're dancing here with me
+kiss,gdfr,Flo Rida,2015,"Yo' girl just kissed a girl, I do bi chicks","Your girl just danced the twirl, I do high kicks"
+man,gdfr,Flo Rida,2015,"We the plus, your man a minus",*cuts verse*
+touch,gdfr,Flo Rida,2015,My touch say it's the Midas,*cuts verse*
+drink,good feeling,Flo Rida,2012,Like you the one drinking what God sip—dot com,Like you the one thinking what gossip got done
+god,good feeling,Flo Rida,2012,Like you the one drinking what God sip—dot com,Like you the one thinking what gossip got done
+tongue,good feeling,Flo Rida,2012,Now I gotta word for your tongue,Now I gotta work with your song
+booty,"i don't like it, i love it",Flo Rida,2015,"Feel the bass, let ya booty go","Feel the base, let the music go"
+champagne,my house,Flo Rida,2016,"Open up the champagne, pop!",This is how we do it! Kidz bop!
+clothes,my house,Flo Rida,2016,"Keep our clothes on the floor, open up champagne","Keep our hands in the air, open up and dance"
+pour,my house,Flo Rida,2016,"Pour yourself something cold, baby, cheers to this","Play a song, something good, come on dance to this"
+vodka,my house,Flo Rida,2016,"Another shot of vodka, you know what's in my glass","Another song to move to, you know my favorite track"
+high,wild ones,Flo Rida,2012,"I like 'em untamed, don't tell me high pain","I like em untamed, don't tell me how pain"
+bikini,cruise,Florida Georgia Line,2014,"Yeah, when I first saw that bikini top on her","Yeah, when I first saw that pretty smile on her "
+blow,cruise,Florida Georgia Line,2014,Down a back road blowing stop signs through the middle,Down a back road blowin' thru pines through the middle 
+chest,cruise,Florida Georgia Line,2014,"Girl, you sure got the beat in my chest bumping",*cuts verse*
+hell,cruise,Florida Georgia Line,2014,Would look a hell of a lot better with you up in it,Would look a heck of a lot better with us up in it
+hell,cruise,Florida Georgia Line,2014,Would look a hell of a lot better with you up in it,Would look a heck of a lot better with us up in it
+man,cruise,Florida Georgia Line,2014,"Because it felt so right, her and I, man, we felt so right",*cuts verse*
+sippin,cruise,Florida Georgia Line,2014,She was sipping on Southern and singing Marshall Tucker,She was talkin all southern and sining Marshall Tucker
+fuck,where’d you go,Fort Minor,2006,"So, I want you to know it's a little fucked up","So, I want you to know it's a little messed up"
+fuck,where’d you go,Fort Minor,2006,"And I'll tell you, I want you to know it's a little fucked up","And I'll tell you, I want you to know it's a little messed up"
+fuck,where’d you go,Fort Minor,2006,I want you to know it's a little fucked up,I want you to know it's a little messed up
+shit,where’d you go,Fort Minor,2006,"She said, ""Some days, I feel like shit","She said, ""Some days I feel so bad"""
+shit,where’d you go,Fort Minor,2006,"Shit, I find myself just filling my time","Yeah, I find myself just fillin' my time"
+shit,where’d you go,Fort Minor,2006,"I was like, that's the shit, right there",*cuts verse*
+man,sit next to me,Foster the People,2019,"Got me praying, man, this hunger, and feeling something rotten","Just got me praying that it's longer, feeling something rotten"
+sober,sit next to me,Foster the People,2019,"And now it’s over, we’re sober, symptoms of the culture","And now it’s over, we’re older, symptoms of the culture"
+bed,some nights,​fun.,2013,I found a martyr in my bed tonight,I found a martyr in my head tonight
+die,some nights,​fun.,2013,Who the fuck wants to die alone,Who the heck wants to be alone
+fuck,some nights,​fun.,2013,Who the fuck wants to die alone,Who the heck wants to be alone
+lord,some nights,​fun.,2013,"Oh, Lord, I'm still not sure what I stand for, oh","Oh, no, I'm still not sure what I stand for, oh"
+lord,some nights,​fun.,2013,"Oh Lord, I'm still not sure what I stand for, oh","Oh, no, I'm still not sure what I stand for, oh"
+die,somebody that i used to know,Gotye,2012,Like when you said you felt so happy you could die,Like when you said you felt so happy you could cry
+fuck,boulevard of broken dreams,Green Day,2005,"What's fucked up, and everything's all right",What's messed up and everything's all right
+body,starving,Hailee Steinfeld & Grey,2017,"By the way, right away, you do things to my body","By the way, by the way, you do things to my heartbeat"
+damn,starving,Hailee Steinfeld & Grey,2017,Don't need no butterflies when you give me the whole damn zoo,Don't need no butterflies when you give me the total zoo
+bitch,bad at love,Halsey,2018,Now he's gone and he's calling me a bitch again,Now he's gone and he's calling me to talk again
+jack,bad at love,Halsey,2018,And he tastes like Jack when I'm kissing him,And it takes me back when I think of him
+kiss,bad at love,Halsey,2018,And he tastes like Jack when I'm kissing him,And it takes me back when I think of him
+demon,without me,Halsey,2019,Just runnin' from the demons in your mind,Just running from the feelings in your mind
+fuck,without me,Halsey,2019,"And if they laugh, then fuck 'em all (All)","And if they laugh, then trick 'em all"
+high,without me,Halsey,2019,"Feelin' so high, but too far away to hold me","Feelin' so fly, but too far away to hold me"
+sanity,come clean,Hilary Duff,2004,"Oh, I'm coming clean (Let it wash away my sanity)","Let it wash away, my sanity"
+amen,exit sign (ft. ecca vandal & illy),Hilltop Hoods,2019,"But don't mind it if it cause offence, we make moves not amends",*cuts verse*
+fuck,exit sign (ft. ecca vandal & illy),Hilltop Hoods,2019,But I don't give a fuck about the money,But I don't give a thought about the money
+fuck,exit sign (ft. ecca vandal & illy),Hilltop Hoods,2019,And I don't give a fuck about the party,And I don't give a thought about the party
+fuck,exit sign (ft. ecca vandal & illy),Hilltop Hoods,2019,I give a fuck about in this phoney world is Ari,I give a thought about in this phoney world is Ari
+god,exit sign (ft. ecca vandal & illy),Hilltop Hoods,2019,"You in it for your fifteen minutes, it's quarter past then, goddamn",*cuts verse*
+jesus,exit sign (ft. ecca vandal & illy),Hilltop Hoods,2019,"Jesus wept, ha, I don't mean it",*cuts verse*
+bitch,i love it,Icona Pop,2013,"You're from the '70s, but I'm a '90s bitch","You're from the 70's, but I'm a Kidz Bop Kid!"
+damn,i love it,Icona Pop,2013,"You're so damn hard to please, we gotta kill this switch","You're so,so hard to please, we gotta flip this switch"
+kill,i love it,Icona Pop,2013,"You're so damn hard to please, we gotta kill this switch","You're so,so hard to please, we gotta flip this switch"
+kill,i love it,Icona Pop,2013,"You're so damn hard to please, we gotta kill this switch","You're so,so hard to please, we gotta flip this switch"
+shit,i love it,Icona Pop,2013,I threw your shit into a bag and pushed it down the stairs,I threw your stuff into a bag and pushed it down the stairs
+bitch,fancy,Iggy Azalea,2015,You should want a bad bitch like this (Huh?),*cuts verse*
+champagne,fancy,Iggy Azalea,2015,"Champagne spilling, you should taste that",*cuts verse*
+drunk,fancy,Iggy Azalea,2015,"Trash the hotel, let's get drunk on the minibar",*cuts verse*
+fuck,fancy,Iggy Azalea,2015,"Chandelier swinging, we don't give a fuck",*cuts verse*
+gun,fancy,Iggy Azalea,2015,"Slayin' these hoes, gold trigger on the gun like",*cuts verse*
+high,fancy,Iggy Azalea,2015,"High heels, something worth a half a ticket on my wrist (On my wrist)",*cuts verse*
+liquor,fancy,Iggy Azalea,2015,"Taking all the liquor straight, never chase that (Never)",*cuts verse*
+retard,fancy,Iggy Azalea,2015,"That my flow retarded, each beat dear, departed","And my flow just started, each speak it, depart it"
+slay,fancy,Iggy Azalea,2015,"Slayin' these hoes, gold trigger on the gun like",*cuts verse*
+touch,fancy,Iggy Azalea,2015,"Classic, expensive, you don't get to touch, ow!",*cuts verse*
+touch,fancy,Iggy Azalea,2015,"Hot girl, hands off, don't touch that",*cuts verse*
+trigger,fancy,Iggy Azalea,2015,"Slayin' these hoes, gold trigger on the gun like",*cuts verse*
+bullet,believer,Imagine Dragons,2017,"Pain! Oh, let the bullets fly, oh, let them rain","Pain! Let the feelings fly, oh let them rain"
+bleed,natural,Imagine Dragons,2019,"Cut until it bleeds inside a world without the peace, facing","Sing until you scream, inside a world without the peace, face it"
+blood,natural,Imagine Dragons,2019,"Took an oath by the blood of my hand, won't break it","Took an oath by the palm of my hand, won't break it"
+cut,natural,Imagine Dragons,2019,"Cut until it bleeds inside a world without the peace, facing","Sing until you scream, inside a world without the peace, face it"
+cutthroat,natural,Imagine Dragons,2019,Living your life cutthroat,"Living your life, you know"
+sin,natural,Imagine Dragons,2019,Will Heaven step in? Will it save us from our sin? Will it?,Will Heaven step in? Will it save us from within? Will it?
+gun,thunder,Imagine Dragons,2018,Just a young gun with a quick fuse,Just a young one with a quick fuse
+body,whatever it takes,Imagine Dragons,2018,And leave the body and the soul to be a part of thee,*cuts verse*
+die,whatever it takes,Imagine Dragons,2018,At least I'll go down to the grave and die happily,*cuts verse*
+gun,replay,Iyaz,2010,"That girl, is a gun to my holster",Like somethin' off a poster
+gun,replay,Iyaz,2010,"That girl, is a gun to my holster",Like somethin' off a poster
+man,mi gente,J Balvin & Willy William,2018,"J Balvin, man",It's boppin 'now
+bed,say you won't let go,James Arthur,2017,I'll wake you up with some breakfast in bed,*cuts verse*
+chest,say you won't let go,James Arthur,2017,I pulled you closer to my chest,I said I thought you were the best
+drank,say you won't let go,James Arthur,2017,We drank too much,We sang so much
+kiss,say you won't let go,James Arthur,2017,With a kiss on your head,*cuts verse*
+sober,say you won't let go,James Arthur,2017,"For a minute, I was stone cold sober","For a minute, I was feeling older"
+fuck,you're beautiful,James Blunt,2006,"She could see from my face that I was, fucking high",She could see from my face that I was flying high
+body,it girl,Jason Derulo,2012,"If I get your body close, not letting go",If I ever get you close not letting go
+crime,it girl,Jason Derulo,2012,Loving you could be a crime,Hang with me well be just fine
+drunk,it girl,Jason Derulo,2012,They don't get another shot 'cause you're love drunk,They don't get another shot cause you're in love
+maniac,it girl,Jason Derulo,2012,"I been like a maniac, insomniac",I've been like a manic insomniac
+shit,it girl,Jason Derulo,2012,"You can be my it girl, baby, you the shit, girl","You could be my it girl, baby you're the it girl"
+damn,i'm yours,Jason Mraz,2009,"Open up your plans and, damn, you're free",Open up your plans and see you're free
+kiss,do you remember,Jay Sean,2010,How many years do you want come kiss dis I know you miss this,*cuts verse*
+sip,do you remember,Jay Sean,2010,Girl take a sip of the champange take a lil trip down my lane my girl,*cuts verse*
+bless,dance again,Jennifer Lopez,2012,"But I told them, 'hallelujah, have a blessed day'",*cuts verse*
+chest,dance again,Jennifer Lopez,2012,Mami let me open your treasure chest,*cuts verse*
+death,dance again,Jennifer Lopez,2012,"Playboy to the death (uh, yes)",*cuts verse*
+dirty,dance again,Jennifer Lopez,2012,I'm a old dirty dog all day,*cuts verse*
+lips,dance again,Jennifer Lopez,2012,"Your lips taste like heaven, so why should I stop?","Your song is like heaven, so why should I stop?"
+woman,dance again,Jennifer Lopez,2012,"Mr Worldwide, and the world's most beautiful woman",*cuts verse*
+women,dance again,Jennifer Lopez,2012,Make women comfortable,*cuts verse*
+god,jenny from the block,Jennifer Lopez,2003,Put God first and can't forget to stay real (Real),Can't forget to stay real
+men,jenny from the block,Jennifer Lopez,2003,"Men go working, some go stealing",*cuts verse*
+women,jenny from the block,Jennifer Lopez,2003,Children grow and women producing,*cuts verse*
+bang,how do you sleep?,Jesse McCartney,2009,Not only does your body bang,*cuts verse*
+body,how do you sleep?,Jesse McCartney,2009,Not only does your body bang,*cuts verse*
+damn,how do you sleep?,Jesse McCartney,2009,Damn those sweet memories,"Ya, those sweet memories"
+damn,how do you sleep?,Jesse McCartney,2009,"They say ""We saw your girl at the game and damn",*cuts verse*
+sleep,how do you sleep?,Jesse McCartney,2009,"Tell me that you're gettin' no sleep, can't think",*cuts verse*
+damn,domino,Jessie J,2012,"Damn, this love is skin tight",Done this club up real tight
+dirty,domino,Jessie J,2012,Dirty dancing in the moonlight,Now we're dancing in the moonlight
+sex,domino,Jessie J,2012,I'm feeling sexy and free,I'm feeling happy and free
+skin,domino,Jessie J,2012,"Damn, this love is skin tight",Done this club up real tight
+touch,domino,Jessie J,2012,"When we touch, don't ever let me go","When we dance, don't ever let me go"
+damn,price tag,Jessie J,2011,Acting so damn mysterious,Acting so mysterious
+man,price tag,Jessie J,2011,"Okay, Coconut Man, Moonhead and Pea",*cuts verse*
+man,are you gonna be my girl,Jet (band),2004,"But you were with another man, yeah","But you were with another boy, yeah"
+curve,all of me,John Legend,2014,Love your curves and all your edges,Love your words and all your edges
+lips,all time low,Jon Bellion,2017,Would put your lips on mine and love the aftertaste,We put your hand in mine and love the afterthought now
+shit,all time low,Jon Bellion,2017,"But that shit's broken, that shit's broken","But that thing is broken, that thing is broken"
+dammit,cool,Jonas Brothers,2019,"Well, dammit, I'm feelin' so cool, yeah","Yeah, you know I'm feelin' so cool, yeah"
+dammit,cool,Jonas Brothers,2019,"Dammit, I'm feelin' so coo-oo-oo-oo-oo-ool",You know I'm feelin' so coo-oo-oo-oo-oo-ool
+high,cool,Jonas Brothers,2019,I'm feelin' high like a late night summer of last year (Yeah),I'm feelin' cool like a late night summer of last year (Yeah)
+bars,sucker,Jonas Brothers,2019,I've been dancin' on top of cars and stumblin' out of bars,I've been dancin' on top of cars and stumblin' really far
+fight,battlefield,Jordin Sparks,2010,(What are we fighting for?),*cuts verse*
+war,battlefield,Jordin Sparks,2010,One word turns into war,"One word turns in two, oh"
+die,no air,Jordin Sparks,2008,If I should die before I wake,If I should fly before I wake
+high,issues,Julia Michaels,2017,"When I'm high, I don't come down",When I'm up I don't come down
+shit,issues,Julia Michaels,2017,You do shit on purpose,You do things on purpose
+bitch,beauty and a beat,Justin Bieber,2013,Bitches couldn't get on my incline,*cuts verse*
+body,beauty and a beat,Justin Bieber,2013,Body rock,Really rock
+body,beauty and a beat,Justin Bieber,2013,"Girl, I can feel your body rock (Ayy-ayy-ayy)","Really rock, girl, I can see your really rock (eh, eh, eh)"
+buns,beauty and a beat,Justin Bieber,2013,"Buns out, weiner, but I gotta keep an eye out for Selener",*cuts verse*
+ink,beauty and a beat,Justin Bieber,2013,"In time, ink lines",*cuts verse*
+priest,beauty and a beat,Justin Bieber,2013,Beautiful confessions of the priest,*cuts verse*
+sleep,love yourself,Justin Bieber,2016,"But now I know, I'm better sleeping on my own","And now I know, I'm better living on my own"
+body,can't stop the feeling!,Justin Timberlake,2016,I feel that hot blood in my body when it drops,"I feel that hot blood in my body when it drops, ooh"
+body,can't stop the feeling!,Justin Timberlake,2016,Wanna see you move your body,*cuts verse*
+creep,can't stop the feeling!,Justin Timberlake,2016,"A feeling good, good, creeping up on you","A feeling good, good, dancing here with you"
+die,my love,Justin Timberlake,2007,"You don't come, I ain't gon' die",*cuts verse*
+high,my love,Justin Timberlake,2007,Cause the girls worldwide throw they hands up high,*cuts verse*
+high,my love,Justin Timberlake,2007,You say you wanna kick it when I ain't so high (Man),*cuts verse*
+man,my love,Justin Timberlake,2007,"I don't know what you hesitatin' for, man",*cuts verse*
+man,my love,Justin Timberlake,2007,"But if you got a man, try to lose him if you can",*cuts verse*
+man,my love,Justin Timberlake,2007,Cause you ain't been seen with a man so fly,*cuts verse*
+man,my love,Justin Timberlake,2007,You say you wanna kick it when I ain't so high (Man),*cuts verse*
+woman,my love,Justin Timberlake,2007,"Ain't another woman that could take your spot, my love","Ain't another girl that can take your spot, my love"
+bleed,not a bad thing,Justin Timberlake,2014,Now you're bleeding,And you're hurting
+cuts,not a bad thing,Justin Timberlake,2014,When someone cuts your heart open with a knife,When someone breaks your heart open with a light
+fuck,not a bad thing,Justin Timberlake,2014,Cause you might fuck around and find your dreams come true with me,Cause you might look around and find your dreams come true with me
+knife,not a bad thing,Justin Timberlake,2014,When someone cuts your heart open with a knife,When someone breaks your heart open with a light
+woman,heartless,Kanye West,2009,He lost his soul to a woman so heartless,He lost his soul to a girl so heartless
+ass,california gurls,Katy Perry,2010,All that ass hanging out,*cuts verse*
+bikini,california gurls,Katy Perry,2010,"Daisy Dukes, bikinis on top","Fine, fresh, fierce, we got it on lock"
+bikini,california gurls,Katy Perry,2010,"Bikinis, zucchinis, martinis, no weenies",*cuts verse*
+buns,california gurls,Katy Perry,2010,"Kiss her, touch her, squeeze her buns (Uh!)",*cuts verse*
+creep,california gurls,Katy Perry,2010,Trying to creep a little sneak peek (At us),Tryna act a little crazy
+freak,california gurls,Katy Perry,2010,We freak in my Jeep ​*horn honks*​,*cuts verse*
+freak,california gurls,Katy Perry,2010,The girl's a freak,*cuts verse*
+gin,california gurls,Katy Perry,2010,Sipping gin and juice,Sippin' on a juice
+kiss,california gurls,Katy Perry,2010,"Kiss her, touch her, squeeze her buns (Uh!)",*cuts verse*
+man,california gurls,Katy Perry,2010,"California gurls, man",California gurls
+martini,california gurls,Katy Perry,2010,"Bikinis, zucchinis, martinis, no weenies",*cuts verse*
+sex,california gurls,Katy Perry,2010,Sex (Sex) on the beach,*cuts verse*
+skin,california gurls,Katy Perry,2010,"Sun-kissed skin so hot, we'll melt your popsicle","Sun-kissed beach, so hot, will melt your Popsicle"
+touch,california gurls,Katy Perry,2010,"Kiss her, touch her, squeeze her buns (Uh!)",*cuts verse*
+drink,chained to the rhythm,Katy Perry,2017,"Drink, this one is on me","Dance, this one is on me"
+high,chained to the rhythm,Katy Perry,2017,"Ay, up in your high place, liars",*cuts verse*
+addict,dark horse,Katy Perry,2014,"But lil mama so dope, I messed around and got addicted",*cuts verse*
+bedroom,dark horse,Katy Perry,2014,"She ride me like a roller coaster, turn the bedroom into a fair (A fair)",*cuts verse*
+coma,dark horse,Katy Perry,2014,"She can be my sleeping beauty, I'm gon' put her in a coma (Woo!)",*cuts verse*
+damn,dark horse,Katy Perry,2014,"Damn, I think I love her, shawty's so bad, I'm sprung and I don't care",*cuts verse*
+dope,dark horse,Katy Perry,2014,"But lil mama so dope, I messed around and got addicted",*cuts verse*
+drug,dark horse,Katy Perry,2014,"Her love is like a drug, I was tryna hit it and quit it",*cuts verse*
+sleep,dark horse,Katy Perry,2014,"She can be my sleeping beauty, I'm gon' put her in a coma (Woo!)",*cuts verse*
+bipolar,hot n cold,Katy Perry,2009,Got a case of a love bipolar,Got a case of a love disorder
+bitch,hot n cold,Katy Perry,2009,"Yeah, you PMS like a bitch; I would know","Yeah, you be a mess like a girl I would know"
+high,the one that got away,Katy Perry,2012,"Summer after high school, when we first met",Summer right before school when we first met
+liquor,the one that got away,Katy Perry,2012,Used to steal your parents' liquor and climb to the roof,Used to eat your favorite ice cream and hang by the pool
+tattoo,the one that got away,Katy Perry,2012,"And on my 18th birthday, we got matching tattoos",And when it was my birthday you bought me some balloons
+tattoo,the one that got away,Katy Perry,2012,Someone said you had your tattoo removed,Someone said you had your heart break removed
+bullet,this is me,Keala Settle,2018,Another round of bullets hits my skin,Another round of words could hit my skin (Ayy)
+kiss,already gone,Kelly Clarkson,2010,It started with a perfect kiss then,It started with a perfect thing then
+poison,already gone,Kelly Clarkson,2010,We could feel the poison set in,We could feel the power set in
+damn,because of you,Kelly Clarkson,2006,For the same damn thing,For the same old thing
+die,because of you,Kelly Clarkson,2006,"I watched you die, I heard you cry every night in your sleep","I watched you cry, I heard you cry every night in your sleep"
+bed,never again,Kelly Clarkson,2007,"I hope when you're in bed with her, you think of me",I hope that when you're out with her you think of me
+die,never again,Kelly Clarkson,2007,"You'll die together, but alone",You'll be together but alone
+bed,stronger,Kelly Clarkson,2012,You know the bed feels warmer,You know that life feels better
+dead,stronger,Kelly Clarkson,2012,"Baby, you don't know me, 'cause you're dead wrong",Maybe you don't know me cause you've been gone
+sleep,stronger,Kelly Clarkson,2012,Sleepin' here alone (Sleepin' here alone),Sitting here alone. sitting here alone
+man,walk away,Kelly Clarkson,2007,I want a man by my side,I want a boy by my side
+bitch,knocks you down,Keri Hilson,2010,"For advice, OMG, you listen to that, bitch",*cuts verse*
+bullet,knocks you down,Keri Hilson,2010,She shot the bullet that ended that life (Oh),*cuts verse*
+damn,knocks you down,Keri Hilson,2010,But I know it feels so damn good,"But I know it feels so, so good"
+god,knocks you down,Keri Hilson,2010,How could a goddess ask someone that's only average?,"I'll admit it, I was scared to answer love's call"
+high,knocks you down,Keri Hilson,2010,I used to be commander-in-chief of my pimp shit flying high (Flying high),I used to be Commander-in-Chief of my own ship flyin' high
+pimp,knocks you down,Keri Hilson,2010,I used to be commander-in-chief of my pimp shit flying high (Flying high),I used to be Commander-in-Chief of my own ship flyin' high
+pimp,knocks you down,Keri Hilson,2010,I swear to you the pimp in me just died tonight,*cuts verse*
+shit,knocks you down,Keri Hilson,2010,I used to be commander-in-chief of my pimp shit flying high (Flying high),I used to be Commander-in-Chief of my own ship flyin' high
+god,praying,Kesha,2018,But some things only God can forgive,*cuts verse*
+hell,praying,Kesha,2018,’Cause you brought the flames and you put me through hell,You brought the flames and you know it too well
+hell,praying,Kesha,2018,You brought the flames and you put me through hell,You brought the flames and you know it too well
+pray,praying,Kesha,2018,"Oh, sometimes I pray for you at night",*cuts verse*
+bang,let it rock,Kevin Rudolf,2009,"My aim is perfect, I'll bang ya",*cuts verse*
+crime,let it rock,Kevin Rudolf,2009,And you do your crime,And you stand in line
+dick,let it rock,Kevin Rudolf,2009,"I can dick you up, I can dick you down",*cuts verse*
+dirty,let it rock,Kevin Rudolf,2009,Dirty like socks that's on the ground,*cuts verse*
+god,let it rock,Kevin Rudolf,2009,So you pray to God to justify the way,So you pray a lot to justify the way you live a lie
+panties,let it rock,Kevin Rudolf,2009,"Panties drop, and the tops",*cuts verse*
+damn,love lies,Khalid & Normani,2019,But I've been waitin' for you for my whole damn life,But I've been waitin' for you for my whole life
+shit,love lies,Khalid & Normani,2019,You've got some shit to say and I'm here to listen,"You've got something to say and I'm here to listen, so, baby..."
+bodies,gold,Kiiara,2017,Bodies on the pavement,Running on the pavement
+drunk,it ain't me,Kygo & Selena Gomez,2017,When you're drunk and all alone?,Who's waking up to take you home when you're through and all alone?
+high,it ain't me,Kygo & Selena Gomez,2017,Nowhere's high enough,Nowhere's far enough
+sippin,it ain't me,Kygo & Selena Gomez,2017,We were sipping whiskey neat,You were hanging out with me
+whiskey,it ain't me,Kygo & Selena Gomez,2017,"The Bowery, whiskey neat, grateful, I'm so grateful",*cuts verse*
+whiskey,it ain't me,Kygo & Selena Gomez,2017,"The Bowery, whiskey neat, grateful, I'm so grateful",*cuts verse*
+cigarette,alejandro,Lady Gaga,2010,Just smoke my cigarette and hush,Just walk away from me and hush
+cigarette,alejandro,Lady Gaga,2010,"Ale-Alejandro, Ale-Alejandro (Just smoke my cigarette and hush)",Alejandro
+kiss,alejandro,Lady Gaga,2010,"Don't wanna kiss, don't wanna touch","Don't wanna miss, don't want too much"
+smoke,alejandro,Lady Gaga,2010,Just smoke my cigarette and hush,Just walk away from me and hush
+smoke,alejandro,Lady Gaga,2010,"Ale-Alejandro, Ale-Alejandro (Just smoke my cigarette and hush)",Ale-ale-jandro
+touch,alejandro,Lady Gaga,2010,"Don't wanna kiss, don't wanna touch","Don't wanna miss, don't want too much"
+touch,alejandro,Lady Gaga,2010,Don't wanna touch,Don't want too much
+touch,alejandro,Lady Gaga,2010,"(Don't wanna kiss, don't wanna touch) Alejandro, Alejandro",Alejandro
+gay,born this way,Lady Gaga,2011,"No matter gay, straight, or bi",*cuts verse*
+lesbian,born this way,Lady Gaga,2011,"Lesbian, transgender life",*cuts verse*
+transgender,born this way,Lady Gaga,2011,"Lesbian, transgender life",*cuts verse*
+cigarette,paparazzi,Lady Gaga,2010,Eyeliner and cigarettes,Eyeliner and all the rest
+shit,paparazzi,Lady Gaga,2010,Snap snap to that shit on the radio,"(Stop, stop) That song on the radio"
+drink,telephone,Lady Gaga,2010,"And I cannot text you with a drink in my hand, eh",Can not text you when i'm going to dance-eh
+sippin,telephone,Lady Gaga,2010,Cause I'm out in the club and I'm sipping that bubb,"I'm out in the club, meeting that grub"
+die,summertime sadness,Lana Del Rey,2014,"I know if I go, I'll die happy tonight","I know if I go, I'll be happy tonight"
+god,summertime sadness,Lana Del Rey,2014,"Oh, my God, I feel it in the air","Oh, my gosh, I feel it in the air"
+high,summertime sadness,Lana Del Rey,2014,"High heels off, I'm feelin' alive","New shoes on, I'm feeling alive"
+kiss,summertime sadness,Lana Del Rey,2014,Kiss me hard before you go,Listen hard before you go
+god,you say,Lauren Daigle,2019,"You have every failure, God",*cuts verse*
+bed,i like me better,Lauv,2018,"Waking up in this bed next to you swear the room, yeah, it got no ceiling","Hanging out on the couch next to you, swear the room, yeah, it got no ceiling"
+damn,i like me better,Lauv,2018,Damn,Yeah
+drunk,i like me better,Lauv,2018,To be drunk and in love in New York City,To be young and in love in New York City
+kill,i'm so tired...,Lauv & Troye Sivan,2019,"Strangers, killing my lonely nights with strangers","Strangers, watching them all pass by those strangers"
+man,steal my sunshine,Len,2001,"Man, I've never seen Sharon look so bad before",*cuts verse*
+hip,summer girls,LFO,2001,Always been hip to the B-boy style,Always been hip to the be -ball style
+boob,old town road,Lil Nas X,2019,Bull ridin' and boobies,Bull ridin' and bougie
+booty,old town road,Lil Nas X,2019,Wrangler on my booty,Wrangler like on TV
+bitch,truth hurts,Lizzo,2019,"I just took a DNA test, turns out I'm 100% that bitch","I just took a DNA test, turns out I'm 100% that kid"
+bitch,truth hurts,Lizzo,2019,"You coulda had a bad bitch, non-committal","You coulda had a good friend, non-committal"
+bitch,truth hurts,Lizzo,2019,"Hey, I'm glad you're back with your bitch","Hey, I'm glad you're back with your friends"
+bitch,truth hurts,Lizzo,2019,"I don't play tag, bitch, I been it (One time)","I don't play tag, yeah, I been it (One time)"
+fuck,truth hurts,Lizzo,2019,"We don't fuck with lies (Two times), we don't do goodbyes (Woo)","We don't deal with lies (Two times), we don't do goodbyes (Woo)"
+man,truth hurts,Lizzo,2019,New man on the Minnesota Vikings (Minnesota Vikings),"New ones, like the Minnesota Vikings"
+men,truth hurts,Lizzo,2019,Why men great 'til they gotta be great?,Why you great 'til they gotta be great?
+drank,party rock anthem,LMFAO,2012,Where the drank? I gots to know,What the track I gots to know
+blood,royals,Lorde,2014,"Bloodstains, ball gowns, trashin' the hotel room","Grass stains, ball gowns, trashin' the hotel room"
+bloodstain,royals,Lorde,2014,"Bloodstains, ball gowns, trashin' the hotel room","Grass stains, ball gowns, trashin' the hotel room"
+drink,7 years,Lukas Graham,2016,By eleven smoking herb and drinking burning liquor,By eleven hanging out and thinking we were slicker
+liquor,7 years,Lukas Graham,2016,By eleven smoking herb and drinking burning liquor,By eleven hanging out and thinking we were slicker
+smoking,7 years,Lukas Graham,2016,By eleven smoking herb and drinking burning liquor,By eleven hanging out and thinking we were slicker
+woman,7 years,Lukas Graham,2016,My woman brought children for me,I hope I have children for me?
+bottle,good  old days,Macklemore,2018,Wish I put the bottle back on that shelf,Wish I put those things back on that shelf
+drink,good  old days,Macklemore,2018,Wish I didn't drink all of that flask first,Wish I didn't think all of that stuff first
+ass,downtown,Macklemore & Ryan Lewis,2016,And a bad little mama with her ass in my face,And a cute little mama with a smile on her face
+ball,downtown,Macklemore & Ryan Lewis,2016,Tip-toeing in the street like ballet,Tip-toeing through the streets like Dally
+body,downtown,Macklemore & Ryan Lewis,2016,"Killing the game, 'bout to catch a body",*cuts verse*
+bullet,downtown,Macklemore & Ryan Lewis,2016,"Stone washed, so raw, moped like a bullet, oh, yee-ow","Stone washed so raw, moped like a record"
+damn,downtown,Macklemore & Ryan Lewis,2016,"Cause I'm too damn quick, I'm too damn slick","Because I'm too too quick, I'm too too slick"
+dope,downtown,Macklemore & Ryan Lewis,2016,Dope,Nope
+fuck,downtown,Macklemore & Ryan Lewis,2016,"I went to the moped store, said ""Fuck it""",I went to the moped store and said what if
+fuck,downtown,Macklemore & Ryan Lewis,2016,"Fuck a bus pass, you got a moped, man",*cuts verse*
+fuck,downtown,Macklemore & Ryan Lewis,2016,"""Going thirty-eight, Dan, chill the fuck out","Going thirty-eight man, you need to chill out"
+god,downtown,Macklemore & Ryan Lewis,2016,"Goddamn, man, everybody got Bugattis",*cuts verse*
+hell,downtown,Macklemore & Ryan Lewis,2016,"Eight hundred cash, that's a hell of a deal",800 cash it’s a steal of a deal
+hell,downtown,Macklemore & Ryan Lewis,2016,"Mow your damn lawn and sit the hell down""",Mow your own lawn and sit right back down
+hella,downtown,Macklemore & Ryan Lewis,2016,But I'ma keep it hella 1987,*cuts verse*
+hella,downtown,Macklemore & Ryan Lewis,2016,"I'm stunting on everybody, hella raw, pass the Wasabi",*cuts verse*
+kill,downtown,Macklemore & Ryan Lewis,2016,"Killing the game, 'bout to catch a body",*cuts verse*
+man,downtown,Macklemore & Ryan Lewis,2016,"Goddamn, man, everybody got Bugattis",*cuts verse*
+man,downtown,Macklemore & Ryan Lewis,2016,"Fuck a bus pass, you got a moped, man",*cuts verse*
+pimp,downtown,Macklemore & Ryan Lewis,2016,Sounding like a French pimp from back in the day,Stunting like a Fresh Prince you remember me
+scrotum,downtown,Macklemore & Ryan Lewis,2016,I'm so low that my scrotum's almost dragging up on the concrete,*cuts verse*
+shit,downtown,Macklemore & Ryan Lewis,2016,"There's layers to this shit, player, tiramisu, tiramisu",There's layers to this like tiramisu tiramisu
+ass,thrift shop,Macklemore & Ryan Lewis,2013,"The people like, ""Damn, that's a cold ass honkey""","The people like “Hey, the guy on the marquee!”"
+bitch,thrift shop,Macklemore & Ryan Lewis,2013,"And saving my money and I'm hella happy; that’s a bargain, bitch","Saving my money and I’m super happy, that’s a bargain, yeah"
+bitch,thrift shop,Macklemore & Ryan Lewis,2013,"50 dollars for a T-shirt, that's just some ignorant bitch shit","Fifty dollars for a t-shirt, that’s just silly overpriced"
+cock,thrift shop,Macklemore & Ryan Lewis,2013,"Walk into the club like, ""What up? I got a big cock""","Now walk into the club like ""What up?! I got a hit song!"""
+damn,thrift shop,Macklemore & Ryan Lewis,2013,Ice on the fringe is so damn frosty,Ice on the fringe is so so frosty
+damn,thrift shop,Macklemore & Ryan Lewis,2013,I'll wear your granddad's clothes (Damn right),I wear your granddad's clothes
+fuck,thrift shop,Macklemore & Ryan Lewis,2013,This is fucking awesome,This is really awesome
+fuck,thrift shop,Macklemore & Ryan Lewis,2013,"Fuck it, coppin' it, washin' it, 'bout to go and get some compliments","Bag it, poppin' it, washin' it, ‘bout to go and get some compliments"
+fuck,thrift shop,Macklemore & Ryan Lewis,2013,"Bummy and grungy, fuck it man, I am stunting and flossin'","Bummy and grungy, wear it man, I am stunting and flossing and"
+fuck,thrift shop,Macklemore & Ryan Lewis,2013,This is fucking awesome,This is really awesome
+fuck,thrift shop,Macklemore & Ryan Lewis,2013,"Second hand and I'll rock that, motherfucker",Second hand and I’ll rock that like it's awesome
+fuck,thrift shop,Macklemore & Ryan Lewis,2013,The built-in onesie with the socks on the motherfucker,The built-in onesie with the socks on that really awesome
+fuck,thrift shop,Macklemore & Ryan Lewis,2013,I hit the party and they stop in that motherfucker,I hit the party and they stop because I'm really awesome
+hella,thrift shop,Macklemore & Ryan Lewis,2013,"Rollin' in hella deep, headed to the mezzanine","Rolling in super deep, headed to the mezzanine"
+hella,thrift shop,Macklemore & Ryan Lewis,2013,"And saving my money and I'm hella happy; that’s a bargain, bitch","Saving my money and I’m super happy, that’s a bargain, yeah"
+hella,thrift shop,Macklemore & Ryan Lewis,2013,"They be like, ""Oh, that Gucci? That's hella tight""","They be like “Oh that Gucci, that’s really tight”"
+hella,thrift shop,Macklemore & Ryan Lewis,2013,That shirt's hella dough,That shirt’s really dough
+hella,thrift shop,Macklemore & Ryan Lewis,2013,And having the same one as six other people in this club is a hella don't,And having the same one as six other people in this club is a major don’t
+hella,thrift shop,Macklemore & Ryan Lewis,2013,"Man, you hella won't! Man, you hella won't!","Man you really won’t, man you really won't"
+man,thrift shop,Macklemore & Ryan Lewis,2013,"Bummy and grungy, fuck it man, I am stunting and flossin'","Bummy and grungy, wear it man, I am stunting and flossing"
+man,thrift shop,Macklemore & Ryan Lewis,2013,"Hello, hello, my ace man, my mellow","Hello, hello, my ace man, my fellow"
+man,thrift shop,Macklemore & Ryan Lewis,2013,"Man, you hella won't! Man, you hella won't!","Man you really won’t, man you really won't"
+piss,thrift shop,Macklemore & Ryan Lewis,2013,Piss...,(Ewwwwww...)
+shit,thrift shop,Macklemore & Ryan Lewis,2013,"Nah, I'm just pumped, I bought some shit from a thrift shop","I'm so pumped, I bought some clothes from the thrift shop"
+shit,thrift shop,Macklemore & Ryan Lewis,2013,"But shit, it was 99 cents!","But hey, it was 99 cents!"
+shit,thrift shop,Macklemore & Ryan Lewis,2013,"50 dollars for a T-shirt, that's just some ignorant bitch shit","Fifty dollars for a t-shirt, that’s just silly overpriced"
+shit,thrift shop,Macklemore & Ryan Lewis,2013,I call that getting-swindled-and-pimped shit,"I call that getting swindled and tricked, yeah"
+hell,4 minutes,Madonna,2008,"The road to hell is paved with good intentions, yeah","The road to heaven paved with good intentions, yeah"
+die,rude,MAGIC!,2015,You say I'll never get your blessin' till the day I die,You say I'll never get your blessing till the day I fly
+blow,lean on,Major Lazer,2015,"Blow a kiss, fire a gun","Blow a kiss, you're the one"
+bitch,uptown funk,Mark Ronson,2015,"Bitch, say my name you know who I am",Say my name you know who I am
+damn,uptown funk,Mark Ronson,2015,I'm too hot (Hot damn),I'm too hot (hot yeah)
+freak,uptown funk,Mark Ronson,2015,"If you freaky then own it (Doh, doh, doh, doh, doh, doh, doh, doh)",*cuts verse*
+liquor,uptown funk,Mark Ronson,2015,"Fill my cup, put some liquor in it","Fill my cup, put some water in it"
+sex,uptown funk,Mark Ronson,2015,"If you sexy then flaunt it (Doh, doh, doh, doh, doh, doh, doh, doh)",*cuts verse*
+cut,cold,Maroon 5,2017,"Now you tryna cut me off like a light switch, yeah",*cuts verse*
+fuck,cold,Maroon 5,2017,You know how to fuck with me,You know how to confuse me
+kiss,cold,Maroon 5,2017,"Distant, when we're kissing","Distant, how we're living"
+sleep,cold,Maroon 5,2017,Sleeping up under the covers,"Slippin' up, you're undiscovered"
+sleep,cold,Maroon 5,2017,Thinking that I'm sleeping on the four-letter word,*cuts verse*
+sleep,cold,Maroon 5,2017,But the four-letter word don't sleep,*cuts verse*
+bed,don't wanna know,Maroon 5,2017,"Even in my head, you're still in my bed",Even in my head all the things you said
+drink,don't wanna know,Maroon 5,2017,"And the more I drink, the more I think about you",And the more I think the more I think about you
+touch,don't wanna know,Maroon 5,2017,"Do he lay it down for you, touch your poona like this?",*cuts verse*
+drunk,girls like you,Maroon 5,2018,Maybe I know that I'm drunk,Maybe I know that I'm done
+shit,girls like you,Maroon 5,2018,Maybe you've taken my shit for the last time (yeah),"Maybe you've taken my stuff for the last time, yeah"
+pill,love somebody,Maroon 5,2014,"And it's a hard pill for you to swallow, yeah","And it's a hard fact for you to swallow, yeah"
+touch,love somebody,Maroon 5,2014,I really wanna touch somebody,I really wanna love somebody
+damn,makes me wonder,Maroon 5,2007,God damn my spinning head,Can't stop my spinning head
+fuck,makes me wonder,Maroon 5,2007,And it really makes me wonder if I ever gave a fuck about you,"And it really makes me wonder, if I ever gave a thought about you"
+god,makes me wonder,Maroon 5,2007,God damn my spinning head,Can't stop my spinning head
+thigh,makes me wonder,Maroon 5,2007,The way it felt between your thighs,Way it felt to hearing lies
+drunk,moves like jagger,Maroon 5,2012,Kiss me till you're drunk and I'll show you,"Dance until were done, and I'll show you"
+kiss,moves like jagger,Maroon 5,2012,Kiss me till you're drunk and I'll show you,"Dance until were done, and I'll show you"
+naked,moves like jagger,Maroon 5,2012,"I put on a show, now I'm naked","I put on a show, now we're Jayden"
+shit,moves like jagger,Maroon 5,2012,I don't give a shit,I don't even care
+tongue,moves like jagger,Maroon 5,2012,Take me by the tongue and I'll know you (Uh),"Take me by the hand, and I'll know you"
+ball,payphone,Maroon 5,2012,"Don't need my name on my shirt, you can tell that I'm ballin'",*cuts verse*
+ballin,payphone,Maroon 5,2012,"Don't need my name on my shirt, you can tell that I'm ballin'",*cuts verse*
+blew,payphone,Maroon 5,2012,Telling me I changed since I blew up or whatever you call it,*cuts verse*
+fuck,payphone,Maroon 5,2012,"One more fucking love song, I'll be sick, oh",One more love song I'll be sick
+fuck,payphone,Maroon 5,2012,"Man, fuck that shit",*cuts verse*
+man,payphone,Maroon 5,2012,"Man, fuck that shit",*cuts verse*
+shit,payphone,Maroon 5,2012,All those fairytales are full of shit,All those fairytales are full of air
+shit,payphone,Maroon 5,2012,So you can go take that little piece of shit with you,*cuts verse*
+shit,friends,Marshmello & Anne-Marie,2018,"Don't mess it up, talking that shit","Don't mess it up, talking like this"
+shit,friends,Marshmello & Anne-Marie,2018,Get that shit inside your head,*cuts verse*
+shit,be without you,Mary J. Blige,2006,(Yes) We got real shit,"Yes, we got real, yeah, yes"
+ass,family affair,Mary J. Blige,2003,So grab somebody and get your ass on the dance floor,"So grab somebody and get yourself on the dance floor (Dance, dance)"
+bitch,all about that bass,Meghan Trainor,2015,Go ahead and tell them skinny bitches that,Go ahead and tell them skinny ladies that
+booty,all about that bass,Meghan Trainor,2015,"She says, boys like a little more booty to hold at night","She says, ""Don't let it keep you at home in your room at night."""
+booty,all about that bass,Meghan Trainor,2015,"(That booty, booty, uh, that booty booty)",*cuts verse*
+booty,all about that bass,Meghan Trainor,2015,"Hey, I'm bringing booty back",Hey! I'm bringing it all back
+shit,all about that bass,Meghan Trainor,2015,"We know that shit ain't real, come on now, make it stop","We know that it ain't real, c'mon now, make it stop"
+drink,me too,Meghan Trainor,2016,I never pay for my drinks,I never pay for a thing
+neck,me too,Meghan Trainor,2016,What's that icy thang hangin' 'round my neck? Mmm,What's that icy thing hangin' 'round my neck?
+sex,me too,Meghan Trainor,2016,Who's that sexy thang I see over there?,Who's that pretty girl I see over there?
+hips,no,Meghan Trainor,2016,Lick your lips and swing your hips,"Move your lips, say it how it is"
+man,no,Meghan Trainor,2016,"If I want a man, then I'ma get a man","If I wanna dance, then I'mma go dance"
+shit,cooler than me,Mike Posner,2011,And you wear 'em around like it ain't shit,And you wear them around like it ain't it
+bed,please don't go,Mike Posner,2011,From my bed and start another day,From my head and start another day
+lips,please don't go,Mike Posner,2011,We'll just keep running from tomorrow with our lips locked,We'll just keep running from tomorrow with our hearts locked
+faith,the climb,Miley Cyrus,2009,"Keep your faith, keep your faith",*cuts verse*
+woman,just a dream,Nelly,2011,"My woman, oh I miss her, when will I learn?","No more will I miss her, when will I learn?"
+kill,animal,Neon Trees,2011,You're killin' me now,You're losing me now
+drug,everybody talks,Neon Trees,2013,Hey honey you could be my drug,*cuts verse*
+lips,everybody talks,Neon Trees,2013,And then she made my lips hurt,And then she made my heart hurt
+overdose,everybody talks,Neon Trees,2013,Too much could be an overdose,*cuts verse*
+shit,everybody talks,Neon Trees,2013,"Oh my, my shit",Oh my my sugar
+hellish,jealous,Nick Jonas,2015,It's my right to be hellish,It's my right to be jealous
+puff,jealous,Nick Jonas,2015,And I'm puffing my chest,And I'm buffing my chest
+sex,jealous,Nick Jonas,2015,Cause you're too sexy beautiful,"Cause you're too pretty, beautiful"
+hell,far away,Nickelback,2007,All of Hell to hold your hand,All of it to hold your hand
+dammit,gotta be somebody,Nickelback,2009,"And dammit, this feels too right",And you know this feels too right
+bitch,ice box,Omarion,2007,"Omarion, bitch",*cuts verse*
+damn,ice box,Omarion,2007,"Damn these memories (Uh), and it's crazy (Uh)",That means memories and it's crazy
+damn,ice box,Omarion,2007,"I said I really wanna work this out, damn girl I'm trying (I'm trying, yeah)","I said, I really wanna work this out, yo girl, I'm tryin'"
+damn,ice box,Omarion,2007,"I said I really wanna work this out, damn girl I'm trying","I said, I really wanna work this out, yo girl, I'm tryin'"
+ice,ice box,Omarion,2007,I got this ice box where my heart used to be (But I got this),But I got this ice box where my heart used to be
+nigga,ice box,Omarion,2007,"Good with ma, good with pa, cool with all my niggas (My niggas)","Good with ma, good with pa, cool with all my friends"
+dirty,best song ever,One Direction,2014,Said I had a dirty mouth,Said I had a crooked smile
+kiss,best song ever,One Direction,2014,But she kissed me like she meant it,But she said it like she meant it
+man,drag me down,One Direction,2016,The shell of a man who could never be his best,The shell of a guy who could never be his best
+die,story of my life,One Direction,2014,It seems to me that when I die,It seems to me that when I go
+dead,all the right moves,OneRepublic,2010,Over the world that's dead,Over the world that's lead
+kill,stop and stare,OneRepublic,2008,And every glance is killing me,And every glance is hurting me
+damn,don't let me get me,P!nk,2003,Tired of being compared to damn Britney Spears,Tired of being compared to darn Britney Spears
+ass,get the party started,P!nk,2002,"I'll be burning rubber, you'll be kissing my ass","I'll be burnin' rubber, you'll be watchin' me pass"
+kiss,get the party started,P!nk,2002,"I'll be burning rubber, you'll be kissing my ass","I'll be burnin' rubber, you'll be watchin' me pass"
+sleep,just give me a reason,P!nk,2013,Now you've been talking in your sleep,Now you've been talking out to me
+victim,just give me a reason,P!nk,2013,And I your willing victim,And I your willing person
+cut,please don't leave me,P!nk,2009,I can cut you into pieces,I could break your heart in pieces
+punch,please don't leave me,P!nk,2009,You're my perfect little punching bag,You're the perfect one I wanna see
+drink,so what,P!nk,2009,"So I'm gonna drink my money, I'm not gonna pay his rent (Nope!)","So I'm gonna spend my money, I'm not gonna pay his rent"
+shit,so what,P!nk,2009,And gave it to Jessica Simps (Shit!),And gave it to Jessica Simps
+punch,who knew,P!nk,2008,I'd stand up and punch them out,I'd stand up and call them loud
+pimp,"hey look ma, i made it",Panic! at the Disco,2019,And my pimp's a record label,And I'm on a record label
+kill,high hopes,Panic! at the Disco,2019,Shooting for the stars when I couldn't make a killing,Shooting for the stars when you knew that I was willing
+christian,feel this moment,Pitbull,2013,"Christian Gris, nice to meet ya","Meet and greet, nice to meet ya"
+bless,timber,Pitbull & Kesha,2014,"Blessed to say, money ain't a thing",*cuts verse*
+booty,timber,Pitbull & Kesha,2014,"Face down, booty up (Timber)",*cuts verse*
+bras,timber,Pitbull & Kesha,2014,Twerking in their bras and thongs (Timber),*cuts verse*
+clothes,timber,Pitbull & Kesha,2014,"I have ‘em like Miley Cyrus, clothes off",*cuts verse*
+club,timber,Pitbull & Kesha,2014,"Club jumping like Lebron, now Voli",*cuts verse*
+damn,timber,Pitbull & Kesha,2014,"Nah, it's just me, ain't a damn thing changed",*cuts verse*
+drink,better now,Post Malone,2018,Drinkin' Henny and I'm tryna forget,Thinkin' heavy and I'm tryna forget
+henny,better now,Post Malone,2018,Drinkin' Henny and I'm tryna forget,Thinkin' heavy and I'm tryna forget
+shit,better now,Post Malone,2018,But I can't get this shit outta my head,But I can't get this stuff outta my head
+addict,congratulations,Post Malone,2017,"I be itching like a addict, yeah","I be itching gotta have it, yeah"
+ball,congratulations,Post Malone,2017,"Everyone countin' on me, drop the ball, yuh (Yeah-yeah-yeah, yeah-yeah-yeah)",*cuts verse*
+ball,congratulations,Post Malone,2017,"I pick up the rock and I ball, baby (Ball)",*cuts verse*
+ball,congratulations,Post Malone,2017,My life is like a ball game (Ball game),*cuts verse*
+bitch,congratulations,Post Malone,2017,"I'm surrounded, twenty bad bitches, yeah","I'm surrounded by all my friends, yeah"
+champagne,congratulations,Post Malone,2017,"Big rings (Ooh), champagne (Champagne)",*cuts verse*
+fuck,congratulations,Post Malone,2017,"If you fuck with winning, put your lighters to the sky","If you go with winning, put your hands up in the sky"
+lighter,congratulations,Post Malone,2017,"If you fuck with winning, put your lighters to the sky","If you go with winning, put your hands up in the sky"
+lighters,congratulations,Post Malone,2017,"If you fuck with winning, put your lighters to the sky","If you go with winning, put your hands up in the sky"
+nigga,congratulations,Post Malone,2017,"Young nigga, young nigga, graduation (Yeah)",*cuts verse*
+pot,congratulations,Post Malone,2017,"Pot so big, call it Super Bowl (Super Bowl)",*cuts verse*
+shit,congratulations,Post Malone,2017,Said shit done changed ever since we was on,Said things done changed ever since we was on
+ecstasy,diamonds,Rihanna,2013,A vision of ecstasy,A vision of learning
+molly,diamonds,Rihanna,2013,As we moonshine and molly,As we sing in melodey
+moonshine,diamonds,Rihanna,2013,As we moonshine and molly,As we sing in melodey
+crazy,disturbia,Rihanna,2009,(I'm goin' crazy now),*cuts verse*
+shit,disturbia,Rihanna,2009,"I gotta get out, or figure this shit out",I gotta get out or figure this thing out
+touch,hate that i love you,Rihanna,2008,You know exactly how to touch,You know exactly what to say
+fuck,love on the brain,Rihanna,2017,It beats me black and blue but it fucks me so good,"It makes me feel it's true, but it tricks me so good"
+fuck,love on the brain,Rihanna,2017,What do I gotta do to get in your motherfuckin’ heart?,*cuts verse*
+fuck,love on the brain,Rihanna,2017,It beats me black and blue but it fucks me so good,"It makes me feel it's true, but it tricks me so good"
+die,sos,Rihanna,2006,"Take me on, I could just die up in your arms tonight","Take me, I'ma put the fire in your heart tonight"
+sleep,sos,Rihanna,2006,"You got me tossin' and turnin', can't sleep at night",I can't take it see it don't feel right
+clothes,take a bow,Rihanna,2009,Grab your clothes and get gone (Get gone),Grab your stuff and get gone
+man,umbrella,Rihanna,2007,Jay—Rain Man is back,*cuts verse*
+pour,umbrella,Rihanna,2007,It's pourin' rain,*cuts verse*
+nigga,work,Rihanna,2016,"I got niggas tryna end me, oh",*cuts verse*
+crazy,how do you sleep? (sam smith),Sam Smith,2019,"I am not this desperate, not this crazy","I am not this desperate, not, so ain't me"
+drug,brave,Sara Bareilles,2014,You can turn a phrase into a weapon or a drug,You can turn a phrase into a put-down or a hug
+weapon,brave,Sara Bareilles,2014,You can turn a phrase into a weapon or a drug,You can turn a phrase into a put-down or a hug
+crime,beautiful girls,Sean Kingston,2008,"Oh, when I went away for doin' my first crime","Oh, when I went away I was gone a long time"
+damn,beautiful girls,Sean Kingston,2008,"Damn, all these beautiful girls","Hey, all these beautiful girls"
+suicidal,beautiful girls,Sean Kingston,2008,"You'll have me suicidal, suicidal","You'll have me in denial, in denial"
+suicidal,beautiful girls,Sean Kingston,2008,"They'll have you suicidal, suicidal","They'll have me in denial, in denial"
+body,fire burning,Sean Kingston,2009,That body is a masterpiece,That move is a masterpiece
+legs,fire burning,Sean Kingston,2009,I'm afraid we'll blow them legs,I'm afraid we'll blow the chance
+damn,me love,Sean Kingston,2008,"Damn, why my baby up and gone (Up and gone)",Why my baby up and gone?
+kiss,me love,Sean Kingston,2008,We use to kiss and caress an chess me,"We use hang out an' talk, an' trust me, girl"
+fight,back to you,Selena Gomez,2018,"And I could fight, but what's the use?",*cuts verse*
+addict,come & get it,Selena Gomez,2013,"Maybe I'm addicted for life, no lie","Maybe it's really love for life, no lie"
+addict,come & get it,Selena Gomez,2013,"Baby, I'm addicted, no lie, no lie","Baby it's really love, no lie, no lie"
+death,come & get it,Selena Gomez,2013,This love will be the death of me,*cuts verse*
+die,come & get it,Selena Gomez,2013,But I know I'll die happily,*cuts verse*
+blow,same old love,Selena Gomez,2016,"I’m so sick of that same old love, feels like I've blown apart","I'm so sick of that same old love, my heart's had enough"
+shit,same old love,Selena Gomez,2016,"I'm so sick of that same old love, that shit, it tears me up","I'm so sick of that same old love, that love, it tears me up"
+drunk,wolves,Selena Gomez & Marshmello,2018,"Drunk on a feeling, alone with the stars in the sky","Lost in a feeling, alone with the stars in the sky"
+wine,wolves,Selena Gomez & Marshmello,2018,"Water or wine, don't make me choose","Water or food, don't make me choose"
+drink,if i can't have you,Shawn Mendes,2019,Can't drink without thinkin' about you,Can't think without thinking about you
+drink,in my blood,Shawn Mendes,2018,Just have a drink and you'll feel better,Just have a think and you'll feel better
+skin,mercy,Shawn Mendes,2017,Ripping all the skin from off my bones,Feeling all the hurt inside my bones
+bleed,stitches,Shawn Mendes,2016,"You watch me bleed until I can't breathe, shaking","You watch me run until I can't breathe, shaking"
+naked,there's nothing holdin' me back,Shawn Mendes,2017,Just picture everybody naked,Just picture everybody smiling
+body,señorita,Shawn Mendes & Camila Cabello,2019,"Her body fit right in my hands, la-la-la","Her hand, it fit right in my hands, la-la-la"
+damn,señorita,Shawn Mendes & Camila Cabello,2019,I wish it wasn't so damn hard to leave ya,"I wish it wasn't so, so hard to leave ya"
+kiss,señorita,Shawn Mendes & Camila Cabello,2019,"Ooh, love, your kiss is deadly, don't stop",*cuts verse*
+lips,señorita,Shawn Mendes & Camila Cabello,2019,"Ooh, when your lips undress me, hooked on your tongue",*cuts verse*
+tequila,señorita,Shawn Mendes & Camila Cabello,2019,Tequila Sunrise,Another sunrise
+tongue,señorita,Shawn Mendes & Camila Cabello,2019,"Ooh, when your lips undress me, hooked on your tongue",*cuts verse*
+touch,señorita,Shawn Mendes & Camila Cabello,2019,But every touch is ooh-la-la-la,But every day is ooh-la-la-la
+undress,señorita,Shawn Mendes & Camila Cabello,2019,"Ooh, when your lips undress me, hooked on your tongue",*cuts verse*
+bitch,party like a rockstar,Shop Boyz,2008,"Bitches wanna marry me, they see me they just might panic",*cuts verse*
+fuck,party like a rockstar,Shop Boyz,2008,Ho don't you know I fuck wit fine dimes that look like Pamela,*cuts verse*
+ice,party like a rockstar,Shop Boyz,2008,"My ice make em go down quick, like the Titanic!",*cuts verse*
+bless,the greatest,Sia,2017,"But the strong'll survive, another scar may bless you, ah",*cuts verse*
+pray,the greatest,Sia,2017,"Ayy, I work hard, pray hard, pay dues, ayy",*cuts verse*
+bras,just got paid (ft. french montana),"Sigala, Ella Eyre & Meghan Trainor",2019,"Sports bras, sports car drive","Sports, yeah, sports car drivers"
+drink,just got paid (ft. french montana),"Sigala, Ella Eyre & Meghan Trainor",2019,"I know I drink too much, can't pay my rent this month","I know I think too much, can't pay the rent this month"
+wine,just got paid (ft. french montana),"Sigala, Ella Eyre & Meghan Trainor",2019,"Crush grapes, we don't do the wine","These days, we don't have the timin'"
+kill,watch me (whip / nae nae),Silento,2015,Now watch me whip (Kill it!),Now watch me whip (Whip it!)
+leg,watch me (whip / nae nae),Silento,2015,Do the stanky leg (Stank) do the stanky leg (Stank-stank),*cuts verse*
+legs,watch me (whip / nae nae),Silento,2015,Now break your legs (Break 'em) break your legs (Brake the knob),*cuts verse*
+clothes,live your life,T.I.,2009,"In fancy clothes, and fancy cars",With fancy clothes and fancy cars
+counterfeit,live your life,T.I.,2009,"Allergic to the counterfeit, impartial to the politics",*cuts verse*
+crazy,live your life,T.I.,2009,"I never been a hater, still, I love 'em in a crazy way",*cuts verse*
+nigga,live your life,T.I.,2009,"Articulate, but still I'll grab a nigga by the collar quick",*cuts verse*
+piss,live your life,T.I.,2009,Unhappy with the riches cause you're piss poor morally,*cuts verse*
+pray,live your life,T.I.,2009,I pray for patience but they make me wanna melt they face away,*cuts verse*
+thug,live your life,T.I.,2009,"Been thuggin' all my life, can't say I don't deserve to take a break",*cuts verse*
+fuck,dynamite,Taio Cruz,2011,"Just what the fuck, came here to do, do, do, do (Yeah)","Just what the floor came here to do, do, do, do"
+kill,...ready for it?,Taylor Swift,2018,Knew he was a killer first time that I saw him,Knew he was a dancer first time that I saw him
+man,...ready for it?,Taylor Swift,2018,"Younger than my exes, but he act like such a man, so","Younger than my exes, but he act like such a fan, so"
+touch,...ready for it?,Taylor Swift,2018,Touch me and you'll never be alone,Know me and you'll never be alone
+drunk,blank space,Taylor Swift,2015,I get drunk on jealousy,I get lost on jealousy
+god,blank space,Taylor Swift,2015,"""Oh my God, look at that face","Oh my Gosh, look at that face"
+god,blank space,Taylor Swift,2015,"""Oh my God, who is she?""","""Oh my Gosh, who is she?"""
+high,blank space,Taylor Swift,2015,If the high was worth the pain,If it all was worth the pain
+insane,blank space,Taylor Swift,2015,They'll tell you I'm insane,They'll tell you I'm to blame
+dope,end game,Taylor Swift,2018,"You so dope, don't overdose, I’m so stoked, I need a toast",*cuts verse*
+drink,end game,Taylor Swift,2018,Drinking on a beach with you all over me,Walking on the beach with you right next to me
+liquor,end game,Taylor Swift,2018,"It's like your eyes are liquor, it's like your body is gold","It's like your eyes are bigger, it's like your body is gold"
+overdose,end game,Taylor Swift,2018,"You so dope, don't overdose, I’m so stoked, I need a toast",*cuts verse*
+touch,end game,Taylor Swift,2018,"I don't wanna touch you, I don't wanna be","I don't lose you, I don't wanna be"
+gun,look what you made me do,Taylor Swift,2018,You said the gun was mine,You said this thing was mine
+hella,shake it off,Taylor Swift,2015,And to the fella over there with the hella good hair,And to the fella over there with the really good hair
+faith,style,Taylor Swift,2015,And I got that good girl faith and a tight little skirt,And I got that good girl faith and my favourite shirt
+lip,style,Taylor Swift,2015,And I got that red lip classic thing that you like,"And I got that red dress, classic thing that you like"
+skirt,style,Taylor Swift,2015,And I got that good girl faith and a tight little skirt,And I got that good girl faith and my favourite shirt
+damn,teardrops on my guitar,Taylor Swift,2008,I laugh 'cause it's so damn funny,I laugh 'cause it's just so funny
+clothes,wildest dreams,Taylor Swift,2016,"His hands are in my hair, his clothes are in my room","His hands are in the air, he looks across the room"
+hell,wildest dreams,Taylor Swift,2016,He's so tall and handsome as hell,"He's so tall, and handsome as well"
+apeshit,boom boom pow,The Black Eyed Peas,2009,"When I step inside the room, them girls go apeshit, mmm","When, when I step inside the room them girls go crazy, uhm"
+dies,boom boom pow,The Black Eyed Peas,2009,The Energy Never Dies,*cuts verse*
+sex,boom boom pow,The Black Eyed Peas,2009,"Sexy ladies, extra longer",*cuts verse*
+shit,boom boom pow,The Black Eyed Peas,2009,"That digital spit, next level visual shit",*cuts verse*
+shit,boom boom pow,The Black Eyed Peas,2009,I'm on that next shit now,"I'm on that next, sit now"
+shit,boom boom pow,The Black Eyed Peas,2009,"Y'all stuck on Super 8 shit, that lo-fi stupid 8-bit","Y'all stuck on Super 8 bit, That low-fi stupid 8 bit"
+shit,boom boom pow,The Black Eyed Peas,2009,"Shitting on y'all wit' the (Boom, boom!)","Hittin' on y'all with the boom, boom"
+god,i gotta feeling,The Black Eyed Peas,2010,"Go out and smash it like, ""Oh, my God!""","Go out and smash it like, oh, my gosh"
+shit,let's get it started,The Black Eyed Peas,2005,You wouldn't believe how we wow shit out,You wouldn't believe how we wow this out
+thug,let's get it started,The Black Eyed Peas,2005,"At the gate, and we'll bring the thugged out drill (just)","Out the gate, we'll bring the bud top drill"
+ass,pump it,The Black Eyed Peas,2006,When we play you shake your ass,*cuts verse*
+damn,pump it,The Black Eyed Peas,2006,Damn (Damn),*cuts verse*
+drunk,pump it,The Black Eyed Peas,2006,She like man on drunk (Fool),*cuts verse*
+man,pump it,The Black Eyed Peas,2006,She like man on drunk (Fool),*cuts verse*
+nigga,pump it,The Black Eyed Peas,2006,Niggas wanna hate on us (Who),*cuts verse*
+nigga,pump it,The Black Eyed Peas,2006,Niggas be envious (Who),*cuts verse*
+shit,pump it,The Black Eyed Peas,2006,Just confess it your girl admits that we the shit,*cuts verse*
+bar,closer,The Chainsmokers,2017,Now you're lookin' pretty in a hotel bar,Now you're looking pretty but you are so far
+bar,closer,The Chainsmokers,2017,Now I'm lookin' pretty in a hotel bar,Now you're looking pretty but you are so far
+drink,closer,The Chainsmokers,2017,I drink too much,I talk too much
+tattoo,closer,The Chainsmokers,2017,Bite that tattoo on your shoulder,Brush that stress right off your shoulder
+cigarette,paris,The Chainsmokers,2017,Standing there with a frown and a cigarette,"Standing there with the frown, like you only get"
+cuttin,paris,The Chainsmokers,2017,"We breathe in the air of this small town on our own, cuttin' class for the thrill of it","We breathe in the air of this small town on our own, having class for the thrill of it"
+drunk,paris,The Chainsmokers,2017,"Getting drunk on the past, we were livin' in","Getting lost in the past, we were living it"
+neck,this feeling (ft. kelsea ballerini),The Chainsmokers,2019,They got their hands at my neck this time,They got their hands in the air this time
+shit,who do you love,The Chainsmokers,2019,This shit is keepin' me up at night,You been keepin' me up at night
+sleep,who do you love,The Chainsmokers,2019,Where you been sleepin'?,Where you been leavin'? (Hey)
+smoke,who do you love,The Chainsmokers,2019,Even though you don't even smoke,Even though you don't even know
+cigarette,you found me,The Fray,2009,All alone smoking his last cigarette,All alone saying that we never met
+god,you found me,The Fray,2009,I found God on the corner of First and Amistad,I found him on the corner of 1st and Amistad
+smoking,you found me,The Fray,2009,All alone smoking his last cigarette,All alone saying that we never met
+sex,when i grow up,The Pussycat Dolls,2009,"Boys call you sexy (What's up, sexy?)",Boys call you crazy
+sex,when i grow up,The Pussycat Dolls,2009,"Just call you sexy (What's up, sexy?)",*cuts verse*
+god,breakeven,The Script,2010,Just praying to a God that I don't believe in,Just praying to a thing that i don't believe in
+man,breakeven,The Script,2010,She finally met a man that's gonna put her first,She finally met a boy that's gonna put her first
+damn,written in the stars,Tinie Tempah,2011,"Look at my jacket and hat, so damn berserk",Look at my jacket and hat so so berserk
+damn,written in the stars,Tinie Tempah,2011,(Where the hell's all the sanity at?) Damn,(Where's all the world's sanity at?)
+fuck,written in the stars,Tinie Tempah,2011,Cause I got more fuckin' hits than a disciplined child,Cause I got more hits and I got more style
+illegal,written in the stars,Tinie Tempah,2011,I even done illegal stuff and was leaded astray,I even done the legal stuff and was leaded astray
+man,written in the stars,Tinie Tempah,2011,Man I’m like a young gun fully black Barack,Standing like a young gun fully backed and trapped
+man,written in the stars,Tinie Tempah,2011,"But I wasn’t going nowhere, running man",But I wasn't goin' nowhere running round
+pray,written in the stars,Tinie Tempah,2011,"For a sec, I even gave up believing and praying",For a sec I even gave up believing the same
+damn,billionaire,Travie McCoy,2010,And damn sure do a lot more than FEMA did,*cuts verse*
+fuck,billionaire,Travie McCoy,2010,I wanna be a billionaire so fucking bad,I wanna be a billionaire so very bad
+shit,billionaire,Travie McCoy,2010,And adopt a bunch of babies that ain't never had shit,*cuts verse*
+bed,dj got us falling in love,Usher,2011,"Yabba-dabba-doo, make her bed rock",*cuts verse*
+drink,dj got us falling in love,Usher,2011,Keep downin' drinks like there's no tomorrow,Keep dancing round like there's no tomorrow
+evil,dj got us falling in love,Usher,2011,"Hear no evil, I speak no evil, I see no evil",*cuts verse*
+man,dj got us falling in love,Usher,2011,"Yeah, man",*cuts verse*
+man,dj got us falling in love,Usher,2011,"Yeah, baby, tonight (Hahahaha, yeah man)",*cuts verse*
+creep,u remind me,Usher,2002,Til I found out she was on her creep,Til I found out she was on her dream
+shit,u remind me,Usher,2002,You won't believe all of the things she put me through (all the shit she put me through),You won't believe all of the things that she put me through
+crap,beverly hills,Weezer,2006,My automobile is a piece of crap,My automobile isn't all that great
+fuck,ruin my life,Zara Larsson,2019,"I want you to fuck up my nights, yeah","I want you to ruin my nights, yeah"
+fuck,ruin my life,Zara Larsson,2019,"Fuck up my nights, yeah, all of my nights, yeah","Ruin my nights, yeah, all of my nights, yeah"
+sleep,ruin my life,Zara Larsson,2019,Now I'm sleeping alone and I'm starting to freeze,Now I'm out here alone and I'm starting to freeze
+die,never forget you,Zara Larsson & MNEK,2016,Til the day I die,*cuts verse*
+die,never forget you,Zara Larsson & MNEK,2016,"Die, yeah",*cuts verse*
+bullet,i don't wanna live forever,ZAYN & Taylor Swift,2017,Wondering if I dodged a bullet or just lost the love of my life,"Wondering if I dodged a problem or just lost the love of my life, oh"
+rum,stay,Zedd & Alessia Cara,2017,"Living on my sofa, drinking rum and cola","Living on my sofa, drinking Coca-Cola"
