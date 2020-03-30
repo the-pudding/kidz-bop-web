@@ -7,9 +7,9 @@ export default [
   },
   {
     quizID: 2,
-    main: [3, 13],
+    main: [3, 11],
     uncensored: null,
-    exact: [3, 11, 12, 13],
+    exact: [3, 9, 10, 11],
   },
   {
     quizID: 3,
@@ -19,9 +19,9 @@ export default [
   },
   {
     quizID: 4,
-    main: [7],
+    main: [6],
     uncensored: null,
-    exact: [7, 8, 9],
+    exact: [6, 7, 8],
   },
   {
     quizID: 5,
