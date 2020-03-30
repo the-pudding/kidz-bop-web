@@ -270,7 +270,7 @@ function updateButtons() {
 
   if ($currSlideID === 2) $rightText.text('Take the quiz');
   // if current slide is quiz slide, make it read Submit
-  else if ($currSlide.attr('data-quiz')) $rightText.text('Submit');
+  else if ($currSlide.attr('data-quiz')) $rightText.text(`I think I've got it`);
   // if current slide is answer slide (and isn't #12), make it read Next Song
   else if ($currSlide.attr('data-answer') && $currSlideID !== 12)
     $rightText.text('Next Song');
