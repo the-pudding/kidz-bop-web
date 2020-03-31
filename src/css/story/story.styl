@@ -1,6 +1,8 @@
 /* CUSTOM STORY STYLE */
 body
-    background lighten($kb-teal, 10)
+    background-color none
+    +mq('bp-4')
+      background-color lighten($kb-teal, 10)  
 
 #story
     position absolute
@@ -32,7 +34,7 @@ body
     justify-content flex-end
     //position absolute
     z-index 999
-    padding-bottom 4rem
+    padding-bottom 6rem
     +mq('bp-4')
         position absolute
         width 100%
@@ -444,7 +446,7 @@ body
         align-items center
         justify-content center
         flex-direction column 
-        padding-top 5rem
+        padding-top 4rem
         +mq('bp-4')
             padding-top 1rem
 
