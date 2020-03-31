@@ -34,7 +34,7 @@ body
     justify-content flex-end
     //position absolute
     z-index 999
-    padding-bottom 6rem
+    padding-bottom 44px
     +mq('bp-4')
         position absolute
         width 100%
@@ -170,7 +170,7 @@ body
 #categories
     width 100%
     position absolute
-    height 70vh
+    height 60vh
     display none
     flex-direction column
     justify-content flex-start
@@ -180,6 +180,7 @@ body
     z-index set-index('overlay')
     align-content stretch
     bottom 0
+    padding-bottom 0rem
     +mq('bp-4')
         position absolute
         max-width 30em
@@ -446,7 +447,7 @@ body
         align-items center
         justify-content center
         flex-direction column 
-        padding-top 4rem
+        padding-top 3rem
         +mq('bp-4')
             padding-top 1rem
 
@@ -469,7 +470,7 @@ body
         height 100vh
         display flex
         flex-direction row
-        margin-top 3rem
+        margin-top 2rem
         +mq('bp-4')
             flex-direction column
 
@@ -502,7 +503,7 @@ body
         width 100%
         height 70vh
         display flex
-        justify-content center
+        justify-content flex-start
         flex-direction column
         margin-bottom 8rem
         +mq('bp-4')
@@ -510,9 +511,9 @@ body
 
         &.top
             justify-content flex-start
-            height 7rem
+            height 5rem
             margin-top 0
-            margin-bottom 2rem
+            margin-bottom 1rem
             +mq('bp-4')
                 margin-top 0
 
@@ -620,7 +621,7 @@ body
         display flex
         justify-content flex-start
         flex-direction column
-        margin-top 5rem
+        margin-top 3rem
         +mq('bp-4')
             margin-top 7rem
 
@@ -667,7 +668,7 @@ body
         display flex
         justify-content flex-start
         flex-direction column
-        margin-top 1.5rem
+        margin-top 1rem
         +mq('bp-4')
             margin-top 3rem
 
@@ -680,7 +681,7 @@ body
                 font-family $national
                 text-align center
                 color $off-black
-                margin 0 0 1.5rem 0
+                margin 0 0 1rem 0
                 +mq('bp-4')
                     set-type-size('medium', true)
 
@@ -705,8 +706,8 @@ body
         .lyric-set
             background $white
             border 2px solid $off-black
-            padding 1.5rem
-            margin-bottom 1.5rem
+            padding 1.25rem 1rem
+            margin-bottom 1rem
 
             .lyric-head
                 width 100%
@@ -784,8 +785,9 @@ body
         width 100%
         display flex
         flex-direction column
+        justify-content flex-start
         align-items center 
-        padding-top 4rem   
+        padding 2rem 0 5rem 0  
 
         .results-count
             font-family $national

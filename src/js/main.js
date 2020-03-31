@@ -11,6 +11,12 @@ import spark from './spark';
 const $body = d3.select('body');
 let previousWidth = 0;
 
+function setVH() {
+  let vh = window.innerHeight * 0.01
+  console.log(vh)
+  d3.select('#content').style('height', `${vh}px`)
+}
+
 function resize() {
   // only do resize on width changes, not height
   // (remove the conditional if you want to trigger on height change)
@@ -38,6 +44,7 @@ function setupStickyHeader() {
 function init() {
   // adds rel="noopener" to all target="_blank" links
   linkFix();
+  //setVH();
   // add mobile class to body tag
   $body.classed('is-mobile', isMobile.any());
   // setup resize event
