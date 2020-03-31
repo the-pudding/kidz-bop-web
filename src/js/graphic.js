@@ -74,8 +74,10 @@ function updateSlideLocation() {
   // hide header
   if ($currSlideID == 1) {
     d3.select('header').classed('is-visible', true);
+    d3.select('#right').classed('pulse', true);
   } else {
     d3.select('header').classed('is-visible', false);
+    d3.select('#right').classed('pulse', false);
   }
 
   // hide/show category bars

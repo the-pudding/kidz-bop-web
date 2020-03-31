@@ -20,60 +20,6 @@ body
         margin-top 3rem
         padding-top 5rem
 
-
-#prompt
-    display none
-    flex-direction column
-    width 100%
-    height 25vh
-    top 50vh
-    align-items center
-    justify-content flex-end
-    position absolute
-    z-index set-index('overlay')
-    padding-bottom 2rem
-
-    p
-        font-family $national 
-        set-type-size('small', true)
-        margin 1rem 0 0 0
-        padding 0
-        opacity 0.5 
-
-    &.is-visible
-        display flex
-
-    .pulse-container
-        display flex
-        width 5rem
-        height 5rem
-        align-items center
-        justify-content center
-
-        .bg-pulse
-            animation pulse 1.2s ease infinite;
-            background $white
-            width 4.5rem
-            height 4.5rem
-            border-radius 50%
-            position absolute
-
-
-        .pulser
-            display flex
-            align-items center
-            justify-content center
-            position absolute
-            width 4.5rem
-            height 4.5rem
-            border-radius 50%
-            background $white
-            cursor pointer
-            box-shadow 4px 4px 10px rgba($off-black, 0.1)
-
-            svg
-                width 50%
-
 #touch
     display flex
     position fixed
@@ -82,12 +28,11 @@ body
     flex-direction column
     width 100%
     height 25vh
-    bottom 0rem
     align-items center
     justify-content flex-end
     //position absolute
     z-index 999
-    padding-bottom 2rem
+    padding-bottom 4rem
     +mq('bp-4')
         position absolute
         width 100%
@@ -151,6 +96,10 @@ body
 
                     svg
                         display none 
+
+            &.pulse
+                button
+                    animation pulse 1.5s ease infinite           
 
         #left, #right
             display none
@@ -614,7 +563,7 @@ body
         .other-span
             font-weight 700
             color $off-black
-            background $gray
+            background $gray-light
             padding 0 0.25rem 
             white-space nowrap                      
 
@@ -890,7 +839,7 @@ body
                 font-weight 700  
 
             .other-sent
-                background-color $gray
+                background-color $gray-light
                 padding 0.25rem
                 font-weight 700                         
 
@@ -945,7 +894,7 @@ body
         margin 0 0 15rem 0
 
         .lyric-set:last-child
-            margin-bottom 10rem
+            margin-bottom 12rem
 
         .lyric-head
 
@@ -1091,14 +1040,13 @@ body
 
 @keyframes pulse {
   0% {
-    transform: scale(1, 1);
+    background rgba($white, 0.3)
   }
   50% {
-    opacity: 0.3;
+    background rgba($white, 1)
   }
   100% {
-    transform: scale(1.5);
-    opacity: 0;
+    background rgba($white, 0.3)
   }
 }
 
@@ -1141,7 +1089,7 @@ body
     z-index set-index('overlay')
     background-color rgba($white, 0.95)
     width 100%
-    height 100vh
+    height auto
     padding 2rem
     transition transform 200ms ease-in-out
     transform translateY(200%)
