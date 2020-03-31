@@ -59,7 +59,10 @@ function handleToggle() {
 
 function handleDropdown(val) {
   // generate new lyric sets for each song
-  const singleWord = filteredData.filter(d => d.key === val)[0].values;
+  const singleWord = filteredData
+    .filter(d => d.key === val)[0]
+    .values.sort((a, b) => d3.descending(+a.kb_deets, +b.kb_deets));
+
   $compare
     .selectAll('.lyric-set')
     .data(singleWord, d => {
@@ -113,7 +116,7 @@ function updateDropdown() {
   const sortedData = filteredData.sort((a, b) =>
     d3.descending(a.length, b.length)
   );
-  console.log({ sortedData });
+
   $dropdown
     .selectAll('option')
     .data(sortedData, d => {
@@ -147,8 +150,6 @@ function filter(cat) {
       length: d.value.length,
       values: d.value.values,
     }));
-
-  console.log(filteredData);
 
   if (filteredData) {
     updateDropdown();
