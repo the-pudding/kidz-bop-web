@@ -115,12 +115,14 @@ function handleDropdown(val) {
 
 function updateDropdown() {
   const sortedData = filteredData.sort((a, b) =>
-    d3.descending(a.length, b.length)
+    d3.ascending(a.key, b.key)
   );
+
+  //console.log(filteredData)
 
   $dropdown
     .selectAll('option')
-    .data(sortedData, d => {
+    .data(filteredData, d => {
       return d.key;
     })
     .join(enter =>
@@ -155,7 +157,35 @@ function filter(cat) {
 
   if (filteredData) {
     updateDropdown();
-    const first = filteredData[0].key;
+    let first = null;
+    if (cat == 'alcohol') {
+      first = filteredData[17].key
+      $dropdown.node().options[17].selected = true
+    }
+    else if (cat == 'sexual') {
+      first = filteredData[22].key
+      $dropdown.node().options[22].selected = true
+    }
+    else if (cat == 'profanity') {
+      first = filteredData[6].key
+      $dropdown.node().options[6].selected = true
+    }
+    else if (cat == 'violence') {
+      first = filteredData[11].key
+      $dropdown.node().options[11].selected = true
+    }
+    else if (cat == 'identity') {
+      first = filteredData[2].key
+      $dropdown.node().options[2].selected = true
+    }
+    else if (cat == 'other') {
+      first = filteredData[16].key
+      $dropdown.node().options[16].selected = true
+    }
+    else {
+      first = filteredData[0].key
+    }
+    //const first = filteredData[0].key;
     handleDropdown(first);
     percentages.populateWordText(first)
   }
