@@ -12,9 +12,10 @@ const $body = d3.select('body');
 let previousWidth = 0;
 
 function setVH() {
-  let vh = window.innerHeight * 0.01
-  console.log(vh)
-  d3.select('#content').style('height', `${vh}px`)
+  let h = window.innerHeight + 'px'
+  //let vh = window.innerHeight * 0.01
+  console.log(h)
+  d3.select('#content').style('height', `${h}`)
 }
 
 function resize() {
@@ -44,7 +45,7 @@ function setupStickyHeader() {
 function init() {
   // adds rel="noopener" to all target="_blank" links
   linkFix();
-  //setVH();
+  setVH();
   // add mobile class to body tag
   $body.classed('is-mobile', isMobile.any());
   // setup resize event
