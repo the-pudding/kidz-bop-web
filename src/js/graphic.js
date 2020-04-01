@@ -466,6 +466,9 @@ function catTap(block) {
     if (categoryAttr == 'alcohol') {
       return 'alcohol & drugs';
     }
+    else if (categoryAttr == 'sexual') {
+      return 'sexual references';
+    }
     return categoryAttr;
   });
   categorySpan.attr('class', null);
