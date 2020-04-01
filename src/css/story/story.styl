@@ -1,6 +1,5 @@
 /* CUSTOM STORY STYLE */
 body
-    background-color none
     overflow hidden
 
 #story
@@ -1114,13 +1113,7 @@ body
     padding 2rem
     transition transform 200ms ease-in-out
     transform translateY(200%)
-    +mq('bp-5')
-        max-width 30em
-        left 50%
-        margin 5rem auto 0 auto
-        transform translate(-50%, 200%)
-        max-height 50em
-        height 100%
+    +mq('bp-4') 
         padding 3rem
 
     &.is-visible
@@ -1130,17 +1123,8 @@ body
         z-index set-index('overlay')
         background-color rgba($white, 0.95)
         width 100%
-        height 100%
+        height auto
         padding 2rem
-        +mq('bp-5')
-            position absolute
-            max-width 30em
-            left 50%
-            margin 5rem auto 0 auto
-            transform translateX(-50%)
-            max-height 50em
-            height 100%
-            padding 3rem
 
     button
         background-color transparent
@@ -1156,12 +1140,17 @@ body
 
         svg
             stroke $off-black
-            width 100%
+            width 30px
+            height 30px
 
             &:hover
                 opacity 0.5
 
     .text-wrapper
+        width 100%
+        +mq('bp-4')
+            max-width $column-width
+            margin 0 auto
 
         h5
             font-family $national

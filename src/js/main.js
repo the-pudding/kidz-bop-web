@@ -13,8 +13,6 @@ let previousWidth = 0;
 
 function setVH() {
   let h = window.innerHeight + 'px'
-  //let vh = window.innerHeight * 0.01
-  console.log(h)
   d3.select('#content').style('height', `${h}`)
 }
 
@@ -26,6 +24,7 @@ function resize() {
     previousWidth = width;
     graphic.resize();
     proportion.resize();
+    setVH();
   }
 }
 
