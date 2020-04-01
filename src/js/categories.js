@@ -1,4 +1,5 @@
 import loadData from './load-data';
+import percentages from './percentages';
 
 let cwMap = null;
 let data = [];
@@ -132,6 +133,7 @@ function updateDropdown() {
   $dropdown.on('change', function() {
     const val = d3.select(this).property('value');
     handleDropdown(val);
+    percentages.populateWordText(val);
   });
 }
 
@@ -155,6 +157,7 @@ function filter(cat) {
     updateDropdown();
     const first = filteredData[0].key;
     handleDropdown(first);
+    percentages.populateWordText(first)
   }
 }
 

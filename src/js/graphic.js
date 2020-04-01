@@ -1,6 +1,7 @@
 import matches from './lyrics';
 import prepareSpan from './utils/prepare-span';
 import categories from './categories';
+import percentages from './percentages';
 
 /* global d3 */
 function resize() {}
@@ -474,22 +475,15 @@ function catTap(block) {
   categorySpan.attr('class', null);
   categorySpan.classed(`${categoryAttr}-sent`, true);
 
-  // hide the category bars completely
-  // $catSection
-  //   .transition()
-  //   .duration(0)
-  //   .delay(1000)
-  //   .ease(d3.easeLinear)
-  //   .style('display', 'none')
-
-  // set the new direction to back
-  // currBckButton.attr('data-direction', 'back');
-
   // trigger a tap forward one slide
   fwdTap();
 
   // trigger a data update
   categories.filter(currCat.attr('data-cat'));
+
+  // trigger the text to update
+  const groupTextCat = categorySpan.text()
+  percentages.populateGroupText(groupTextCat);
 
   // removes pointer events to allow for clicking on slide
   $catSection.style('pointer-events', 'none');
