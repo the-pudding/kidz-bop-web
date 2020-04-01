@@ -29,28 +29,28 @@
 		<p>back</p>
 	</div>
 </section>
+<section id='touch'>
+	<div class='tapper'>
+		<div id='left'>
+			<button>
+				<p>Back to categories</p>
+				<img inline src='arrow-left.svg'>
+			</button>
+		</div>
+		<div id='right' class='is-visible solo pulse'>
+			<button>
+				<p>Let's find out</p>
+				<img inline src='arrow-right.svg'>
+			</button>
+		</div>
+	</div>
+	<div class='directions'>
+		<p id='skipper'>Skip the quiz. Show me the data.</p>
+		<p id='begin'>Take me back to the beginnning.</p>
+	</div>
+	<div class='bottom-fade'></div>
+</section>
 <section id='story'>
-	<section id='touch'>
-		<div class='tapper'>
-			<div id='left'>
-				<button>
-					<p>Back to categories</p>
-					<img inline src='arrow-left.svg'>
-				</button>
-			</div>
-			<div id='right' class='is-visible solo pulse'>
-				<button>
-					<p>Let's find out</p>
-					<img inline src='arrow-right.svg'>
-				</button>
-			</div>
-		</div>
-		<div class='directions'>
-			<p id='skipper'>Skip the quiz. Show me the data.</p>
-			<p id='begin'>Take me back to the beginnning.</p>
-		</div>
-		<div class='bottom-fade'></div>
-	</section>
 	<div class='quiz-details'>
 		<div class='quiz-tracker'>
 			<p class='song-count'>Song <span id='count'>1</span> of 5</p>
@@ -63,6 +63,7 @@
 			</div>
 		</div>
 	</div>
+
 	<div id='slide_1' class='slide gradient is-visible-slide'>
 		<div class='title'>
 			<h1>{{meta.title1}}</h1>
@@ -115,19 +116,21 @@
 			<div class='quiz-feedback'>
 				<p><span>Feedback!</span> Sentence about how you did goes here.</p>
 			</div>
-			<div class='lyric-set'>
-				<div class='lyric-head'>
-					<p>Original</p>
-					<a href='{{{ogLink}}}' target='_blank'><img inline src='youtube.svg'></a>
+			<div class='lyric-block'>
+				<div class='lyric-set'>
+					<div class='lyric-head'>
+						<p>Original</p>
+						<a href='{{{ogLink}}}' target='_blank'><img inline src='youtube.svg'></a>
+					</div>
+					<p class='origLyric'>{{{lyric}}}</p>
 				</div>
-				<p class='origLyric'>{{{lyric}}}</p>
-			</div>
-			<div class='lyric-set'>
-				<div class='lyric-head'>
-					<p>Kidz Bop</p>
-					<a href='{{{kbLink}}}' target='_blank'><img inline src='youtube.svg'></a>
+				<div class='lyric-set'>
+					<div class='lyric-head'>
+						<p>Kidz Bop</p>
+						<a href='{{{kbLink}}}' target='_blank'><img inline src='youtube.svg'></a>
+					</div>
+					<p class='kbLyric'>{{{kbLyric}}}</p>
 				</div>
-				<p class='kbLyric'>{{{kbLyric}}}</p>
 			</div>
 		</div>
 	</div>

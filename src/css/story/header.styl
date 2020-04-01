@@ -28,20 +28,11 @@ header.is-sticky
 	align-items flex-start
 	&.is-visible
 		display flex	
-	+mq('bp-4')
-		background-color $white
-		box-shadow 0 0 7px 1px $gray-light
-		align-items center
-		height 3rem
-		border-bottom none
-		display flex
 
 	
 	a.wordmark
 		margin 0 auto
 		display none
-		+mq('bp-4')
-			display block
 
 		svg
 
@@ -52,8 +43,6 @@ header.is-sticky
 		margin 0.5rem
 		display block
 		border-bottom 0
-		+mq('bp-4')
-			display none
 
 		.roundel
 			background-color $off-black
@@ -86,7 +75,7 @@ header.is-sticky
 		z-index set-index(overlay)
 		border none 
 		background-color transparent
-		+mq('bp-4')
+		+mq('bp-5')
 			padding 0.75rem
 
 		svg
