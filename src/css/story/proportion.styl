@@ -11,7 +11,7 @@
         align-items baseline
         &__number 
             set-type-size('small')
-            line-height 1.4
+            line-height 1.3
             font-family $national
             margin 0 0.5rem 0 0
         &__barCont
@@ -38,3 +38,42 @@
     .chart__bar
         .bar
             background-color $off-black
+
+
+.chart-labels
+    width 100%
+    margin 0.5rem 0 0 0
+    display flex
+    flex-direction row
+    justify-content space-between
+    +mq('bp-4')
+        max-width $column-width
+        margin 0.5rem auto 0 auto
+
+    .right-label, .left-label
+        display flex
+        flex-direction row
+
+        p
+            margin 0
+            padding 0   
+            font-family $national 
+            set-type-size('small')
+            color $gray-dark
+        svg
+            width 16px
+            height 16px
+            margin-top 3px
+            stroke $gray
+
+    .right-label
+        padding-right 0.5rem
+
+        svg
+            margin-left 2px   
+
+    .left-label
+        padding-left 2.5rem
+
+        svg
+            margin-right 2px               
