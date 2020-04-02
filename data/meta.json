@@ -2,16 +2,16 @@
 	"title": "Just how does Kidz Bop censor songs?",
 	"title1": "Just how does",
 	"title2": "censor songs?",
-	"description": "Sentence case dek goes down here. Modify these in data/meta.json.",
+	"description": "We looked at 19 years of the kid-friendly albums to find out what types of words get the black bar.",
 	"site": "https://pudding.cool",
 	"siteName": "The Pudding",
-	"url": "https://pudding.cool/year/month/name/",
+	"url": "https://pudding.cool/2020/04/kidz-bop/",
 	"keywords": "tk",
-	"imgFacebook": "https://pudding.cool/year/month/name/assets/social/social-facebook.jpg",
-	"imgTwitter": "https://pudding.cool/year/month/name/assets/social/social-twitter.jpg",
+	"imgFacebook": "https://pudding.cool/2020/04/kidz-bop/assets/social/social-facebook.jpg",
+	"imgTwitter": "https://pudding.cool/2020/04/kidz-bop/assets/social/social-twitter.jpg",
 	"author1": {
 		"name": "Sara Stoudt",
-		"url": "https://twitter.com/sastoudt",
+		"url": "https://pudding.cool/author/sara-stoudt/",
 		"twitterHandle": "@sastoudt"
 	},
 	"author2": {
@@ -24,6 +24,6 @@
 		"url": "https://pudding.cool/author/amber-thomas/",
 		"twitterHandle": "@ProQuesAsker"
 	},
-	"analytics": "",
+	"analytics": "UA-90567923-1",
 	"lorem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis neque sit amet sollicitudin vehicula. Maecenas fringilla mi non lacus mattis elementum. Curabitur dignissim faucibus justo."
 }
