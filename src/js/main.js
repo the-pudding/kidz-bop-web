@@ -24,7 +24,6 @@ function resize() {
     previousWidth = width;
     graphic.resize();
     proportion.resize();
-    setVH();
   }
 }
 
