@@ -853,7 +853,7 @@ body
                 font-weight 700   
 
             .identity-sent
-                background-color $kb-teal
+                background-color $kb-blue
                 padding 0.25rem
                 font-weight 700  
 
@@ -1176,3 +1176,23 @@ body
 
 #catIN, #catCEN, #catPCT, #wordIN, #wordCEN, #wordPCT
     font-weight 700
+
+#progress
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 0.25rem
+    z-index 1000
+
+    .full-bar
+        position absolute
+        width 100%
+        height 100%
+        background-color rgba($white, 0.3)
+
+    .progress-bar
+        position absolute
+        width 10%
+        height 100%
+        background-color $off-black

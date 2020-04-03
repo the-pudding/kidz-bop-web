@@ -1,16 +1,4 @@
 /* global d3 */
-/* usage
-	import loadData from './load-data'
-	
-	loadData('file.csv').then(result => {
-		console.log(result);
-	}).catch(console.error);
-
-	loadData(['file1.csv', 'file2.json]).then(result => {
-		console.log(result);
-	}).catch(console.error);
-*/
-
 function loadFile(file) {
   return new Promise((resolve, reject) => {
     const ext = file.split('.').pop();

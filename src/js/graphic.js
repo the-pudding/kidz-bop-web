@@ -6,6 +6,7 @@ import percentages from './percentages';
 /* global d3 */
 function resize() {}
 
+// SELECTIONS
 const $slides = d3.selectAll('.slide');
 const $methodOpen = d3.select('#method-button');
 const $methodClose = d3.select('#method svg');
@@ -28,13 +29,13 @@ const $catSection = d3.select('#categories');
 const $feedbackSentences = d3.selectAll('.quiz-feedback p');
 
 let $lyricSpans = null;
-
 let $currSlide = null;
 let $currSlideID = null;
 let $prevSlide = null;
 let $nextSlide = null;
 let $quizSlide = null;
 
+// SETUP FUNCTIONS
 function spanSetup() {
   // select all quiz slides then select the p element in each slide
   $quizSlidesAll.nodes().forEach(d => {
@@ -42,7 +43,6 @@ function spanSetup() {
     // then convert them to spans
     prepareSpan.prepare(wrapper);
   });
-
   $lyricSpans = d3.selectAll('.lyric-wrapper span');
 }
 
@@ -50,11 +50,27 @@ function spanHintSetup() {
   const firstQuizSlide = d3.selectAll('#slide_3');
   const firstLyrics = firstQuizSlide.selectAll('.lyric-wrapper p');
   const firstSpan = firstLyrics.selectAll('span');
-  firstSpan.attr('class', function(d, i) {
-    return i ? null : 'hintSpan';
-  });
+  firstSpan.attr('class', function(d, i) { return i ? null : 'hintSpan';});
 }
 
+function slideSetup() {
+  // create data attribute for each slide based on its index
+  $slides.attr('data-slide', (d, i) => i + 1);
+  updateSlideLocation();
+}
+
+function buttonSetup() {
+  d3.selectAll('#left').classed('is-visible', false);
+  d3.selectAll('#right').classed('solo', true);
+}
+
+function updateProgress(slideID) {
+  const $progressBar = d3.selectAll('.progress-bar')
+  const w = (slideID-1)/17 * 100
+  $progressBar.style('width', `${w}%`)
+}
+
+// SLIDE UPDATE
 function updateSlideLocation() {
   // sets the current slide to whichever is visible
   $currSlide = d3.select('.is-visible-slide');
@@ -64,13 +80,9 @@ function updateSlideLocation() {
   const answerSlide = $currSlideID >= 3 && ($currSlideID + 1) % 2 !== 0;
   // select the previous slide
   // if currently on an answer slide, go back 2
-  $prevSlide = $slides.filter(
-    (d, i, n) => d3.select(n[i]).attr('data-slide') === `${$currSlideID - 1}`
-  );
+  $prevSlide = $slides.filter((d, i, n) => d3.select(n[i]).attr('data-slide') === `${$currSlideID - 1}`);
   // select the global next slide
-  $nextSlide = $slides.filter(
-    (d, i, n) => d3.select(n[i]).attr('data-slide') === `${$currSlideID + 1}`
-  );
+  $nextSlide = $slides.filter((d, i, n) => d3.select(n[i]).attr('data-slide') === `${$currSlideID + 1}`);
 
   // hide header
   if ($currSlideID == 1) {
@@ -92,26 +104,20 @@ function updateSlideLocation() {
       .delay((d, i) => i * 25)
       .ease(d3.easeLinear)
       .style('transform', 'translate(0, 0)');
-  } else if ($currSlideID < 17) {
-    $catSection.classed('is-visible', false);
-  }
+  } else if ($currSlideID < 17) { $catSection.classed('is-visible', false); }
 
   if (answerSlide) {
-    $quizSlide = $slides.filter(
-      (d, i, n) => d3.select(n[i]).attr('data-slide') === `${$currSlideID - 1}`
-    );
+    $quizSlide = $slides.filter((d, i, n) => d3.select(n[i]).attr('data-slide') === `${$currSlideID - 1}`);
   }
 
   // update buttons
   updateButtons();
+
+  // update progress bar
+  updateProgress($currSlideID)
 }
 
-function slideSetup() {
-  // create data attribute for each slide based on its index
-  $slides.attr('data-slide', (d, i) => i + 1);
-  updateSlideLocation();
-}
-
+// QUIZ FUNCTIONALITY
 function checkCensors(censoredIndeces) {
   // first, see if they censored everything on the previous slide
   const allWords = $quizSlide.selectAll('span');
@@ -122,35 +128,23 @@ function checkCensors(censoredIndeces) {
   const thisMatch = matches.filter(d => d.quizID === +currQuiz)[0];
 
   // words the user didn't censor that should've been
-  const missed = thisMatch.exact.filter(
-    element => !censoredIndeces.includes(element)
-  );
+  const missed = thisMatch.exact.filter(element => !censoredIndeces.includes(element));
 
   // words the user DID censor that didn't need to be
-  const extraCensored = censoredIndeces.filter(
-    element => !thisMatch.exact.includes(element)
-  );
+  const extraCensored = censoredIndeces.filter(element => !thisMatch.exact.includes(element));
 
   const selectedAll = allWords.size() === allCensored.size();
 
-  const thisCircle = $songCircles.filter((d, i, n) => {
-    return d3.select(n[i]).attr('data-quiz') === currQuiz;
-  });
+  const thisCircle = $songCircles.filter((d, i, n) => { return d3.select(n[i]).attr('data-quiz') === currQuiz; });
 
-  const thisFeedbackSlide = d3.selectAll('.slide').filter((d, i, n) => {
-    return d3.select(n[i]).attr('data-answer') === currQuiz;
-  });
+  const thisFeedbackSlide = d3.selectAll('.slide').filter((d, i, n) => { return d3.select(n[i]).attr('data-answer') === currQuiz; });
 
-  const thisFeedbackSent = thisFeedbackSlide.selectAll(
-    '.compare-wrapper .quiz-feedback p'
-  );
+  const thisFeedbackSent = thisFeedbackSlide.selectAll('.compare-wrapper .quiz-feedback p');
 
   // were each of the main words censored?
   let mainWords = null;
   if (thisMatch.main) {
-    mainWords = thisMatch.main.map(d => {
-      return censoredIndeces.includes(d);
-    });
+    mainWords = thisMatch.main.map(d => { return censoredIndeces.includes(d); });
   } else mainWords = ['true'];
 
   // add animations to feedback
@@ -172,9 +166,7 @@ function checkCensors(censoredIndeces) {
     thisFeedbackSent
       .classed('slide-in', true)
       .classed('is-correct', true)
-      .html(
-        `<span>Correct!</span><br> Do you secretly have a Kidz Bop playlist?`
-      );
+      .html(`<span>Correct!</span><br> Do you secretly have a Kidz Bop playlist?`);
   } else if (
     thisMatch.uncensored &&
     censoredIndeces.includes(thisMatch.uncensored)
@@ -188,9 +180,7 @@ function checkCensors(censoredIndeces) {
     thisFeedbackSent
       .classed('slide-in', true)
       .classed('is-wrong', true)
-      .html(
-        `<span>Oops!</span><br> Kidz Bop didn't actually censor "${wrongWord}."`
-      );
+      .html(`<span>Oops!</span><br> Kidz Bop didn't actually censor "${wrongWord}."`);
   } else if (missed.length > 0 && !mainWords.includes(false)) {
     // if they missed some words, but still got the main one, correct
     thisCircle.classed('is-correct', true).classed('is-wrong', false);
@@ -198,14 +188,20 @@ function checkCensors(censoredIndeces) {
       .classed('slide-in', true)
       .classed('is-correct', true)
       .html(`<span>This counts!</span><br> You found the main censored word.`);
-  } else {
+  } else if (currQuiz == 3 && thisMatch.uncensored) {
+    // if they censored anything that's not a 'bad word' in slide 3
     thisCircle.classed('is-wrong', true).classed('is-correct', false);
     thisFeedbackSent
       .classed('slide-in', true)
       .classed('is-wrong', true)
-      .html(
-        `<span>Yikes!</span><br> This still needs a parental advisory label.`
-      );
+      .html(`<span>Oops!</span><br> Kidz Bop didn't actually censor anything here.`);
+  } else {
+    // it must be wrong
+    thisCircle.classed('is-wrong', true).classed('is-correct', false);
+    thisFeedbackSent
+      .classed('slide-in', true)
+      .classed('is-wrong', true)
+      .html(`<span>Yikes!</span><br> This still needs a parental advisory label.`);
   }
 }
 
@@ -238,11 +234,6 @@ function spanCensor() {
 
   // if so, make it uncensored, if not, censor it
   word.classed('censored', !isCensored);
-}
-
-function buttonSetup() {
-  d3.selectAll('#left').classed('is-visible', false);
-  d3.selectAll('#right').classed('solo', true);
 }
 
 function findTotalCorrect() {
@@ -296,13 +287,6 @@ function updateButtons() {
   $right.classed('solo', $currSlideID <= 13);
   $left.classed('solo', $currSlideID == 18);
 
-  // show tapping prompt
-  // $prompt.classed('is-visible', $currSlideID == 3)
-  // if ($prompt.classed('is-visible')) {
-  //   console.log('yup')
-  //   //window.addEventListener('click', $prompt.classed('is-visible', false))
-  // }
-
   // show quiz details on quiz and answer slides
   $quizDetails.classed('is-visible', quizOrAnswer);
 
@@ -319,13 +303,12 @@ function updateButtons() {
 
   // if above slide 16, remove pointer events for touch
   if ($currSlideID > 16 && $currSlideID < 18) {
-    // console.log({ $touch });
     $touch.style('pointer-events', 'none');
   } else $touch.style('pointer-events', 'all');
 }
 
+// TAPS
 function fwdTap() {
-  // console.log({ $currSlide });
   // is the current slide a quiz slide?
   const $currQuiz = $currSlide.attr('data-quiz');
 
@@ -336,9 +319,7 @@ function fwdTap() {
   updateSlideLocation();
 
   // if the current slide is a quiz slide, evaluate answer on tap
-  if ($currQuiz) {
-    findCensored();
-  }
+  if ($currQuiz) { findCensored(); }
 }
 
 function methodOpen() {
@@ -426,14 +407,10 @@ function setupArrowButton() {
     else {
       catTap(bar);
     }
-
-    // update direction
-    //button.attr('data-direction', dir === 'back' ? 'forward' : 'back');
   });
 }
 
 function catTap(block) {
-  // console.log(block)
   const clickedCat = block.node().attr;
   const currCat = block.classed('cat-chosen', true);
   currCat.classed('not-chosen', false);
@@ -442,11 +419,7 @@ function catTap(block) {
   const notCat = d3.selectAll('.category-bar').filter(function() {
     return !this.classList.contains('cat-chosen');
   });
-  // console.log(notCat)
 
-  const currPos = block.node().getBoundingClientRect();
-
-  // console.log({ currCat, notCat, block });
   notCat
     .transition()
     .duration(250)
@@ -460,7 +433,6 @@ function catTap(block) {
     .delay(250)
     .ease(d3.easeLinear)
     .style('transform', 'translate(100%)');
-  // .style('transform', `translate(0, -${currPos.top -70}px)`);
 
   // replace category span on dropdown page
   const categoryAttr = currCat.node().getAttribute('data-cat');
