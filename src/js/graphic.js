@@ -325,11 +325,13 @@ function fwdTap() {
 function methodOpen() {
   d3.select('#method').classed('is-visible', true)
   d3.selectAll('body').style('overflow', 'scroll')
+  //d3.selectAll('main').style('overflow', 'scroll')
 }
 
 function methodClose() {
   d3.select('#method').classed('is-visible', false)
   d3.selectAll('body').style('overflow', 'hidden')
+  //d3.selectAll('main').style('overflow', 'hidden')
 }
 
 function bckTap() {
