@@ -136,11 +136,13 @@ main
             visibility hidden
             opacity 0
             font-family $national 
-            set-type-size('small', true)
+            set-type-size('x-small', true)
             margin 0.5rem 0 0 0
             padding 0
             opacity 0.5 
             display none
+            +mq('bp-2-5')
+                set-type-size('small', true)
             +mq('bp-5')
                 set-type-size('root', true)  
 
@@ -157,7 +159,7 @@ main
 #categories
     width 100%
     position absolute
-    height 65vh
+    height 75vh
     display none
     flex-direction column
     justify-content flex-start
@@ -168,6 +170,8 @@ main
     align-content stretch
     bottom 0
     padding-bottom 0rem
+    +mq('bp-2-5')
+        height 65vh  
     +mq('bp-4')
         height 75vh
 
@@ -474,9 +478,11 @@ main
 
             p
                 margin 0   
-                set-type-size('root', true)
+                set-type-size('small', true)
                 font-family $national
                 text-align left
+                +mq('bp-2-5')
+                    set-type-size('root', true) 
                 +mq('bp-4')
                     set-type-size('small', true)
                     line-height 1.5
@@ -497,9 +503,12 @@ main
 
         &.top
             justify-content flex-start
-            height 7rem
+            height 6rem
             margin-top 0
-            margin-bottom 1rem
+            margin-bottom 1.5rem
+            +mq('bp-2-5')
+                height 7rem
+                margin-bottom 1rem
             +mq('bp-4')
                height 6rem
 
@@ -508,9 +517,12 @@ main
                 opacity 0.5       
 
         p    
-            set-type-size('root', true)
+            set-type-size('small', true)
             font-family $national
             margin 0 0 1rem 0
+            line-height 1.5
+            +mq('bp-2-5')
+                set-type-size('root', true)
             +mq('bp-5')
                 set-type-size('large', true)
 
@@ -622,10 +634,12 @@ main
             max-width $column-width
 
         p    
-            set-type-size('xxx-large', true)
+            set-type-size('xx-large', true)
             line-height 1.25
             font-family $national
             font-weight 700 
+            +mq('bp-2-5')
+                set-type-size('xxx-large', true)
             +mq('bp-5')
                 set-type-size('xxxx-large', true)
 
@@ -641,7 +655,7 @@ main
                     animation fadeBG 1.5s ease infinite
                     &::before
                         font-weight 500
-                        set-type-size('small', true)
+                        set-type-size('x-small', true)
                         content 'Click on the words that Kidz Bop changed'
                         background-image url('assets/images/touch.png')
                         background-repeat no-repeat
@@ -654,6 +668,8 @@ main
                         text-indent 1.65rem
                         //animation fadeHint 1.2s ease infinite
                         pointer-events none
+                        +mq('bp-2-5')
+                          set-type-size('small', true)  
                         +mq('bp-5')
                            set-type-size('root', true) 
                            width 21rem
@@ -673,11 +689,13 @@ main
             justify-content center
             p   
                 display inline-block
-                set-type-size('small', true)
+                set-type-size('x-small', true)
                 font-family $national
                 text-align center
                 color $off-black
                 margin 0 0 1rem 0
+                +mq('bp-2-5')
+                    set-type-size('small', true)
                 +mq('bp-5')
                     set-type-size('medium', true)
 
@@ -695,7 +713,9 @@ main
                     background-color $off-black
                     color $white
                     padding 0 0.25rem 
-                    set-type-size('medium', true)
+                    set-type-size('root', true)
+                    +mq('bp-2-5')
+                        set-type-size('medium', true)
                     +mq('bp-5')
                         set-type-size('x-large', true)
 
@@ -713,9 +733,11 @@ main
         .lyric-set
             background $white
             border 2px solid $off-black
-            padding 1.25rem 1rem
+            padding 1rem 0.75rem
             margin-bottom 1rem
             width 100%
+            +mq('bp-2-5')
+                padding 1.25rem 1rem
             +mq('bp-4') 
                 width 48%
 
@@ -731,11 +753,13 @@ main
                   padding-bottom 1rem  
 
                 p
-                    set-type-size('small', true)
+                    set-type-size('x-small', true)
                     font-family $national
                     font-weight 700
                     margin 0
                     padding-top 0
+                    +mq('bp-2-5')
+                        set-type-size('small', true)
                     +mq('bp-5')
                         set-type-size('medium', true)
 
@@ -743,9 +767,12 @@ main
                     border-bottom none        
 
                 svg
-                    width 24px
-                    height 24px 
+                    width 20px
+                    height 20px 
                     cursor pointer
+                    +mq('bp-2-5')
+                        width 24px
+                        height 24px 
                     +mq('bp-5')
                         width 30px
                         height 30px
@@ -757,10 +784,13 @@ main
                             fill $off-black 
 
             p
-                set-type-size('large', true)
+                set-type-size('root', true)
                 font-family $national
                 margin 0 
-                padding-top 1rem 
+                padding-top 0.75rem 
+                +mq('bp-2-5')
+                    set-type-size('large', true)
+                    padding-top 1rem 
                 +mq('bp-5')
                     set-type-size('x-large', true)
 
@@ -797,22 +827,29 @@ main
         flex-direction column
         justify-content flex-start
         align-items center 
-        padding 2rem 0 
+        padding 2rem 0 1rem 0 
+        +mq('bp-2-5')
+            padding 2rem 0 
 
         .results-count
             font-family $national
             font-weight 700
-            set-type-size('xxxx-large', true) 
+            set-type-size('xxx-large', true) 
             margin 0 
+            +mq('bp-2-5')
+                set-type-size('xxxx-large', true) 
             +mq('bp-4')
                 set-type-size('xxxxx-large', true) 
 
         .results-sentence
             font-family $national
             width 80%
-            set-type-size('large', true)  
-            margin 1rem 0   
+            set-type-size('medium', true)  
+            margin 0.5rem 0   
             text-align center
+            +mq('bp-2-5')
+                set-type-size('large', true)
+                margin 1rem 0  
             +mq('bp-4')
                 set-type-size('x-large', true)
 
@@ -828,9 +865,11 @@ main
             margin 0 auto
 
         p
-            set-type-size('root', true)
+            set-type-size('small', true)
             font-family $national
             margin 0 
+            +mq('bp-2-5')
+                set-type-size('root', true)
             +mq('bp-5')
                 set-type-size('large', true)
 
@@ -879,10 +918,12 @@ main
             position relative
             width 100%
             margin 0.5rem auto
-            height 3.5rem
+            height 3rem
             display flex
             justify-content center
             cursor pointer 
+            +mq('bp-2-5')
+                height 3.5rem
             +mq('bp-5')
                 height 4rem
 
@@ -890,12 +931,12 @@ main
                 width 100%
                 border 0
                 background-color transparent
-                set-type-size('large', true)
+                set-type-size('medium', true)
                 font-family $national
                 font-weight 700
                 color $off-black
                 border-radius none
-                height 3.5rem
+                height 3rem
                 position absolute
                 cursor pointer
                 appearance none
@@ -903,7 +944,11 @@ main
                 background-image url('assets/images/arrow.png')
                 background-repeat no-repeat
                 background-position 95% 50%
-                background-size 20px 20px
+                background-size 16px 16px
+                +mq('bp-2-5')
+                    height 3.5rem
+                    set-type-size('large', true)
+                    background-size 20px 20px
                 +mq('bp-5')
                     set-type-size('x-large', true)
                     height 4rem 
@@ -913,8 +958,10 @@ main
                 border 2px solid $white
                 background-color rgba($white, 0.3)
                 width 100%
-                height 3.5rem    
+                height 3rem    
                 box-shadow 4px 4px 10px rgba($off-black, 0.1)
+                +mq('bp-2-5')
+                    height 3.5rem
                 +mq('bp-5')  
                     height 4rem    
 
@@ -950,15 +997,19 @@ main
 
             p
                 font-weight 500
-                set-type-size('small', true)
+                set-type-size('x-small', true)
                 color $gray
                 width 3.75rem
+                +mq('bp-2-5')
+                    set-type-size('small', true)
                 +mq('bp-5')
                     set-type-size('root', true)
 
 
             .toggle-labels
-                width 1.2rem 
+                width 1rem 
+                +mq('bp-2-5')
+                    width 1.2rem 
                 +mq('bp-5')  
                     width 1.3rem  
 
@@ -969,8 +1020,11 @@ main
             .switch
                 margin 0 0.25rem
                 position relative
-                width 2.5rem
-                height 1.25 rem  
+                width 2rem
+                height 1.25 rem 
+                +mq('bp-2-5') 
+                    margin 0 0.25rem
+                    width 2.5rem
                 +mq('bp-5')  
                     margin 0.25rem 0.25rem 0 0.25rem
 
@@ -1000,7 +1054,9 @@ main
                         background-color $white
                         transition 0.4s
                         border-radius 50%
-                        transform translateX(1.25rem) 
+                        transform translateX(0.75rem) 
+                        +mq('bp-2-5') 
+                             transform translateX(1.25rem) 
 
                 input:focus + .slider
                     none
